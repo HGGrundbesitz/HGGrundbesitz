@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Menu, X, ArrowUpRight, Globe } from 'lucide-react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -11,6 +11,8 @@ import { usePathname, useRouter } from 'next/navigation';
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const lastScrollY = useRef(0);
   const [isLangOpen, setIsLangOpen] = useState(false);
   const t = useTranslations('Navbar');
   const pathname = usePathname();
@@ -18,9 +20,18 @@ const Navbar: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      const currentScrollY = window.scrollY;
+      
+      if (currentScrollY > lastScrollY.current && currentScrollY > 50) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+
+      setScrolled(currentScrollY > 20);
+      lastScrollY.current = currentScrollY;
     };
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -87,7 +98,7 @@ const Navbar: React.FC = () => {
       {/* Main Navbar */}
       <nav
         className={`fixed left-0 right-0 z-[100] transition-all duration-500 ${
-          scrolled ? 'top-4' : 'top-8'
+          isVisible ? (scrolled ? 'top-4' : 'top-8') : '-top-40'
         }`}
       >
         <div className="max-w-7xl mx-auto px-6">
