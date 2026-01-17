@@ -52,7 +52,7 @@ const InvestmentProfile: React.FC = () => {
            
            <motion.a
              {...fadeInUp}
-             href="/Website Texte Hendrik Grau.pdf"
+             href="#"
              target="_blank"
              rel="noopener noreferrer"
              className="inline-flex items-center gap-3 px-8 py-4 bg-stone-900 text-white rounded-full hover:bg-gold hover:text-stone-900 transition-all shadow-lg hover:shadow-2xl hover:-translate-y-1 group"
