@@ -1,0 +1,19 @@
+import createNextIntlPlugin from 'next-intl/plugin';
+import type { NextConfig } from 'next';
+
+const withNextIntl = createNextIntlPlugin();
+
+const nextConfig: NextConfig = {
+    images: {
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'hoirqrkdgbmvpwutwuwj.supabase.co',
+                port: '',
+                pathname: '/storage/v1/object/public/assets/assets/**',
+            },
+        ],
+    },
+};
+
+export default withNextIntl(nextConfig);

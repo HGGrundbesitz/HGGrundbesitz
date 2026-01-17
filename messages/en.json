@@ -1,0 +1,128 @@
+{
+  "Navbar": {
+    "about": "About Me",
+    "profile": "Acquisition Profile",
+    "companies": "Our Companies",
+    "references": "References",
+    "contact": "Contact"
+  },
+  "Hero": {
+    "badge": "Premium Investment",
+    "title_start": "I buy",
+    "title_end": "Apartment Buildings",
+    "subtitle": "Your partner for discreet and direct real estate sales.",
+    "subtitle_highlight": "No brokers. No detours.",
+    "cta_offer": "Offer Property",
+    "cta_more": "Learn More",
+    "stat_exp": "Years Experience",
+    "stat_discretion": "Discretion",
+    "stat_credit": "Creditworthiness",
+    "scroll": "Scroll"
+  },
+  "About": {
+    "badge": "About Me",
+    "title_start": "Your partner for",
+    "title_highlight": "direct acquisition.",
+    "description_1": "As a private investor with over 25 years of experience, I act independently and personally. My focus is on the sustainable development of a property portfolio.",
+    "description_2": "I guarantee you a discreet transaction at eye level – without brokers, without unnecessary bureaucracy, but with maximum reliability.",
+    "cta": "Offer Property",
+    "signature_role": "Private Investor & CEO",
+    "features": {
+      "direct_buy": { "title": "Direct Purchase", "desc": "No brokers, no commissions" },
+      "solvency": { "title": "Solvency", "desc": "Secured financing and fast liquidity" },
+      "reliability": { "title": "Reliability", "desc": "Binding commitments and adherence to deadlines" },
+      "expertise": { "title": "Expertise", "desc": "Over 25 years of industry experience" }
+    }
+  },
+  "Process": {
+    "badge": "The Process",
+    "title_start": "Selling made",
+    "title_highlight": "easy.",
+    "description": "We reduce complexity to the essentials. A lean, transparent process from the first valuation to immediate payment.",
+    "steps": {
+      "contact": { "title": "Contact", "desc": "Send us the key data. We will check it immediately and confidentially." },
+      "valuation": { "title": "Valuation", "desc": "Viewing and market-based valuation of your property within 48h." },
+      "offer": { "title": "Offer", "desc": "You will receive a binding purchase offer without financing reservation." },
+      "closing": { "title": "Closing", "desc": "Fast notarization and immediate purchase price payment." }
+    }
+  },
+  "InvestmentProfile": {
+    "badge": "Acquisition Profile",
+    "title_start": "We invest in",
+    "title_highlight": "NRW, Berlin & Brandenburg.",
+    "download_btn": "Download Profile",
+    "mfh_card": {
+      "title": "Apartment Buildings",
+      "focus": "Primary Focus",
+      "cta": "Offer Building",
+      "criteria": {
+        "locations": { "title": "Locations", "desc": "NRW, Berlin and Brandenburg." },
+        "volume": { "title": "Volume", "desc": "Purchase value from € 2 million" },
+        "type": { "title": "Property Type", "desc": "Exclusively apartment buildings and residential portfolios" },
+        "condition": { "title": "Condition", "desc": "From well-maintained existing buildings to properties in need of renovation" }
+      }
+    },
+    "land_card": {
+      "title": "Building Plots",
+      "focus": "Secondary Focus",
+      "cta": "Offer Plot",
+      "criteria": {
+        "location": { "title": "Location", "value": "NRW, Berlin & Brandenburg" },
+        "size": { "title": "Size", "value": "From 500 m² plot size" },
+        "law": { "title": "Building Rights", "value": "Open, achievable in short term or existing" }
+      }
+    }
+  },
+  "Footer": {
+    "role": "Private Investor",
+    "navigation": "Navigation",
+    "legal": "Legal",
+    "social": "Social",
+    "imprint": "Imprint",
+    "privacy": "Privacy Policy",
+    "copyright": "© 2026 Hendrik Grau Investment. All rights reserved.",
+    "designed_by": "Designed by HG"
+  },
+  "Contact": {
+    "badge": "Contact",
+    "title_start": "Let's",
+    "title_end": "talk.",
+    "description": "Do you own a property that fits our profile? Fill out the form or call us directly. We guarantee a discreet review.",
+    "form": {
+      "name": "Name",
+      "name_placeholder": "Your Name",
+      "phone": "Phone",
+      "phone_placeholder": "Your Number",
+      "email": "Email",
+      "email_placeholder": "your@email.com",
+      "message": "Message",
+      "message_placeholder": "Property details...",
+      "submit": "Submit",
+      "sending": "Sending...",
+      "sent": "Sent"
+    },
+    "info": {
+      "email_btn": "Send Email",
+      "call_btn": "Call Now",
+      "address_title": "Address",
+      "route": "Get Directions",
+      "phone_title": "Phone",
+      "fax_title": "Fax",
+      "ceo_title": "Management"
+    }
+  },
+  "Carousel": {
+    "badge": "References",
+    "title": "Selected Projects",
+    "description": "An insight into our portfolio of successfully realized residential projects and existing developments.",
+    "view_project": "View Project",
+    "details": {
+      "location": "Location",
+      "realization": "Realization",
+      "status": "Status",
+      "status_value": "Completed",
+      "description_title": "Project Description",
+      "expose_btn": "Request Exposé"
+    }
+  }
+}

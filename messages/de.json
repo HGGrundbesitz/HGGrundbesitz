@@ -1,0 +1,128 @@
+{
+  "Navbar": {
+    "about": "Über mich",
+    "profile": "Ankaufsprofil",
+    "companies": "Unsere Gesellschaften",
+    "references": "Referenzen",
+    "contact": "Kontakt"
+  },
+  "Hero": {
+    "badge": "Premium Investment",
+    "title_start": "Ich kaufe",
+    "title_end": "Mehrfamilienhäuser",
+    "subtitle": "Ihr Partner für den diskreten und direkten Immobilienverkauf.",
+    "subtitle_highlight": "Ohne Makler. Ohne Umwege.",
+    "cta_offer": "Immobilie anbieten",
+    "cta_more": "Mehr erfahren",
+    "stat_exp": "Jahre Erfahrung",
+    "stat_discretion": "Diskretion",
+    "stat_credit": "Bonität",
+    "scroll": "Scrollen"
+  },
+  "About": {
+    "badge": "Über Mich",
+    "title_start": "Ihr Partner für den",
+    "title_highlight": "direkten Ankauf.",
+    "description_1": "Als privater Investor mit langjähriger Erfahrung im Immobilienmarkt stehe ich, Hendrik Grau, persönlich hinter jedem Kauf. Mein Fokus liegt klar auf der Akquisition und dem langfristigen Halten von Mehrfamilienhäusern.",
+    "description_2": "Ich verstehe die Komplexität und den emotionalen Wert, den eine Immobilie darstellt. Deshalb lege ich größten Wert auf eine faire Bewertung, absolute Diskretion und eine zügige, transparente Abwicklung des gesamten Kaufprozesses.",
+    "cta": "Immobilie anbieten",
+    "signature_role": "Privatinvestor & Geschäftsführer",
+    "features": {
+      "direct_buy": { "title": "Direkter Kauf", "desc": "Keine Makler, keine Provisionen" },
+      "solvency": { "title": "Solvenz", "desc": "Gesicherte Finanzierung und schnelle Liquidität" },
+      "reliability": { "title": "Verlässlichkeit", "desc": "Verbindliche Zusagen und Einhaltung von Fristen" },
+      "expertise": { "title": "Expertise", "desc": "Über 25 Jahre Branchenerfahrung" }
+    }
+  },
+  "Process": {
+    "badge": "Der Prozess",
+    "title_start": "Verkauf leicht",
+    "title_highlight": "gemacht.",
+    "description": "Wir reduzieren Komplexität auf das Wesentliche. Ein schlanker, transparenter Prozess von der ersten Bewertung bis zur sofortigen Auszahlung.",
+    "steps": {
+      "contact": { "title": "Kontaktaufnahme", "desc": "Senden Sie uns die Eckdaten. Wir prüfen diese unverzüglich und vertraulich." },
+      "valuation": { "title": "Bewertung", "desc": "Besichtigung und marktgerechte Einwertung Ihrer Immobilie binnen 48h." },
+      "offer": { "title": "Angebot", "desc": "Auf Basis der Bewertung unterbreiten wir Ihnen ein faires Kaufangebot." },
+      "closing": { "title": "Abschluss", "desc": "Wir sorgen für eine schnelle Abwicklung und bedanken uns für Ihre Vertrauens." }
+    }
+  },
+  "InvestmentProfile": {
+    "badge": "Ankaufsprofil",
+    "title_start": "Wir investieren in",
+    "title_highlight": "NRW, Berlin & Brandenburg.",
+    "download_btn": "Suchprofil laden",
+    "mfh_card": {
+      "title": "Mehrfamilienhäuser",
+      "focus": "Primärer Fokus",
+      "cta": "MFH Anbieten",
+      "criteria": {
+        "locations": { "title": "Standorte", "desc": "NRW, Berlin und Brandenburg." },
+        "volume": { "title": "Volumen", "desc": "Ankaufswert ab 2 Mio. €" },
+        "type": { "title": "Immobilienart", "desc": "Ausschließlich Mehrfamilienhäuser und Wohnungspakete" },
+        "condition": { "title": "Zustand", "desc": "Vom gepflegten Bestandsgebäude bis hin zu sanierungsbedürftigen Objekten" }
+      }
+    },
+    "land_card": {
+      "title": "Baugrundstücke",
+      "focus": "Sekundärer Fokus",
+      "cta": "Grundstück Anbieten",
+      "criteria": {
+        "location": { "title": "Lage", "value": "NRW, Berlin & Brandenburg" },
+        "size": { "title": "Größe", "value": "Ab 500 m² Grundstücksgröße" },
+        "law": { "title": "Baurecht", "value": "Offen, kurzfristig schaffbar oder bestehend" }
+      }
+    }
+  },
+  "Footer": {
+    "role": "Gessellschaften",
+    "navigation": "Navigation",
+    "legal": "Rechtliches",
+    "social": "Social",
+    "imprint": "Impressum",
+    "privacy": "Datenschutz",
+    "copyright": "© 2026 Hendrik Grau Investment. Alle Rechte vorbehalten.",
+    "designed_by": "Designed by HG"
+  },
+  "Contact": {
+    "badge": "Kontakt",
+    "title_start": "Lassen Sie uns",
+    "title_end": "sprechen.",
+    "description": "Sie besitzen eine Immobilie, die in unser Profil passt? Füllen Sie das Formular aus oder rufen Sie uns direkt an. Wir garantieren eine diskrete Prüfung.",
+    "form": {
+      "name": "Name",
+      "name_placeholder": "Ihr Name",
+      "phone": "Telefon",
+      "phone_placeholder": "Ihre Nummer",
+      "email": "E-Mail",
+      "email_placeholder": "ihre@email.de",
+      "message": "Nachricht",
+      "message_placeholder": "Eckdaten zur Immobilie...",
+      "submit": "Absenden",
+      "sending": "Wird gesendet...",
+      "sent": "Gesendet"
+    },
+    "info": {
+      "email_btn": "E-Mail schreiben",
+      "call_btn": "Anrufen",
+      "address_title": "Anschrift",
+      "route": "Route planen",
+      "phone_title": "Telefon",
+      "fax_title": "Fax",
+      "ceo_title": "Geschäftsführung"
+    }
+  },
+  "Carousel": {
+    "badge": "Referenzen",
+    "title": "Ausgewählte Projekte",
+    "description": "Ein Einblick in unser Portfolio aus erfolgreich realisierten Wohnbauprojekten und Bestandsentwicklungen.",
+    "view_project": "Projekt ansehen",
+    "details": {
+      "location": "Standort",
+      "realization": "Realisierung",
+      "status": "Status",
+      "status_value": "Abgeschlossen",
+      "description_title": "Projektbeschreibung",
+      "expose_btn": "Exposé anfordern"
+    }
+  }
+}
