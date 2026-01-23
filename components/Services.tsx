@@ -33,7 +33,6 @@ const Services: React.FC = () => {
     'WBW Wohnungsgesellschaft mbH',
     'WBC Wohnungsgesellschaft mbH',
     'Friedrich-Ebert-Straße GmbH',
-    'Altstadtsee 127. VV GMBH',
   ];
 
   return (

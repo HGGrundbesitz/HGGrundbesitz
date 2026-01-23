@@ -38,7 +38,8 @@ const Navbar: React.FC = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   const changeLanguage = (locale: string) => {
-    const newPath = `/${locale}${pathname.replace(/^\/(de|en|ar)/, '')}`;
+    // hier arbabic
+    const newPath = `/${locale}${pathname.replace(/^\/(de|en)/, '')}`;
     router.push(newPath);
     setIsLangOpen(false);
   };
@@ -81,7 +82,7 @@ const Navbar: React.FC = () => {
               <div className="flex gap-4 justify-center mt-4">
                  <button onClick={() => changeLanguage('de')} className="text-stone-400 hover:text-gold">DE</button>
                  <button onClick={() => changeLanguage('en')} className="text-stone-400 hover:text-gold">EN</button>
-                 <button onClick={() => changeLanguage('ar')} className="text-stone-400 hover:text-gold">AR</button>
+                 {/* <button onClick={() => changeLanguage('ar')} className="text-stone-400 hover:text-gold">AR</button> */}
               </div>
               <a
                 href="#contact"
@@ -138,7 +139,7 @@ const Navbar: React.FC = () => {
             {/* Actions */}
             <div className="flex items-center gap-4">
               {/* Language Switcher */}
-              {/* <div className="relative hidden lg:block">
+              <div className="relative hidden lg:block">
                  <button 
                     onClick={() => setIsLangOpen(!isLangOpen)}
                     className="p-2 text-stone-400 hover:text-white transition-colors flex items-center gap-1"
@@ -149,10 +150,10 @@ const Navbar: React.FC = () => {
                     <div className="absolute top-full right-0 mt-2 bg-stone-900 border border-stone-800 rounded-xl overflow-hidden shadow-xl min-w-[100px]">
                        <button onClick={() => changeLanguage('de')} className="block w-full text-left px-4 py-2 text-xs font-bold text-stone-400 hover:bg-stone-800 hover:text-white transition-colors">Deutsch</button>
                        <button onClick={() => changeLanguage('en')} className="block w-full text-left px-4 py-2 text-xs font-bold text-stone-400 hover:bg-stone-800 hover:text-white transition-colors">English</button>
-                       <button onClick={() => changeLanguage('ar')} className="block w-full text-left px-4 py-2 text-xs font-bold text-stone-400 hover:bg-stone-800 hover:text-white transition-colors">العربية</button>
+                       {/* <button onClick={() => changeLanguage('ar')} className="block w-full text-left px-4 py-2 text-xs font-bold text-stone-400 hover:bg-stone-800 hover:text-white transition-colors">العربية</button> */}
                     </div>
                  )}
-              </div> */}
+              </div> 
 
               <a
                 href="#contact"
