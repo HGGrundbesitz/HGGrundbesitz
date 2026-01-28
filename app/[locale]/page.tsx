@@ -8,13 +8,14 @@ import Carousel from '../../components/Carousel';
 import FAQ from '../../components/FAQ';
 import Contact from '../../components/Contact';
 import Footer from '../../components/Footer';
-import Chatbot from '../../components/Chatbot';
+import ScrollToTop from '@/components/ScrollToTop';
 
 export default function Home() {
   return (
     <main className="bg-black min-h-screen text-stone-200 font-sans selection:bg-gold/30 selection:text-white">
       <Navbar />
       <Hero />
+      <ScrollToTop />
       <div id="about">
         <About />
       </div>

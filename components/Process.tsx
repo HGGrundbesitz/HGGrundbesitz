@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Mail, Eye, FileText, CheckCircle } from 'lucide-react';
+import { Mail, Eye, FileText, CheckCircle, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { fadeInUp, staggerContainer } from '@/lib/animations';
 import { useTranslations } from 'next-intl';
@@ -37,64 +37,102 @@ const Process: React.FC = () => {
   ];
 
   return (
-    <section className="py-24 lg:py-40 bg-[#101010] text-white overflow-hidden">
-      <div className="max-w-[1700px] mx-auto px-6 sm:px-12 lg:px-24 relative">
+    <section className="py-16 sm:py-24 lg:py-40 bg-[#101010] text-white overflow-hidden relative">
+      {/* Background effects */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gold/3 rounded-full blur-[150px]" />
+      </div>
+
+      <div className="max-w-[1700px] mx-auto px-4 sm:px-6 lg:px-12 xl:px-24 relative z-10">
         
         {/* Header */}
-        <div className="flex flex-col lg:flex-row gap-16 justify-between items-end mb-32">
-           <motion.div {...fadeInUp} className="max-w-3xl">
-              <span className="text-xs font-bold text-stone-500 uppercase tracking-widest mb-6 block">{t('badge')}</span>
-              <h2 className="text-5xl sm:text-6xl lg:text-7xl font-serif font-medium leading-[1.1] text-white">
-                {t('title_start')} <br/> <span className="text-gold italic">{t('title_highlight')}</span>
-              </h2>
-           </motion.div>
-           <div className="max-w-md border-l border-stone-800 pl-8">
-             <p className="text-stone-400 leading-relaxed text-base">
-               {t('description')}
-             </p>
-           </div>
+        <div className="flex flex-col lg:flex-row gap-8 sm:gap-12 lg:gap-16 justify-between items-start lg:items-end mb-16 sm:mb-24 lg:mb-32">
+          <motion.div {...fadeInUp} className="max-w-3xl">
+            <motion.span 
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-800/50 border border-stone-700/50 text-xs font-bold text-stone-400 uppercase tracking-widest mb-4 sm:mb-6"
+            >
+              <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
+              {t('badge')}
+            </motion.span>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif font-medium leading-[1.1] text-white">
+              {t('title_start')} <br className="hidden sm:block"/> 
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold via-[#F0DFB0] to-gold italic">{t('title_highlight')}</span>
+            </h2>
+          </motion.div>
+          <motion.div 
+            {...fadeInUp}
+            className="max-w-md border-l-2 border-stone-800 pl-6 sm:pl-8"
+          >
+            <p className="text-stone-400 leading-relaxed text-sm sm:text-base">
+              {t('description')}
+            </p>
+          </motion.div>
         </div>
 
         {/* Steps */}
         <div className="relative">
-           {/* Connecting Line (Desktop) */}
-           <div className="hidden lg:block absolute top-[3.25rem] left-0 w-full h-[1px] bg-gradient-to-r from-stone-800 via-stone-800 to-transparent"></div>
+          {/* Connecting Line (Desktop) */}
+          <div className="hidden lg:block absolute top-[3.75rem] left-[3rem] right-[3rem] h-[2px] bg-gradient-to-r from-stone-800 via-stone-700 to-stone-800" />
+          
+          {/* Active progress line */}
+          <motion.div 
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1.5, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
+            className="hidden lg:block absolute top-[3.75rem] left-[3rem] right-[3rem] h-[2px] bg-gradient-to-r from-gold/50 via-gold to-gold/50 origin-left"
+          />
 
-           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-16 lg:gap-12">
-              {steps.map((step, index) => {
-                 const Icon = step.icon;
-                 return (
-                    <motion.div
-                      key={index}
-                      initial={{ opacity: 0, y: 30 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: index * 0.15, duration: 0.8 }}
-                      className="relative group"
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-10 lg:gap-8 xl:gap-12">
+            {steps.map((step, index) => {
+              const Icon = step.icon;
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.15, duration: 0.8 }}
+                  className="relative group bg-stone-900/50 sm:bg-transparent rounded-2xl p-5 sm:p-0 border border-stone-800 sm:border-0"
+                >
+                  {/* Step number circle */}
+                  <div className="flex items-center gap-4 sm:gap-0 sm:justify-center mb-4 sm:mb-10">
+                    <motion.div 
+                      whileHover={{ scale: 1.1 }}
+                      className="relative w-14 h-14 sm:w-24 sm:h-24 lg:w-28 lg:h-28 rounded-full bg-stone-900 border-2 border-stone-800 shadow-[0_10px_40px_rgba(0,0,0,0.3)] flex items-center justify-center text-gold sm:text-stone-500 font-serif text-lg sm:text-2xl z-10 group-hover:border-gold/50 group-hover:text-gold transition-all duration-500"
                     >
-                       {/* Mobile Connecting Line */}
-                       <div className="lg:hidden absolute left-[3.25rem] top-24 bottom-0 w-px bg-stone-800 -z-10 h-full last:hidden"></div>
-
-                       <div className="flex items-center justify-start mb-10">
-                          <div className="w-24 h-24 rounded-full bg-stone-900/50 border border-stone-800 shadow-[0_10px_30px_rgba(0,0,0,0.2)] flex items-center justify-center text-stone-500 font-serif text-2xl z-10 relative group-hover:scale-110 group-hover:text-gold group-hover:border-gold/30 transition-all duration-500">
-                             {step.number}
-                          </div>
-                       </div>
-                       
-                       <div className="pl-4 lg:pl-2 relative">
-                          <div className="absolute -left-4 top-0 w-px h-full bg-gold/20 origin-top scale-y-0 group-hover:scale-y-100 transition-transform duration-500 delay-100 hidden lg:block"></div>
-                          
-                          <h3 className="text-2xl font-serif text-white mb-4 group-hover:translate-x-2 transition-transform duration-300">{step.title}</h3>
-                          <p className="text-stone-400 text-sm leading-relaxed mb-8 group-hover:text-stone-300 transition-colors">{step.description}</p>
-                          
-                          <div className="w-12 h-12 rounded-2xl bg-stone-900 border border-stone-800 flex items-center justify-center text-stone-500 group-hover:bg-gold group-hover:text-black group-hover:border-gold transition-all duration-500">
-                             <Icon className="w-5 h-5" />
-                          </div>
-                       </div>
+                      {step.number}
+                      {/* Ring animation on hover */}
+                      <div className="absolute inset-0 rounded-full border border-gold/20 scale-110 opacity-0 group-hover:opacity-100 group-hover:scale-125 transition-all duration-500" />
                     </motion.div>
-                 )
-              })}
-           </div>
+                    
+                    {/* Mobile: Title next to number */}
+                    <h3 className="sm:hidden text-lg font-serif text-white group-hover:text-gold transition-colors duration-300">{step.title}</h3>
+                  </div>
+                  
+                  <div className="lg:text-center">
+                    <h3 className="hidden sm:block text-xl sm:text-2xl font-serif text-white mb-3 sm:mb-4 group-hover:text-gold transition-colors duration-300">{step.title}</h3>
+                    <p className="text-stone-400 text-sm leading-relaxed mb-4 sm:mb-8 group-hover:text-stone-300 transition-colors">{step.description}</p>
+                    
+                    <motion.div 
+                      whileHover={{ scale: 1.1 }}
+                      className="inline-flex w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-stone-900 sm:bg-stone-900 border border-stone-800 items-center justify-center text-stone-500 group-hover:bg-gold group-hover:text-black group-hover:border-gold transition-all duration-500"
+                    >
+                      <Icon className="w-4 h-4 sm:w-5 sm:h-5" />
+                    </motion.div>
+                  </div>
+
+                  {/* Mobile connecting line */}
+                  {index < steps.length - 1 && (
+                    <div className="sm:hidden absolute -bottom-2 left-7 w-px h-4 bg-gradient-to-b from-stone-700 to-transparent" />
+                  )}
+                </motion.div>
+              )
+            })}
+          </div>
         </div>
 
       </div>
