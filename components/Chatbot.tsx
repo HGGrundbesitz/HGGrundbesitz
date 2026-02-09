@@ -136,7 +136,7 @@ const Chatbot = () => {
         </AnimatePresence>
 
         {/* Toggle Button */}
-        <div className="fixed bottom-10 right-10 z-[100]">
+        <div className="fixed bottom-6 right-6 sm:bottom-8 sm:right-8 z-[100]">
            <button 
             onClick={() => setIsOpen(!isOpen)}
             className={`w-14 h-14 rounded-full shadow-2xl flex items-center justify-center text-black transition-all duration-300 hover:scale-105 active:scale-95 group relative border-2 border-transparent ${isOpen ? 'bg-stone-900 text-white border-stone-700 rotate-90' : 'bg-gold hover:shadow-gold/20'}`}

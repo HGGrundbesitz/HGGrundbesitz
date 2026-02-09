@@ -7,7 +7,6 @@
     "contact": "Kontakt"
   },
   "Hero": {
-    "badge": "Premium Investment",
     "title_start": "Ich kaufe",
     "title_end": "Mehrfamilienhäuser",
     "subtitle": "Ihr Partner für den diskreten und direkten Immobilienverkauf.",
@@ -123,6 +122,77 @@
       "status_value": "Abgeschlossen",
       "description_title": "Projektbeschreibung",
       "expose_btn": "Exposé anfordern"
+    }
+  },
+  "Services": {
+    "badge": "Unsere Kompetenz",
+    "title_start": "Werte schaffen.",
+    "title_highlight": "Langfristig.",
+    "services": {
+      "purchase": {
+        "title": "Ankauf",
+        "desc": "Wir konzentrieren uns auf den schnellen und diskreten Ankauf von Mehrfamilienhäusern. Wir prüfen sorgfältig und fokussieren uns dabei vor allem auf den Nutzen von Potenzialen."
+      },
+      "development": {
+        "title": "Entwicklung",
+        "desc": "Wir entwickeln nachhaltige Konzepte, um den Wert der erworbenen Immobilien zu steigern. Wir schaffen einen Mehrwert für den Immobilienmarkt und die Mieter."
+      },
+      "holding": {
+        "title": "Bestandshaltung",
+        "desc": "Immobilien zu pflegen und langfristig für künftige Generationen zu erhalten, ist unser erklärtes Ziel. Verlässlichkeit und Werterhalt stehen im Fokus."
+      }
+    },
+    "company_section": {
+      "title": "Grau Gruppe",
+      "description": "Ein starker Verbund. Wir decken die gesamte Wertschöpfungskette ab – von der Akquisition bis zum Bestandsmanagement."
+    },
+    "companies": {
+      "grau_ag": "Grau Grundbesitz AG",
+      "hg_gmbh": "HG Grundbesitz GmbH",
+      "wbw_gmbh": "WBW Wohnungsgesellschaft mbH",
+      "wbc_gmbh": "WBC Wohnungsgesellschaft mbH",
+      "fes_gmbh": "Friedrich-Ebert-Straße GmbH"
+    }
+  },
+  "FAQ": {
+    "badge": "Wissenswertes",
+    "title": "Häufige Fragen.",
+    "faqs": {
+      "broker_fees": {
+        "question": "Fallen Maklergebühren an?",
+        "answer": "Nein. Da wir als private Investoren direkt kaufen, entfallen sämtliche Maklerprovisionen für Sie. Der Verkauf ist für Sie provisionsfrei."
+      },
+      "purchase_speed": {
+        "question": "Wie schnell können Sie kaufen?",
+        "answer": "Da wir über eine gesicherte Finanzierung verfügen, können wir in der Regel innerhalb von 2-4 Wochen nach Einigung den Notartermin wahrnehmen."
+      },
+      "renovation_objects": {
+        "question": "Kaufen Sie auch sanierungsbedürftige Objekte?",
+        "answer": "Ja, absolut. Wir sind spezialisiert auf die Entwicklung von Immobilien und kaufen auch Objekte mit Instandhaltungsstau oder Leerstand."
+      }
+    },
+    "cta_text": "Haben Sie weitere Fragen?",
+    "cta_button": "Kontaktieren Sie uns"
+  },
+  "Testimonials": {
+    "badge": "Echte Erfahrungen von unseren Partnern.",
+    "title": "Was unsere Partner sagen",
+    "testimonials": {
+      "t1": {
+        "quote": "Die Zusammenarbeit mit Herrn Grau war von absoluter Professionalität und Zuverlässigkeit geprägt. Die Transaktion wurde schnell und diskret abgewickelt.",
+        "name": "Dr. Hans-Peter Müller",
+        "role": "Immobilienberater"
+      },
+      "t2": {
+        "quote": "Wir schätzen die transparente Kommunikation und die faire Bewertung. Wir können Herrn Grau uneingeschränkt weiterempfehlen.",
+        "name": "Sabine Schmidt",
+        "role": "Hausverwalterin"
+      },
+      "t3": {
+        "quote": "Ein Partner auf Augenhöhe. Der gesamte Prozess wurde mit höchster Diskretion und Effizienz abgewickelt.",
+        "name": "Thomas Becker",
+        "role": "Privatverkäufer"
+      }
     }
   }
 }

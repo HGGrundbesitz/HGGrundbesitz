@@ -37,10 +37,11 @@ const Process: React.FC = () => {
   ];
 
   return (
-    <section className="py-16 sm:py-24 lg:py-40 bg-[#101010] text-white overflow-hidden relative">
+    <section className="py-20 sm:py-32 lg:py-44 bg-stone-950 text-white overflow-hidden relative">
       {/* Background effects */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gold/3 rounded-full blur-[150px]" />
+        <div className="absolute top-0 right-0 w-[400px] sm:w-[600px] h-[400px] sm:h-[600px] bg-gold/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/4" />
+        <div className="absolute bottom-0 left-0 w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] bg-stone-800/30 rounded-full blur-[80px] translate-y-1/4 -translate-x-1/4" />
       </div>
 
       <div className="max-w-[1700px] mx-auto px-4 sm:px-6 lg:px-12 xl:px-24 relative z-10">
@@ -59,7 +60,7 @@ const Process: React.FC = () => {
             </motion.span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif font-medium leading-[1.1] text-white">
               {t('title_start')} <br className="hidden sm:block"/> 
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold via-[#F0DFB0] to-gold italic">{t('title_highlight')}</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold via-[#F4C285] to-gold italic">{t('title_highlight')}</span>
             </h2>
           </motion.div>
           <motion.div 

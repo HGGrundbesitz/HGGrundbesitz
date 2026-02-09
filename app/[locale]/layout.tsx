@@ -5,7 +5,9 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import SmoothScroll from '../../components/SmoothScroll';
+import Preloader from '../../components/Preloader';
 import { Analytics } from "@vercel/analytics/next"
+
 const geist = Inter({
   subsets: ['latin'],
   variable: '--font-geist',
@@ -39,6 +41,7 @@ export default async function LocaleLayout({
     <html lang={locale} dir={isRtl ? 'rtl' : 'ltr'}>
       <body className={`${geist.variable} bg-stone-950 text-stone-200 min-h-screen flex flex-col antialiased selection:bg-gold/20 selection:text-stone-50`}>
         <NextIntlClientProvider messages={messages}>
+          <Preloader />
           <SmoothScroll />
           {children}
           <Analytics/>

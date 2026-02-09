@@ -44,16 +44,10 @@ const Footer: React.FC = () => {
           
           {/* Brand */}
           <div className="col-span-2 md:col-span-4 lg:col-span-1 mb-4 lg:mb-0">
-            <div className="flex items-center gap-3 mb-4 sm:mb-6">
-              <div className="relative w-10 h-10 sm:w-12 sm:h-12">
-                <Image
-                  src="/Logo2.png"
-                  alt="Hendrik Grau"
-                  fill
-                  className="object-contain"
-                />
-              </div>
-              <h3 className="text-xl sm:text-2xl lg:text-3xl font-serif text-white">Hendrik Grau</h3>
+            <div className="flex flex-col mb-4 sm:mb-6">
+              <span className="text-xs sm:text-sm font-serif text-white tracking-widest font-bold mb-1">
+                HG GRUNDBESITZ GMBH
+              </span>
             </div>
             <p className="text-[10px] sm:text-xs text-gold font-bold uppercase tracking-[0.15em] sm:tracking-[0.2em] mb-4 sm:mb-6 lg:mb-8">{t('role')}</p>
             <div className="space-y-1 sm:space-y-2 text-xs sm:text-sm text-stone-400 font-light leading-relaxed">

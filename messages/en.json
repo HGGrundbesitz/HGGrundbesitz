@@ -7,7 +7,6 @@
     "contact": "Contact"
   },
   "Hero": {
-    "badge": "Premium Investment",
     "title_start": "I buy",
     "title_end": "Apartment Buildings",
     "subtitle": "Your partner for discreet and direct real estate sales.",
@@ -123,6 +122,77 @@
       "status_value": "Completed",
       "description_title": "Project Description",
       "expose_btn": "Request Exposé"
+    }
+  },
+  "Services": {
+    "badge": "Our Competence",
+    "title_start": "Creating Value.",
+    "title_highlight": "Long-term.",
+    "services": {
+      "purchase": {
+        "title": "Purchase",
+        "desc": "We focus on the quick and discreet purchase of apartment buildings. We carefully examine and focus primarily on the potential benefits."
+      },
+      "development": {
+        "title": "Development",
+        "desc": "We develop sustainable concepts to increase the value of the acquired properties. We create added value for the real estate market and the tenants."
+      },
+      "holding": {
+        "title": "Portfolio Management",
+        "desc": "Maintaining properties and preserving them for future generations is our declared goal. Reliability and value retention are our focus."
+      }
+    },
+    "company_section": {
+      "title": "Grau Group",
+      "description": "A strong network. We cover the entire value chain – from acquisition to portfolio management."
+    },
+    "companies": {
+      "grau_ag": "Grau Grundbesitz AG",
+      "hg_gmbh": "HG Grundbesitz GmbH",
+      "wbw_gmbh": "WBW Wohnungsgesellschaft mbH",
+      "wbc_gmbh": "WBC Wohnungsgesellschaft mbH",
+      "fes_gmbh": "Friedrich-Ebert-Straße GmbH"
+    }
+  },
+  "FAQ": {
+    "badge": "Worth Knowing",
+    "title": "Frequently Asked Questions.",
+    "faqs": {
+      "broker_fees": {
+        "question": "Are there broker fees?",
+        "answer": "No. Since we buy directly as private investors, there are no broker commissions for you. The sale is commission-free for you."
+      },
+      "purchase_speed": {
+        "question": "How quickly can you buy?",
+        "answer": "Since we have secured financing, we can usually attend the notary appointment within 2-4 weeks after agreement."
+      },
+      "renovation_objects": {
+        "question": "Do you also buy properties in need of renovation?",
+        "answer": "Yes, absolutely. We specialize in the development of real estate and also buy properties with maintenance backlogs or vacancies."
+      }
+    },
+    "cta_text": "Do you have any further questions?",
+    "cta_button": "Contact Us"
+  },
+  "Testimonials": {
+    "badge": "Real experiences from our partners.",
+    "title": "What our partners say",
+    "testimonials": {
+      "t1": {
+        "quote": "The collaboration with Mr. Grau was characterized by absolute professionalism and reliability. The transaction was completed quickly and discreetly.",
+        "name": "Dr. Hans-Peter Müller",
+        "role": "Real Estate Consultant"
+      },
+      "t2": {
+        "quote": "We appreciate the transparent communication and fair valuation. We can recommend Mr. Grau without reservation.",
+        "name": "Sabine Schmidt",
+        "role": "Property Manager"
+      },
+      "t3": {
+        "quote": "A partner at eye level. The entire process was handled with the utmost discretion and efficiency.",
+        "name": "Thomas Becker",
+        "role": "Private Seller"
+      }
     }
   }
 }

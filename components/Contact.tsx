@@ -45,7 +45,7 @@ const Contact: React.FC = () => {
       </div>
 
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 xl:px-16 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-16 xl:gap-24 items-start lg:items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-16 xl:gap-24 items-start lg:items-center">
           
           {/* Left: Content & Form */}
           <motion.div
@@ -200,7 +200,7 @@ const Contact: React.FC = () => {
                     </div>
                     <div>
                       <h4 className="text-[9px] sm:text-[10px] font-bold text-stone-500 uppercase tracking-widest mb-1">{t('info.phone_title')}</h4>
-                      <a href="tel:+4925139479064" className="text-white hover:text-gold transition-colors text-sm sm:text-base ltr:text-left rtl:text-right" dir="ltr">+49 251 39479064</a>
+                      <a href="tel:+4925139479064" className="text-white hover:text-gold transition-colors text-sm font-medium tracking-tight">+49 251 39479064</a>
                     </div>
                   </div>
                   

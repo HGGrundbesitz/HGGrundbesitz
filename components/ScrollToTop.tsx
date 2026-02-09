@@ -38,7 +38,7 @@ const ScrollToTop: React.FC = () => {
           exit={{ opacity: 0, scale: 0.8, y: 20 }}
           transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
           onClick={scrollToTop}
-          className="fixed bottom-6 right-6 sm:bottom-8 sm:right-8 z-50 w-12 h-12 sm:w-14 sm:h-14 bg-gold text-black rounded-full flex items-center justify-center shadow-lg shadow-gold/20 hover:bg-white hover:shadow-white/20 transition-all duration-300 group"
+          className="fixed bottom-24 right-6 sm:bottom-28 sm:right-8 z-50 w-12 h-12 sm:w-14 sm:h-14 bg-gold text-black rounded-full flex items-center justify-center shadow-lg shadow-gold/20 hover:bg-white hover:shadow-white/20 transition-all duration-300 group"
           aria-label="Scroll to top"
         >
           <ArrowUp className="w-5 h-5 sm:w-6 sm:h-6 group-hover:-translate-y-0.5 transition-transform" />

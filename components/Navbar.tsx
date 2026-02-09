@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Menu, X, ArrowUpRight, Globe, ChevronDown } from 'lucide-react';
 import Image from 'next/image';
+import Flag from 'react-world-flags';
 import { motion, AnimatePresence, cubicBezier } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
@@ -101,13 +102,10 @@ const Navbar: React.FC = () => {
             
             {/* Header with logo and close */}
             <div className="flex items-center justify-between px-6 py-6 relative z-10">
-              <div className="relative w-16 h-16">
-                <Image
-                  src="/Logo2.png"
-                  alt="Hendrik Grau"
-                  fill
-                  className="object-contain"
-                />
+              <div className="relative">
+                <span className="text-sm sm:text-base font-serif text-white tracking-widest font-bold">
+                  HG GRUNDBESITZ GMBH
+                </span>
               </div>
               <motion.button
                 onClick={toggleMenu}
@@ -145,13 +143,18 @@ const Navbar: React.FC = () => {
               
               {/* Language Switcher - Mobile */}
               <motion.div variants={menuItemVariants} className="flex gap-3 mt-8">
-                {['de', 'en', 'ar'].map((lang) => (
-                  <button 
-                    key={lang}
-                    onClick={() => changeLanguage(lang)} 
-                    className="px-5 py-2.5 rounded-full border border-stone-800 text-stone-400 hover:text-white hover:border-gold hover:bg-gold/10 transition-all text-sm font-bold uppercase tracking-wider"
+                {[
+                  { code: 'de', flag: 'DE' },
+                  { code: 'en', flag: 'GB' },
+                  { code: 'ar', flag: 'AE' }
+                ].map((lang) => (
+                  <button
+                    key={lang.code}
+                    onClick={() => changeLanguage(lang.code)}
+                    className="px-4 py-2.5 rounded-full border border-stone-800 text-stone-400 hover:text-white hover:border-gold hover:bg-gold/10 transition-all text-sm font-bold uppercase tracking-wider flex items-center gap-2"
                   >
-                    {lang.toUpperCase()}
+                    <Flag code={lang.flag} style={{ width: '16px', height: '12px' }} />
+                    {lang.code.toUpperCase()}
                   </button>
                 ))}
               </motion.div>
@@ -200,21 +203,16 @@ const Navbar: React.FC = () => {
               borderColor: scrolled ? 'rgba(68, 64, 60, 0.5)' : 'rgba(0, 0, 0, 0)',
             }}
             transition={{ duration: 0.3 }}
-            className={`flex items-center justify-between px-4 sm:px-6 lg:px-8 py-3 sm:py-4 rounded-2xl sm:rounded-full backdrop-blur-xl ${
+            className={`flex items-center justify-between px-4 sm:px-6 lg:px-8 py-5 sm:py-6 lg:py-8 rounded-2xl sm:rounded-full backdrop-blur-xl ${
               scrolled ? 'shadow-2xl shadow-black/20' : ''
             }`}
             style={{ border: '1px solid' }}
           >
             {/* Logo */}
             <a href="#" className="flex items-center gap-3 group relative">
-              <div className="relative w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20">
-                <Image
-                  src="/Logo2.png"
-                  alt="Hendrik Grau"
-                  fill
-                  className="object-contain transition-transform duration-300 group-hover:scale-105"
-                />
-              </div>
+              <span className="text-xs sm:text-sm lg:text-base font-serif text-white whitespace-nowrap tracking-widest font-bold transition-transform duration-300 group-hover:scale-105">
+                HG GRUNDBESITZ GMBH
+              </span>
             </a>
 
             {/* Desktop Links */}
@@ -256,21 +254,21 @@ const Navbar: React.FC = () => {
                       className="absolute top-full right-0 mt-3 bg-stone-900/95 backdrop-blur-xl border border-stone-800 rounded-2xl overflow-hidden shadow-2xl shadow-black/50 min-w-[140px]"
                     >
                       {[
-                        { code: 'de', label: 'Deutsch' },
-                        { code: 'en', label: 'English' },
-                        { code: 'ar', label: 'العربية' }
+                        { code: 'de', label: 'Deutsch', flag: 'DE' },
+                        { code: 'en', label: 'English', flag: 'GB' },
+                        { code: 'ar', label: 'العربية', flag: 'AE' }
                       ].map((lang, idx) => (
-                        <button 
-                          key={lang.code}
-                          onClick={() => changeLanguage(lang.code)} 
-                          className={`group flex items-center gap-3 w-full text-left px-4 py-3 text-sm text-stone-300 hover:bg-gold/10 hover:text-gold transition-all ${
-                            idx !== 2 ? 'border-b border-stone-800/50' : ''
-                          }`}
-                        >
-                          <span className="w-6 text-stone-500 text-xs font-mono group-hover:text-gold">{lang.code.toUpperCase()}</span>
-                          <span>{lang.label}</span>
-                        </button>
-                      ))}
+                          <button
+                            key={lang.code}
+                            onClick={() => changeLanguage(lang.code)}
+                            className={`group flex items-center gap-3 w-full text-left px-4 py-3 text-sm text-stone-300 hover:bg-gold/10 hover:text-gold transition-all ${
+                              idx !== 2 ? 'border-b border-stone-800/50' : ''
+                            }`}
+                          >
+                            <Flag code={lang.flag} style={{ width: '20px', height: '15px' }} />
+                            <span>{lang.label}</span>
+                          </button>
+                        ))}
                     </motion.div>
                   )}
                 </AnimatePresence>
