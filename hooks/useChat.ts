@@ -21,8 +21,8 @@ const useChat = () => {
       const apiHistory = messages
         .filter((msg, index) => !(index === 0 && msg.role === 'assistant'))
         .map(m => ({
-          role: m.role === 'assistant' ? 'model' : 'user',
-          parts: [{ text: m.content }],
+          role: m.role,
+          content: m.content,
         }));
 
       const response = await fetch('/api/chat', {

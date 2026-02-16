@@ -1,15 +1,17 @@
 import { NextResponse } from "next/server";
-import { GoogleGenerativeAI } from "@google/generative-ai";
+import OpenAI from "openai";
 
 export const runtime = "nodejs";
 
-const apiKey = process.env.GEMINI_API_KEY;
+const apiKey = process.env.OPENAI_API_KEY;
 
 if (!apiKey) {
-  console.warn("⚠️ GEMINI_API_KEY is missing.");
+  console.warn("⚠️ OPENAI_API_KEY is missing.");
 }
 
-const genAI = new GoogleGenerativeAI(apiKey ?? "");
+const openai = new OpenAI({
+  apiKey: apiKey ?? "",
+});
 
 function normalizeHistory(history: any[] = []) {
   if (!Array.isArray(history)) return [];
@@ -25,11 +27,12 @@ function normalizeHistory(history: any[] = []) {
 
       if (!content.trim()) return null;
 
-      const role = m?.role === "assistant" || m?.role === "model" ? "model" : "user";
+      const role =
+        m?.role === "assistant" || m?.role === "model" ? "assistant" : "user";
 
-      return { role, parts: [{ text: content }] };
+      return { role, content };
     })
-    .filter(Boolean) as Array<{ role: "user" | "model"; parts: { text: string }[] }>;
+    .filter(Boolean) as Array<{ role: "user" | "assistant"; content: string }>;
 }
 
 const SYSTEM_INSTRUCTION = `
@@ -84,7 +87,7 @@ export async function POST(req: Request) {
   try {
     if (!apiKey) {
       return NextResponse.json(
-        { error: "Server configuration error: GEMINI_API_KEY missing" },
+        { error: "Server configuration error: OPENAI_API_KEY missing" },
         { status: 500 }
       );
     }
@@ -101,22 +104,21 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: "Missing message" }, { status: 400 });
     }
 
-    const model = genAI.getGenerativeModel({
-      model: 'gemini-2.0-flash',
-      systemInstruction: SYSTEM_INSTRUCTION,
+    const messages: any[] = [
+      { role: "system", content: SYSTEM_INSTRUCTION },
+      ...normalizeHistory(history),
+      { role: "user", content: message },
+    ];
+
+    const completion = await openai.chat.completions.create({
+      model: "gpt-4o",
+      messages: messages,
+      temperature: 0.3,
+      top_p: 0.9,
+      max_tokens: 500,
     });
 
-    const chat = model.startChat({
-      history: normalizeHistory(history),
-      generationConfig: {
-        temperature: 0.3,
-        topP: 0.9,
-        maxOutputTokens: 500,
-      },
-    });
-
-    const result = await chat.sendMessage(message);
-    const text = result.response.text();
+    const text = completion.choices[0]?.message?.content || "";
 
     return NextResponse.json({ text });
   } catch (err) {
