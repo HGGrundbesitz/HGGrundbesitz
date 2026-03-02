@@ -49,7 +49,7 @@ export function Testimonials() {
       author: {
         name: t('testimonials.t3.name'),
         title: t('testimonials.t3.role'),
-        avatar: 'https://images.unsplash.com/photo-1580852300654-037841933214?w=200&h=200&fit=crop&crop=face',
+        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face',
       },
       rating: 5.0,
       rotation: 5,
