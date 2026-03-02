@@ -33,10 +33,10 @@ const InvestmentProfile: React.FC = () => {
   ];
 
   const fadeUp = {
-    initial: { opacity: 0 },
+    initial: { opacity: 1 },
     whileInView: { opacity: 1 },
     viewport: { once: true, margin: '-50px' },
-    transition: { duration: 0.8 }
+    transition: { duration: 0 }
   };
 
   return (
@@ -52,8 +52,8 @@ const InvestmentProfile: React.FC = () => {
         {/* Header */}
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-16 sm:mb-20 lg:mb-24 gap-10 lg:gap-16">
           <motion.div {...fadeUp} className="max-w-3xl">
-            <motion.span 
-              initial={{ opacity: 0 }}
+            <motion.span
+              initial={{ opacity: 1 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold/10 border border-gold/20 text-[10px] font-bold text-gold uppercase tracking-[0.2em] mb-8"

@@ -32,10 +32,10 @@ const About: React.FC = () => {
   ];
 
   const stableFade = {
-    initial: { opacity: 0 },
+    initial: { opacity: 1 },
     whileInView: { opacity: 1 },
     viewport: { once: true, margin: '-50px' },
-    transition: { duration: 0.8 }
+    transition: { duration: 0 }
   };
 
   return (
@@ -53,8 +53,8 @@ const About: React.FC = () => {
           {...stableFade}
           className="text-center max-w-4xl mx-auto mb-16 sm:mb-20 lg:mb-32"
         >
-          <motion.span 
-            initial={{ opacity: 0 }}
+          <motion.span
+            initial={{ opacity: 1 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold/10 border border-gold/20 text-[10px] font-bold text-gold uppercase tracking-[0.2em] mb-8 sm:mb-10"
@@ -83,8 +83,8 @@ const About: React.FC = () => {
               {t('cta')}
             </motion.a>
             
-            <motion.div 
-              initial={{ opacity: 0 }}
+            <motion.div
+              initial={{ opacity: 1 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               className="flex items-center gap-5 text-left"

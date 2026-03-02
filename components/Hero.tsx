@@ -23,9 +23,9 @@ const Hero: React.FC = () => {
   };
 
   const stableFade: any = {
-    initial: { opacity: 0 },
+    initial: { opacity: 1 },
     animate: { opacity: 1 },
-    transition: { duration: 1.2, ease: "easeOut" }
+    transition: { duration: 0 }
   };
 
   return (

@@ -16,16 +16,37 @@ const Contact: React.FC = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    // Reset form
-    setFormState({ name: '', email: '', phone: '', message: '' });
+    setErrorMessage('');
+    
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formState),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Ein Fehler ist aufgetreten.');
+      }
+
+      setIsSubmitted(true);
+      // Reset form
+      setFormState({ name: '', email: '', phone: '', message: '' });
+    } catch (error: any) {
+      console.error('Error submitting form:', error);
+      setErrorMessage(error.message || 'Bitte versuchen Sie es später erneut.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -56,8 +77,8 @@ const Contact: React.FC = () => {
             className="space-y-6 sm:space-y-8 lg:space-y-10"
           >
             <div>
-              <motion.span 
-                initial={{ opacity: 0, y: 10 }}
+              <motion.span
+                initial={{ opacity: 1, y: 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-stone-800 bg-stone-900/50 mb-4 sm:mb-6"
@@ -127,14 +148,14 @@ const Contact: React.FC = () => {
                 />
               </div>
 
-              <motion.button 
+              <motion.button
                 type="submit"
                 disabled={isSubmitting || isSubmitted}
                 whileHover={{ scale: 1.01 }}
                 whileTap={{ scale: 0.99 }}
                 className={`w-full py-3.5 sm:py-4 rounded-lg sm:rounded-xl font-bold uppercase tracking-widest text-[11px] sm:text-xs transition-all duration-300 disabled:cursor-not-allowed flex items-center justify-center gap-2 ${
-                  isSubmitted 
-                    ? 'bg-emerald-500 text-white' 
+                  isSubmitted
+                    ? 'bg-emerald-500 text-white'
                     : 'bg-gold text-black hover:bg-white'
                 }`}
               >
@@ -155,6 +176,12 @@ const Contact: React.FC = () => {
                   </>
                 )}
               </motion.button>
+              
+              {errorMessage && (
+                <p className="text-red-500 text-xs sm:text-sm text-center mt-3 animate-fade-in">
+                  {errorMessage}
+                </p>
+              )}
             </form>
           </motion.div>
 

@@ -85,8 +85,8 @@ const Carousel: React.FC = () => {
         {/* Header */}
         <div className="flex flex-col md:flex-row items-start md:items-end justify-between mb-12 sm:mb-20 lg:mb-24 gap-8 lg:gap-12">
           <motion.div {...fadeInUp} className="max-w-2xl">
-            <motion.span 
-              initial={{ opacity: 0, y: 10 }}
+            <motion.span
+              initial={{ opacity: 1, y: 0 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold/10 border border-gold/20 text-[10px] font-bold text-gold uppercase tracking-[0.2em] mb-8"

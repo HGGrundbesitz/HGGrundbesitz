@@ -30,10 +30,10 @@ const FAQ: React.FC = () => {
 
   // Professional short-distance animations
   const fadeUp = {
-    initial: { opacity: 0, y: 20 },
+    initial: { opacity: 1, y: 0 },
     whileInView: { opacity: 1, y: 0 },
     viewport: { once: true, margin: '-50px' },
-    transition: { duration: 0.6 }
+    transition: { duration: 0 }
   };
 
   return (
@@ -48,8 +48,8 @@ const FAQ: React.FC = () => {
         
         {/* Header - Matched with About */}
         <motion.div {...fadeUp} className="text-center mb-16 sm:mb-20">
-          <motion.span 
-            initial={{ opacity: 0, y: 10 }}
+          <motion.span
+            initial={{ opacity: 1, y: 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold/10 border border-gold/20 text-[10px] font-bold text-gold uppercase tracking-[0.2em] mb-6 sm:mb-8"

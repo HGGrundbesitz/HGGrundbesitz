@@ -134,34 +134,29 @@ body {
 /* Utilities */
 /* Smooth animations */
 .animate-fade-in-up {
-  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  opacity: 0;
+  opacity: 1;
 }
 
 .animate-fade-in {
-  animation: fadeIn 1s ease-out forwards;
-  opacity: 0;
+  opacity: 1;
 }
 
 .animate-slide-in-left {
-  animation: slideInLeft 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  opacity: 0;
+  opacity: 1;
 }
 
 .animate-slide-in-right {
-  animation: slideInRight 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  opacity: 0;
+  opacity: 1;
 }
 
 .animate-scale-in {
-  animation: scaleIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  opacity: 0;
+  opacity: 1;
 }
 
 @keyframes fadeInUp {
   from {
-    opacity: 0;
-    transform: translateY(40px);
+    opacity: 1;
+    transform: translateY(0);
   }
   to {
     opacity: 1;
@@ -171,7 +166,7 @@ body {
 
 @keyframes fadeIn {
   from {
-    opacity: 0;
+    opacity: 1;
   }
   to {
     opacity: 1;
@@ -180,8 +175,8 @@ body {
 
 @keyframes slideInLeft {
   from {
-    opacity: 0;
-    transform: translateX(-40px);
+    opacity: 1;
+    transform: translateX(0);
   }
   to {
     opacity: 1;
@@ -191,8 +186,8 @@ body {
 
 @keyframes slideInRight {
   from {
-    opacity: 0;
-    transform: translateX(40px);
+    opacity: 1;
+    transform: translateX(0);
   }
   to {
     opacity: 1;
@@ -202,8 +197,8 @@ body {
 
 @keyframes scaleIn {
   from {
-    opacity: 0;
-    transform: scale(0.9);
+    opacity: 1;
+    transform: scale(1);
   }
   to {
     opacity: 1;
@@ -281,10 +276,8 @@ body {
 
 /* Reveal Animation */
 .reveal-on-scroll {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: opacity, transform;
+  opacity: 1;
+  transform: translateY(0);
 }
 .reveal-on-scroll.is-visible {
   opacity: 1;

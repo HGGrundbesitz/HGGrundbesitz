@@ -49,8 +49,8 @@ const Process: React.FC = () => {
         {/* Header */}
         <div className="flex flex-col lg:flex-row gap-8 sm:gap-12 lg:gap-16 justify-between items-start lg:items-end mb-16 sm:mb-24 lg:mb-32">
           <motion.div {...fadeInUp} className="max-w-3xl">
-            <motion.span 
-              initial={{ opacity: 0, y: 10 }}
+            <motion.span
+              initial={{ opacity: 1, y: 0 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-800/50 border border-stone-700/50 text-xs font-bold text-stone-400 uppercase tracking-widest mb-4 sm:mb-6"
@@ -93,10 +93,10 @@ const Process: React.FC = () => {
               return (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 40 }}
+                  initial={{ opacity: 1, y: 0 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: index * 0.15, duration: 0.8 }}
+                  transition={{ duration: 0 }}
                   className="relative group bg-stone-900/50 sm:bg-transparent rounded-2xl p-5 sm:p-0 border border-stone-800 sm:border-0"
                 >
                   {/* Step number circle */}

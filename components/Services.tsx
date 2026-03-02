@@ -39,17 +39,17 @@ const Services: React.FC = () => {
 
   // Professional short-distance animations
   const fadeUp = {
-    initial: { opacity: 0, y: 20 },
+    initial: { opacity: 1, y: 0 },
     whileInView: { opacity: 1, y: 0 },
     viewport: { once: true, margin: '-50px' },
-    transition: { duration: 0.6 }
+    transition: { duration: 0 }
   };
 
   const staggerContainer = {
     initial: {},
     whileInView: {
       transition: {
-        staggerChildren: 0.1
+        staggerChildren: 0
       }
     },
     viewport: { once: true, margin: '-50px' }
@@ -70,8 +70,8 @@ const Services: React.FC = () => {
           {...fadeUp}
           className="text-center max-w-4xl mx-auto mb-16 sm:mb-20 lg:mb-32"
         >
-          <motion.span 
-            initial={{ opacity: 0, y: 10 }}
+          <motion.span
+            initial={{ opacity: 1, y: 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold/10 border border-gold/20 text-[10px] font-bold text-gold uppercase tracking-[0.2em] mb-8 sm:mb-10"
@@ -140,10 +140,10 @@ const Services: React.FC = () => {
               {companies.map((company, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, x: -10 }}
+                  initial={{ opacity: 1, x: 0 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
+                  transition={{ duration: 0 }}
                   className="group flex items-center gap-4 sm:gap-5 py-4 sm:py-5 border-b border-stone-50 hover:border-gold/20 transition-colors cursor-default"
                 >
                   <div className="w-2.5 h-2.5 rounded-full bg-stone-100 group-hover:bg-gold group-hover:scale-125 transition-all duration-300" />

@@ -1,4 +1,9 @@
 {
+  "Metadata": {
+    "title": "Hendrik Grau Investment | Ankauf Mehrfamilienhäuser ohne Makler",
+    "description": "Privatinvestor für den direkten Ankauf von Mehrfamilienhäusern in NRW, Berlin & Brandenburg. Keine Maklerprovision, schnelle Abwicklung, diskret & solvent.",
+    "keywords": "Immobilienankauf, Mehrfamilienhaus verkaufen, ohne Makler, Privatinvestor, NRW, Berlin, Brandenburg, Hendrik Grau, Immobilien Investment, Wohnungspaket"
+  },
   "Navbar": {
     "about": "Über mich",
     "profile": "Ankaufsprofil",
@@ -9,7 +14,7 @@
   "Hero": {
     "title_start": "Ich kaufe",
     "title_end": "Mehrfamilienhäuser",
-    "subtitle": "Ihr Partner für den diskreten und direkten Immobilienverkauf.",
+    "subtitle": "Ihr privater Investor für den diskreten Immobilienverkauf ohne Makler.",
     "subtitle_highlight": "Ohne Umwege.",
     "cta_offer": "Immobilie anbieten",
     "cta_more": "Mehr erfahren",
@@ -22,8 +27,8 @@
     "badge": "Über Mich",
     "title_start": "Ihr Partner für den",
     "title_highlight": "direkten Ankauf.",
-    "description_1": "Als privater Investor mit langjähriger Erfahrung im Immobilienmarkt stehe ich persönlich hinter jedem Kauf. Mein Fokus liegt klar auf der Akquisition und dem langfristigen Halten von Mehrfamilienhäusern.",
-    "description_2": "Ich verstehe die Komplexität und den emotionalen Wert, den eine Immobilie darstellt. Deshalb lege ich größten Wert auf eine faire Bewertung, absolute Diskretion und eine zügige, transparente Abwicklung des gesamten Kaufprozesses.",
+    "description_1": "Als privater Investor mit über 25 Jahren Erfahrung im Immobilienmarkt stehe ich persönlich hinter jedem Kauf. Mein Fokus liegt auf der Akquisition und dem langfristigen Halten von Mehrfamilienhäusern in NRW, Berlin und Brandenburg.",
+    "description_2": "Ich verstehe die Komplexität und den emotionalen Wert einer Immobilie. Deshalb garantiere ich eine faire Bewertung, absolute Diskretion und eine zügige, transparente Abwicklung ohne Maklerprovision.",
     "cta": "Immobilie anbieten",
     "signature_role": "Privatinvestor & Geschäftsführer",
     "features": {
@@ -39,10 +44,10 @@
     "title_highlight": "gemacht.",
     "description": "Wir reduzieren Komplexität auf das Wesentliche. Ein schlanker, transparenter Prozess von der ersten Bewertung bis zur sofortigen Auszahlung.",
     "steps": {
-      "contact": { "title": "Kontaktaufnahme", "desc": "Senden Sie uns die Eckdaten. Wir prüfen diese unverzüglich und vertraulich." },
+      "contact": { "title": "Kontaktaufnahme", "desc": "Senden Sie uns die Eckdaten Ihrer Immobilie. Wir prüfen diese unverzüglich und vertraulich." },
       "valuation": { "title": "Bewertung", "desc": "Besichtigung und marktgerechte Einwertung Ihrer Immobilie binnen 48h." },
-      "offer": { "title": "Angebot", "desc": "Auf Basis der Bewertung unterbreiten wir Ihnen ein faires Kaufangebot." },
-      "closing": { "title": "Abschluss", "desc": "Wir sorgen für eine schnelle Abwicklung und bedanken uns für Ihre Vertrauens." }
+      "offer": { "title": "Angebot", "desc": "Auf Basis der Bewertung unterbreiten wir Ihnen ein faires, provisionsfreies Kaufangebot." },
+      "closing": { "title": "Abschluss", "desc": "Wir sorgen für eine schnelle notarielle Abwicklung und sofortige Kaufpreiszahlung." }
     }
   },
   "InvestmentProfile": {
@@ -55,8 +60,8 @@
       "focus": "Primärer Fokus",
       "cta": "MFH Anbieten",
       "criteria": {
-        "locations": { "title": "Standorte", "desc": "NRW, Berlin und Brandenburg." },
-        "volume": { "title": "Volumen", "desc": "Ankaufswert ab 2 Mio. €" },
+        "locations": { "title": "Standorte", "desc": "NRW (Münsterland, Ruhrgebiet), Berlin und Brandenburg." },
+        "volume": { "title": "Volumen", "desc": "Ankaufswert ab 2 Mio. € bis 50 Mio. €" },
         "type": { "title": "Immobilienart", "desc": "Ausschließlich Mehrfamilienhäuser und Wohnungspakete" },
         "condition": { "title": "Zustand", "desc": "Vom gepflegten Bestandsgebäude bis hin zu sanierungsbedürftigen Objekten" }
       }
@@ -86,7 +91,7 @@
     "badge": "Kontakt",
     "title_start": "Lassen Sie uns",
     "title_end": "sprechen.",
-    "description": "Sie besitzen eine Immobilie, die in unser Profil passt? Füllen Sie das Formular aus oder rufen Sie uns direkt an. Wir garantieren eine diskrete Prüfung.",
+    "description": "Sie besitzen ein Mehrfamilienhaus oder Grundstück, das in unser Profil passt? Füllen Sie das Formular aus oder rufen Sie uns direkt an. Wir garantieren eine diskrete Prüfung.",
     "form": {
       "name": "Name",
       "name_placeholder": "Ihr Name",
@@ -95,7 +100,7 @@
       "email": "E-Mail",
       "email_placeholder": "ihre@email.de",
       "message": "Nachricht",
-      "message_placeholder": "Eckdaten zur Immobilie...",
+      "message_placeholder": "Eckdaten zur Immobilie (Adresse, Baujahr, Fläche)...",
       "submit": "Absenden",
       "sending": "Wird gesendet...",
       "sent": "Gesendet"

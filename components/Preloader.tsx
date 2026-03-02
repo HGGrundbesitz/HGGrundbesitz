@@ -23,10 +23,10 @@ const Preloader: React.FC = () => {
   const letters = text.split("");
 
   const container: any = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 1 },
     visible: {
       opacity: 1,
-      transition: { staggerChildren: 0.05, delayChildren: 0.2 },
+      transition: { staggerChildren: 0, delayChildren: 0 },
     },
   };
 
@@ -36,14 +36,13 @@ const Preloader: React.FC = () => {
       y: 0,
       filter: "blur(0px)",
       transition: {
-        duration: 1,
-        ease: [0.16, 1, 0.3, 1]
+        duration: 0
       },
     },
     hidden: {
-      opacity: 0,
-      y: 20,
-      filter: "blur(10px)",
+      opacity: 1,
+      y: 0,
+      filter: "blur(0px)",
     },
   };
 
@@ -100,9 +99,9 @@ const Preloader: React.FC = () => {
             </div>
 
             <motion.span
-              initial={{ opacity: 0, letterSpacing: "0.2em" }}
+              initial={{ opacity: 1, letterSpacing: "0.5em" }}
               animate={{ opacity: 1, letterSpacing: "0.5em" }}
-              transition={{ delay: 1.5, duration: 1.2 }}
+              transition={{ delay: 0, duration: 0 }}
               className="mt-8 text-gold/50 text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.5em] ml-[0.5em] text-center select-none"
             >
               Excellence in Real Estate
