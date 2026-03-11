@@ -101,22 +101,22 @@ body {
     background: #000000;
   }
   ::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, #60A5FA 0%, #172554 100%);
+    background: linear-gradient(180deg, #D4AF37 0%, #8B6914 100%);
     border-radius: 4px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(180deg, #93C5FD 0%, #60A5FA 100%);
+    background: linear-gradient(180deg, #F4C285 0%, #D4AF37 100%);
   }
 }
 
 ::selection {
-  background-color: rgba(96, 165, 250, 0.3);
+  background-color: rgba(212, 175, 55, 0.3);
   color: #f5f5f4;
 }
 
 /* Focus states for accessibility */
 :focus-visible {
-  outline: 2px solid #60A5FA;
+  outline: 2px solid var(--color-gold);
   outline-offset: 2px;
 }
 
@@ -224,7 +224,7 @@ body {
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(96, 165, 250, 0.1),
+    rgba(212, 175, 55, 0.1),
     transparent
   );
   background-size: 1000px 100%;
@@ -248,7 +248,7 @@ body {
 
 /* Gradient text */
 .gradient-text {
-  background: linear-gradient(135deg, #60A5FA 0%, #93C5FD 100%);
+  background: linear-gradient(135deg, #D4AF37 0%, #F4C285 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -260,7 +260,7 @@ body {
 }
 
 .hover-glow:hover {
-  box-shadow: 0 0 30px rgba(96, 165, 250, 0.3);
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
 }
 
 /* Fluid Typography - Mobile optimized */
@@ -290,13 +290,13 @@ body {
 
 /* Pulse Animation */
 .pulse-dot {
-  box-shadow: 0 0 0 0 rgba(96, 165, 250, 0.7);
+  box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7);
   animation: pulse-gold 2s infinite;
 }
 @keyframes pulse-gold {
-  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(96, 165, 250, 0.7); }
-  70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(96, 165, 250, 0); }
-  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(96, 165, 250, 0); }
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(212, 175, 55, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
 }
 
 /* Marquee Animation */
@@ -357,7 +357,7 @@ input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   height: 16px; width: 16px;
   border-radius: 50%;
-  background: #60A5FA;
+  background: #D4AF37;
   margin-top: -6px;
   box-shadow: 0 0 0 4px #1c1917, 0 2px 4px rgba(0,0,0,0.5);
   cursor: pointer;

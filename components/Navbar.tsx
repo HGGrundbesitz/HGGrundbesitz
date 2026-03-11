@@ -70,8 +70,6 @@ const Navbar: React.FC = () => {
   const navLinks = [
     { href: '#about', label: t('about') },
     { href: '#profile', label: t('profile') },
-    { href: '#companies', label: t('companies') },
-    { href: '#references', label: t('references') },
   ];
 
   const menuVariants = {
@@ -189,22 +187,22 @@ const Navbar: React.FC = () => {
 
       {/* Main Navbar */}
       <motion.nav
-        initial={{ y: -100 }}
-        animate={{ y: isVisible ? 0 : -150 }}
-        transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-        className={`fixed left-0 right-0 z-[100] transition-all duration-500 ${
-          scrolled ? 'top-3 sm:top-4' : 'top-4 sm:top-6 lg:top-8'
+        initial={{ y: -100, x: '-50%' }}
+        animate={{ y: 0, x: '-50%' }}
+        transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+        className={`fixed left-1/2 z-[100] transition-all duration-500 w-[92%] sm:w-[90%] max-w-4xl ${
+          scrolled ? 'top-3 sm:top-4' : 'top-4 sm:top-6 lg:top-6'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="w-full">
           <motion.div
             animate={{
-              backgroundColor: scrolled ? 'rgba(12, 10, 9, 0.85)' : 'rgba(0, 0, 0, 0)',
-              borderColor: scrolled ? 'rgba(68, 64, 60, 0.5)' : 'rgba(0, 0, 0, 0)',
+              backgroundColor: scrolled ? 'rgba(12, 10, 9, 0.85)' : 'rgba(12, 10, 9, 0.4)',
+              borderColor: scrolled ? 'rgba(68, 64, 60, 0.5)' : 'rgba(68, 64, 60, 0.2)',
             }}
             transition={{ duration: 0.3 }}
-            className={`flex items-center justify-between px-4 sm:px-6 lg:px-8 py-5 sm:py-6 lg:py-8 rounded-2xl sm:rounded-full backdrop-blur-xl ${
-              scrolled ? 'shadow-2xl shadow-black/20' : ''
+            className={`flex items-center justify-between px-4 sm:px-5 lg:px-6 py-2.5 sm:py-3 lg:py-3.5 rounded-full backdrop-blur-xl ${
+              scrolled ? 'shadow-2xl shadow-black/40' : 'shadow-lg shadow-black/10'
             }`}
             style={{ border: '1px solid' }}
           >

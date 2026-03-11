@@ -105,16 +105,28 @@
       "sending": "Sending...",
       "sent": "Sent"
     },
-    "info": {
-      "email_btn": "Send Email",
-      "call_btn": "Call Now",
-      "address_title": "Address",
-      "route": "Get Directions",
-      "phone_title": "Phone",
-      "fax_title": "Fax",
-      "ceo_title": "Management"
-    }
-  },
+      "info": {
+        "email_btn": "Send Email",
+        "call_btn": "Call Now",
+        "address_title": "Address",
+        "route": "Get Directions",
+        "phone_title": "Phone",
+        "fax_title": "Fax",
+        "ceo_title": "Management"
+      }
+    },
+    "DocumentUpload": {
+      "badge": "Secure Upload",
+      "title_start": "Upload",
+      "title_end": "documents.",
+      "description": "Securely upload all relevant documents here (e.g. rent rolls, floor plans, energy certificates) instead of sending them via email.",
+      "dropzone_title": "Drag & drop files here or click to browse",
+      "dropzone_subtitle": "Supported formats: PDF, XLSX, DOCX, JPG (Max. 50MB)",
+      "uploading": "Uploading...",
+      "success": "Upload successful! We have received your documents.",
+      "error": "Upload failed. Please try again.",
+      "btn_upload": "Transmit documents securely"
+    },
   "Carousel": {
     "badge": "References",
     "title": "Selected Projects",

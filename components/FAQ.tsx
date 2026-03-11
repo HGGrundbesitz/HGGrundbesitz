@@ -28,56 +28,56 @@ const FAQ: React.FC = () => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
-  // Professional short-distance animations
   const fadeUp = {
-    initial: { opacity: 1, y: 0 },
+    initial: { opacity: 0, y: 20 },
     whileInView: { opacity: 1, y: 0 },
     viewport: { once: true, margin: '-50px' },
-    transition: { duration: 0 }
+    transition: { duration: 0.6 }
   };
 
   return (
-    <section className="py-20 sm:py-32 bg-[#FAF9F6] text-stone-900 relative overflow-hidden">
-      {/* Premium Background Decor - Matched with About */}
+    <section className="py-24 sm:py-32 lg:py-48 bg-[#0A0A0A] text-stone-200 relative overflow-hidden font-sans border-t border-stone-900/50">
+      {/* Premium Background Decor */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 right-0 w-[500px] sm:w-[700px] h-[500px] sm:h-[700px] bg-gold/5 rounded-full blur-[100px] sm:blur-[150px] -translate-y-1/2 translate-x-1/2 opacity-70" />
-        <div className="absolute bottom-0 left-0 w-[400px] sm:w-[500px] h-[400px] sm:h-[500px] bg-stone-200/40 rounded-full blur-[80px] sm:blur-[100px] translate-y-1/2 -translate-x-1/2 opacity-50" />
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gold/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2 opacity-60" />
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-stone-800/10 rounded-full blur-[150px] translate-y-1/3 -translate-x-1/3 opacity-40" />
       </div>
 
-      <div className="max-w-[900px] mx-auto px-6 relative z-10">
+      <div className="max-w-[1000px] mx-auto px-6 sm:px-12 relative z-10">
         
-        {/* Header - Matched with About */}
-        <motion.div {...fadeUp} className="text-center mb-16 sm:mb-20">
+        {/* Header */}
+        <motion.div {...fadeUp} className="text-center mb-16 sm:mb-24">
           <motion.span
-            initial={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold/10 border border-gold/20 text-[10px] font-bold text-gold uppercase tracking-[0.2em] mb-6 sm:mb-8"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-900/50 border border-stone-800 text-[10px] sm:text-xs font-bold text-stone-400 uppercase tracking-widest mb-6 sm:mb-8 shadow-lg"
           >
             <span className="w-1.5 h-1.5 rounded-full bg-gold" />
             {t('badge')}
           </motion.span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-serif font-medium leading-tight text-stone-900 tracking-tight">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-medium leading-tight text-white tracking-tight">
             {t('title')}
           </h2>
+          <div className="w-12 h-1 bg-gradient-to-r from-gold to-transparent rounded-full mx-auto mt-8" />
         </motion.div>
 
-        {/* FAQ List - Dark Cards on Light Background */}
+        {/* FAQ List */}
         <div className="space-y-4 sm:space-y-6">
           {faqItems.map((item, index) => (
             <motion.div
               key={index}
               {...fadeUp}
               transition={{ delay: index * 0.1, duration: 0.6 }}
-              className={`bg-stone-900 rounded-2xl sm:rounded-[2.5rem] px-6 sm:px-10 py-6 sm:py-8 shadow-2xl transition-all duration-500 cursor-pointer group border ${
-                openIndex === index ? 'border-gold/30' : 'border-stone-800'
+              className={`bg-stone-900/40 rounded-[1.5rem] sm:rounded-[2rem] px-6 sm:px-10 py-6 sm:py-8 shadow-xl transition-all duration-500 cursor-pointer group border hover:shadow-2xl hover:shadow-gold/5 ${
+                openIndex === index ? 'border-gold/30 bg-stone-900/60' : 'border-stone-800/80 hover:border-gold/20'
               }`}
               onClick={() => toggleAccordion(index)}
             >
               <div className="flex justify-between items-center gap-4 sm:gap-6">
                 <div className="flex items-center gap-4 sm:gap-6">
-                  <span className="hidden sm:flex w-12 h-12 rounded-2xl bg-stone-800 items-center justify-center text-stone-500 font-mono text-sm font-bold group-hover:bg-gold group-hover:text-black transition-all duration-500">
-                    {String(index + 1).padStart(2, '0')}
+                  <span className="hidden sm:flex w-12 h-12 rounded-full bg-stone-900 border border-stone-800 items-center justify-center text-stone-500 font-mono text-sm font-medium tracking-widest group-hover:text-gold transition-all duration-500 shadow-inner">
+                    0{index + 1}
                   </span>
                   <h3 className="text-lg sm:text-xl lg:text-2xl font-serif text-white group-hover:text-gold transition-colors duration-500 leading-snug">{item.question}</h3>
                 </div>
@@ -85,7 +85,7 @@ const FAQ: React.FC = () => {
                   animate={{ rotate: openIndex === index ? 180 : 0 }}
                   transition={{ duration: 0.3 }}
                   className={`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-500 border ${
-                    openIndex === index ? 'bg-gold border-gold text-white' : 'bg-stone-800 border-stone-700 text-stone-400 group-hover:border-gold group-hover:text-gold'
+                    openIndex === index ? 'bg-gold border-gold text-black shadow-lg shadow-gold/20' : 'bg-stone-900 border-stone-800 text-stone-400 group-hover:border-gold/50 group-hover:text-gold'
                   }`}
                 >
                   <ChevronDown className="w-5 h-5" />
@@ -97,10 +97,10 @@ const FAQ: React.FC = () => {
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: 'auto', opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+                    transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
                     className="overflow-hidden"
                   >
-                    <div className="pt-6 text-stone-400 leading-relaxed text-base sm:text-lg font-light border-t border-stone-800 mt-6 sm:pl-16">
+                    <div className="pt-6 text-stone-400 leading-relaxed text-sm sm:text-lg font-light border-t border-stone-800/50 mt-6 sm:pl-[4.5rem]">
                       {item.answer}
                     </div>
                   </motion.div>
@@ -113,14 +113,14 @@ const FAQ: React.FC = () => {
         {/* CTA */}
         <motion.div 
           {...fadeUp}
-          className="mt-16 sm:mt-24 text-center"
+          className="mt-20 sm:mt-32 text-center"
         >
-          <p className="text-stone-400 text-[10px] font-bold uppercase tracking-[0.2em] mb-8">{t('cta_text')}</p>
+          <p className="text-stone-500 text-[10px] sm:text-xs font-bold uppercase tracking-widest mb-6">{t('cta_text')}</p>
           <motion.a
             href="#contact"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className="inline-flex items-center gap-3 px-10 py-5 bg-stone-900 text-white rounded-full font-bold uppercase tracking-widest text-xs hover:bg-gold hover:text-stone-900 transition-all shadow-xl shadow-stone-200"
+            className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-white text-black rounded-full font-bold uppercase tracking-widest text-[11px] sm:text-xs hover:bg-gold hover:text-white transition-all shadow-xl"
           >
             {t('cta_button')}
           </motion.a>

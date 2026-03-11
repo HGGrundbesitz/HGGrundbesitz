@@ -105,16 +105,28 @@
       "sending": "Wird gesendet...",
       "sent": "Gesendet"
     },
-    "info": {
-      "email_btn": "E-Mail schreiben",
-      "call_btn": "Anrufen",
-      "address_title": "Anschrift",
-      "route": "Route planen",
-      "phone_title": "Telefon",
-      "fax_title": "Fax",
-      "ceo_title": "Geschäftsführung"
-    }
-  },
+      "info": {
+        "email_btn": "E-Mail schreiben",
+        "call_btn": "Anrufen",
+        "address_title": "Anschrift",
+        "route": "Route planen",
+        "phone_title": "Telefon",
+        "fax_title": "Fax",
+        "ceo_title": "Geschäftsführung"
+      }
+    },
+    "DocumentUpload": {
+      "badge": "Sicherer Upload",
+      "title_start": "Dokumente",
+      "title_end": "hochladen.",
+      "description": "Laden Sie hier sicher und verschlüsselt alle relevanten Unterlagen (z.B. Mietlisten, Grundrisse, Energieausweise) hoch, anstatt sie per E-Mail zu senden.",
+      "dropzone_title": "Dateien hier ablegen oder klicken",
+      "dropzone_subtitle": "Unterstützte Formate: PDF, XLSX, DOCX, JPG (Max. 50MB)",
+      "uploading": "Wird hochgeladen...",
+      "success": "Upload erfolgreich! Wir haben Ihre Dokumente erhalten.",
+      "error": "Fehler beim Upload. Bitte versuchen Sie es erneut.",
+      "btn_upload": "Dokumente sicher übermitteln"
+    },
   "Carousel": {
     "badge": "Referenzen",
     "title": "Ausgewählte Projekte",
