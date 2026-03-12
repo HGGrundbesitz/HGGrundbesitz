@@ -6,6 +6,7 @@ import { getMessages, getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import SmoothScroll from '../../components/SmoothScroll';
 import Preloader from '../../components/Preloader';
+
 import { Analytics } from "@vercel/analytics/next"
 
 const geist = Inter({
@@ -59,7 +60,7 @@ export default async function LocaleLayout({
           <Preloader />
           <SmoothScroll />
           {children}
-          <Analytics/>
+                    <Analytics/>
         </NextIntlClientProvider>
       </body>
     </html>
