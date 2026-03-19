@@ -65,13 +65,6 @@ const Hero: React.FC = () => {
                 <span>{t('cta_offer')}</span>
                 <ArrowRight className="w-4 h-4 rtl:rotate-180" />
               </motion.a>
-              <motion.a 
-                href="#about" 
-                whileTap={{ scale: 0.98 }}
-                className="w-full sm:w-auto flex items-center justify-center px-8 py-4 sm:py-5 bg-transparent border border-stone-800 text-white rounded-full font-bold uppercase tracking-widest text-xs hover:border-gold hover:text-gold transition-colors"
-              >
-                {t('cta_more')}
-              </motion.a>
             </div>
 
             {/* Stats - Horizontal layout for mobile premium feel */}

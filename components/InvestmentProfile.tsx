@@ -98,7 +98,6 @@ const InvestmentProfile: React.FC = () => {
                 <Building className="w-8 h-8 sm:w-10 sm:h-10" />
               </div>
               <h3 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-white mb-3 group-hover:text-gold transition-colors duration-300">{t('mfh_card.title')}</h3>
-              <p className="text-gold/60 font-bold uppercase tracking-[0.15em] text-[10px] sm:text-xs">{t('mfh_card.focus')}</p>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-x-12 lg:gap-x-16 gap-y-8 sm:gap-y-12 mb-12 sm:mb-16 lg:mb-20 flex-1 relative z-10">
@@ -135,7 +134,6 @@ const InvestmentProfile: React.FC = () => {
                 <MapPin className="w-8 h-8 sm:w-10 sm:h-10" />
               </div>
               <h3 className="text-3xl sm:text-4xl font-serif text-white mb-3">{t('land_card.title')}</h3>
-              <p className="text-stone-500 font-bold uppercase tracking-[0.15em] text-[10px] sm:text-xs">{t('land_card.focus')}</p>
             </div>
 
             <div className="relative z-10 space-y-6 sm:space-y-8 mb-12 sm:mb-16 flex-1">

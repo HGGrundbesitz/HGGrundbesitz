@@ -36,11 +36,12 @@ const FAQ: React.FC = () => {
   };
 
   return (
-    <section className="py-24 sm:py-32 lg:py-48 bg-[#0A0A0A] text-stone-200 relative overflow-hidden font-sans border-t border-stone-900/50">
-      {/* Premium Background Decor */}
+    <section className="py-24 sm:py-32 lg:py-48 bg-stone-50 text-stone-900 relative overflow-hidden font-sans">
+      {/* Enhanced Background Elements */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gold/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2 opacity-60" />
-        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-stone-800/10 rounded-full blur-[150px] translate-y-1/3 -translate-x-1/3 opacity-40" />
+        <div className="absolute top-0 right-0 w-[400px] sm:w-[600px] h-[400px] sm:h-[600px] bg-white rounded-full blur-[100px] sm:blur-[120px] -translate-y-1/2 translate-x-1/2 opacity-60" />
+        <div className="absolute bottom-0 left-0 w-[300px] sm:w-[400px] h-[300px] sm:h-[400px] bg-stone-200/50 rounded-full blur-[60px] sm:blur-[80px] translate-y-1/2 -translate-x-1/2" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gold/5 rounded-full blur-[150px] opacity-30" />
       </div>
 
       <div className="max-w-[1000px] mx-auto px-6 sm:px-12 relative z-10">
@@ -51,12 +52,12 @@ const FAQ: React.FC = () => {
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-900/50 border border-stone-800 text-[10px] sm:text-xs font-bold text-stone-400 uppercase tracking-widest mb-6 sm:mb-8 shadow-lg"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold/10 border border-gold/20 text-[10px] sm:text-xs font-bold text-gold uppercase tracking-widest mb-6 sm:mb-8 shadow-sm"
           >
             <span className="w-1.5 h-1.5 rounded-full bg-gold" />
             {t('badge')}
           </motion.span>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-medium leading-tight text-white tracking-tight">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-medium leading-tight text-stone-900 tracking-tight">
             {t('title')}
           </h2>
           <div className="w-12 h-1 bg-gradient-to-r from-gold to-transparent rounded-full mx-auto mt-8" />
@@ -69,8 +70,8 @@ const FAQ: React.FC = () => {
               key={index}
               {...fadeUp}
               transition={{ delay: index * 0.1, duration: 0.6 }}
-              className={`bg-stone-900/40 rounded-[1.5rem] sm:rounded-[2rem] px-6 sm:px-10 py-6 sm:py-8 shadow-xl transition-all duration-500 cursor-pointer group border hover:shadow-2xl hover:shadow-gold/5 ${
-                openIndex === index ? 'border-gold/30 bg-stone-900/60' : 'border-stone-800/80 hover:border-gold/20'
+              className={`bg-stone-900 rounded-[1.5rem] sm:rounded-[2rem] px-6 sm:px-10 py-6 sm:py-8 shadow-xl transition-all duration-500 cursor-pointer group border hover:shadow-2xl hover:shadow-gold/5 ${
+                openIndex === index ? 'border-gold/30 bg-stone-800' : 'border-stone-800 hover:border-gold/20'
               }`}
               onClick={() => toggleAccordion(index)}
             >
@@ -111,7 +112,7 @@ const FAQ: React.FC = () => {
         </div>
 
         {/* CTA */}
-        <motion.div 
+        <motion.div
           {...fadeUp}
           className="mt-20 sm:mt-32 text-center"
         >
@@ -120,7 +121,7 @@ const FAQ: React.FC = () => {
             href="#contact"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-white text-black rounded-full font-bold uppercase tracking-widest text-[11px] sm:text-xs hover:bg-gold hover:text-white transition-all shadow-xl"
+            className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-stone-900 text-white rounded-full font-bold uppercase tracking-widest text-[11px] sm:text-xs hover:bg-gold hover:text-stone-900 transition-all shadow-xl"
           >
             {t('cta_button')}
           </motion.a>

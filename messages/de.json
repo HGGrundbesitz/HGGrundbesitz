@@ -14,7 +14,7 @@
   "Hero": {
     "title_start": "Ich kaufe",
     "title_end": "Mehrfamilienhäuser",
-    "subtitle": "Ihr privater Investor für den diskreten Immobilienverkauf ohne Makler.",
+    "subtitle": "Ihr Partner für den diskreten und direkten Immobilienankauf.",
     "subtitle_highlight": "Ohne Umwege.",
     "cta_offer": "Immobilie anbieten",
     "cta_more": "Mehr erfahren",
@@ -91,7 +91,15 @@
     "badge": "Kontakt",
     "title_start": "Lassen Sie uns",
     "title_end": "sprechen.",
-    "description": "Sie besitzen ein Mehrfamilienhaus oder Grundstück, das in unser Profil passt? Füllen Sie das Formular aus oder rufen Sie uns direkt an. Wir garantieren eine diskrete Prüfung.",
+    "description": "Sie besitzen ein Mehrfamilienhaus oder Grundstück, das in unser Profil passt? Senden Sie uns eine Nachricht  aus oder rufen Sie uns direkt an. Wir garantieren eine diskrete Prüfung.",
+    "tabs": {
+      "expose": "Exposé hochladen",
+      "message": "Nachricht"
+    },
+    "errors": {
+      "missing_document": "Bitte fügen Sie mindestens ein Dokument (Exposé) hinzu.",
+      "general": "Bitte versuchen Sie es später erneut."
+    },
     "form": {
       "name": "Name",
       "name_placeholder": "Ihr Name",
@@ -101,9 +109,10 @@
       "email_placeholder": "ihre@email.de",
       "message": "Nachricht",
       "message_placeholder": "Eckdaten zur Immobilie (Adresse, Baujahr, Fläche)...",
-      "submit": "Absenden",
+      "submit_expose": "Exposé sicher übermitteln",
+      "submit_message": "Nachricht senden",
       "sending": "Wird gesendet...",
-      "sent": "Gesendet"
+      "sent": "Erfolgreich übermittelt"
     },
       "info": {
         "email_btn": "E-Mail schreiben",
@@ -176,12 +185,12 @@
     "title": "Häufige Fragen.",
     "faqs": {
       "broker_fees": {
-        "question": "Fallen Maklergebühren an?",
-        "answer": "Nein. Da wir als private Investoren direkt kaufen, entfallen sämtliche Maklerprovisionen für Sie. Der Verkauf ist für Sie provisionsfrei."
+        "question": "Muss ich Unterlagen vorbereiten?",
+        "answer": "Nein, wir unterstützen dich über den gesamten Prozess hinweg und kümmern uns um alles Wichtige gemeinsam mit dir."
       },
       "purchase_speed": {
-        "question": "Wie schnell können Sie kaufen?",
-        "answer": "Da wir über eine gesicherte Finanzierung verfügen, können wir in der Regel innerhalb von 2-4 Wochen nach Einigung den Notartermin wahrnehmen."
+        "question": "Was unterscheidet euch von anderen Käufern?",
+        "answer": "Wir sind ehrlich, solvent und treffen schnelle Entscheidungen. Dabei ist es uns sehr wichtig für alle Parteien die bestmögliche Lösung zu finden."
       },
       "renovation_objects": {
         "question": "Kaufen Sie auch sanierungsbedürftige Objekte?",

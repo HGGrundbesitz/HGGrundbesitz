@@ -53,7 +53,7 @@ const Contact: React.FC = () => {
     
     try {
       if (activeTab === 'expose' && files.length === 0) {
-        throw new Error("Bitte fügen Sie mindestens ein Dokument (Exposé) hinzu.");
+        throw new Error(t('errors.missing_document'));
       }
 
       const formData = new FormData();
@@ -79,7 +79,7 @@ const Contact: React.FC = () => {
       setFiles([]);
       setTimeout(() => setIsSubmitted(false), 5000);
     } catch (error: any) {
-      setErrorMessage(error.message || 'Bitte versuchen Sie es später erneut.');
+      setErrorMessage(error.message || t('errors.general'));
     } finally {
       setIsSubmitting(false);
     }
@@ -136,23 +136,23 @@ const Contact: React.FC = () => {
                   type="button"
                   onClick={() => setActiveTab('expose')}
                   className={`flex-1 py-3.5 sm:py-4 rounded-xl text-xs sm:text-sm font-bold uppercase tracking-widest transition-all duration-300 ${
-                    activeTab === 'expose' 
-                    ? 'bg-stone-800 text-gold shadow-md' 
+                    activeTab === 'expose'
+                    ? 'bg-stone-800 text-gold shadow-md'
                     : 'text-stone-500 hover:text-stone-300'
                   }`}
                 >
-                  Exposé hochladen
+                  {t('tabs.expose')}
                 </button>
                 <button
                   type="button"
                   onClick={() => setActiveTab('message')}
                   className={`flex-1 py-3.5 sm:py-4 rounded-xl text-xs sm:text-sm font-bold uppercase tracking-widest transition-all duration-300 ${
-                    activeTab === 'message' 
-                    ? 'bg-stone-800 text-white shadow-md' 
+                    activeTab === 'message'
+                    ? 'bg-stone-800 text-white shadow-md'
                     : 'text-stone-500 hover:text-stone-300'
                   }`}
                 >
-                  Nachricht
+                  {t('tabs.message')}
                 </button>
               </div>
 
@@ -184,8 +184,8 @@ const Contact: React.FC = () => {
                             <UploadCloud className={`w-8 h-8 ${isDragging ? 'text-gold' : 'text-stone-400'}`} />
                           </div>
                           <div>
-                            <p className="text-base font-medium text-stone-200 mb-1">Dateien hier ablegen</p>
-                            <p className="text-xs text-stone-500">PDF, DOCX, XLSX (Max. 50MB)</p>
+                            <p className="text-base font-medium text-stone-200 mb-1">{tUpload('dropzone_title')}</p>
+                            <p className="text-xs text-stone-500">{tUpload('dropzone_subtitle')}</p>
                           </div>
                         </div>
 
@@ -284,17 +284,17 @@ const Contact: React.FC = () => {
                     {isSubmitting ? (
                       <>
                         <Loader2 className="w-5 h-5 animate-spin" />
-                        <span>Wird gesendet...</span>
+                        <span>{t('form.sending')}</span>
                       </>
                     ) : isSubmitted ? (
                       <>
                         <Check className="w-5 h-5" />
-                        <span>Erfolgreich übermittelt</span>
+                        <span>{t('form.sent')}</span>
                       </>
                     ) : (
                       <>
                         <Send className="w-5 h-5" />
-                        <span>{activeTab === 'expose' ? 'Exposé sicher übermitteln' : 'Nachricht senden'}</span>
+                        <span>{activeTab === 'expose' ? t('form.submit_expose') : t('form.submit_message')}</span>
                       </>
                     )}
                   </motion.button>

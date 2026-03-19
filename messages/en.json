@@ -92,6 +92,14 @@
     "title_start": "Let's",
     "title_end": "talk.",
     "description": "Do you own a property that fits our profile? Fill out the form or call us directly. We guarantee a discreet review.",
+    "tabs": {
+      "expose": "Upload Exposé",
+      "message": "Message"
+    },
+    "errors": {
+      "missing_document": "Please add at least one document (Exposé).",
+      "general": "Please try again later."
+    },
     "form": {
       "name": "Name",
       "name_placeholder": "Your Name",
@@ -101,9 +109,10 @@
       "email_placeholder": "your@email.com",
       "message": "Message",
       "message_placeholder": "Property details...",
-      "submit": "Submit",
+      "submit_expose": "Submit Exposé securely",
+      "submit_message": "Send Message",
       "sending": "Sending...",
-      "sent": "Sent"
+      "sent": "Successfully submitted"
     },
       "info": {
         "email_btn": "Send Email",
@@ -176,12 +185,12 @@
     "title": "Frequently Asked Questions.",
     "faqs": {
       "broker_fees": {
-        "question": "Are there broker fees?",
-        "answer": "No. Since we buy directly as private investors, there are no broker commissions for you. The sale is commission-free for you."
+        "question": "Do I need to prepare documents?",
+        "answer": "No, we support you throughout the entire process and take care of everything important together with you."
       },
       "purchase_speed": {
-        "question": "How quickly can you buy?",
-        "answer": "Since we have secured financing, we can usually attend the notary appointment within 2-4 weeks after agreement."
+        "question": "What distinguishes you from other buyers?",
+        "answer": "We are honest, solvent, and make quick decisions. It is very important to us to find the best possible solution for all parties."
       },
       "renovation_objects": {
         "question": "Do you also buy properties in need of renovation?",

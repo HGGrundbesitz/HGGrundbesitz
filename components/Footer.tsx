@@ -36,13 +36,12 @@ const Footer: React.FC = () => {
           {/* Brand & Info Column */}
           <div className="md:col-span-12 lg:col-span-6 flex flex-col items-start">
             <span className="text-2xl font-bold text-white mb-6 tracking-tight">
-              HG GRUNDBESITZ
+              HG Grundbesitz GmbH
             </span>
             <div className="text-sm sm:text-base text-stone-400 font-light leading-relaxed max-w-sm mb-10">
-              <p className="mb-1">{t('role')} · Bremer Platz 9-11</p>
               <p>48155 Münster</p>
               <p className="mt-2">
-                <a href="mailto:info@hendrikgrau.de" className="hover:text-gold transition-colors">info@hendrikgrau.de</a>
+                <a href="mailto:info@hg-grundbesitz.de" className="hover:text-gold transition-colors">info@hg-grundbesitz.de</a>
               </p>
             </div>
             
