@@ -33,7 +33,10 @@ const About: React.FC = () => {
   ];
 
   return (
-    <section id="about" className="py-16 sm:py-20 lg:py-32 bg-stone-50 text-stone-900 relative overflow-hidden">
+    <section
+      id="about"
+      className="relative -mt-4 rounded-t-[2rem] border-t border-stone-200/80 bg-stone-50 py-16 text-stone-900 shadow-[0_-18px_40px_rgba(0,0,0,0.12)] overflow-hidden sm:-mt-6 sm:rounded-t-[2.5rem] sm:py-20 lg:mt-0 lg:rounded-none lg:border-t-0 lg:py-32 lg:shadow-none"
+    >
       {/* Enhanced Background Elements */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 right-0 w-[400px] sm:w-[600px] h-[400px] sm:h-[600px] bg-white rounded-full blur-[100px] sm:blur-[120px] -translate-y-1/2 translate-x-1/2 opacity-60" />
@@ -41,7 +44,7 @@ const About: React.FC = () => {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gold/5 rounded-full blur-[150px] opacity-30" />
       </div>
 
-      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 xl:px-20 relative z-10">
+      <div className="max-w-[1600px] mx-auto px-4 pt-4 sm:px-6 sm:pt-6 lg:px-12 lg:pt-0 xl:px-20 relative z-10">
         
         {/* Centered Header & Story */}
         <motion.div 
@@ -86,14 +89,25 @@ const About: React.FC = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
-              className="flex items-center gap-4 text-left"
+              className="text-left"
             >
-              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white flex items-center justify-center border-2 border-stone-100 shadow-lg">
-                <span className="font-serif text-lg sm:text-xl text-gold">HG</span>
-              </div>
-              <div>
-                <div className="text-sm font-bold text-stone-900 uppercase tracking-wide">Hendrik Grau</div>
-              </div>
+              <motion.a
+                href="https://www.linkedin.com/in/hendrikgrau/"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ x: 4 }}
+                className="group inline-flex items-center gap-4 rounded-full pr-2 transition-all"
+                aria-label="Hendrik Grau auf LinkedIn ansehen"
+              >
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white flex items-center justify-center border-2 border-stone-100 shadow-lg transition-all duration-300 group-hover:border-gold/50 group-hover:shadow-xl">
+                  <span className="font-serif text-lg sm:text-xl text-gold">HG</span>
+                </div>
+                <div>
+                  <div className="text-sm font-bold text-stone-900 uppercase tracking-wide transition-colors duration-300 group-hover:text-gold">
+                    Hendrik Grau
+                  </div>
+                </div>
+              </motion.a>
             </motion.div>
           </div>
         </motion.div>

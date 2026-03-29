@@ -1,12 +1,15 @@
 {
   "Metadata": {
-    "title": "Hendrik Grau Investment | Ankauf Mehrfamilienhäuser ohne Makler",
-    "description": "Privatinvestor für den direkten Ankauf von Mehrfamilienhäusern in NRW, Berlin & Brandenburg. Keine Maklerprovision, schnelle Abwicklung, diskret & solvent.",
+    "title": "Hendrik Grau Investment | Ankauf von Mehrfamilienhäusern ohne Makler",
+    "description": "Privatinvestor für den direkten Ankauf von Mehrfamilienhäusern in NRW, Berlin und Brandenburg. Keine Maklerprovision, schnelle Abwicklung, diskret und solvent.",
     "keywords": "Immobilienankauf, Mehrfamilienhaus verkaufen, ohne Makler, Privatinvestor, NRW, Berlin, Brandenburg, Hendrik Grau, Immobilien Investment, Wohnungspaket"
   },
   "Navbar": {
-    "about": "Über mich",
+    "about": "Über uns",
     "profile": "Ankaufsprofil",
+    "services": "Kompetenz",
+    "process": "Prozess",
+    "faq": "FAQ",
     "companies": "Unsere Gesellschaften",
     "references": "Referenzen",
     "contact": "Kontakt"
@@ -24,18 +27,30 @@
     "scroll": "Scrollen"
   },
   "About": {
-    "badge": "Über Mich",
+    "badge": "Über uns",
     "title_start": "Ihr Partner für den",
     "title_highlight": "direkten Ankauf.",
-    "description_1": "Als privater Investor mit über 25 Jahren Erfahrung im Immobilienmarkt stehe ich persönlich hinter jedem Kauf. Mein Fokus liegt auf der Akquisition und dem langfristigen Halten von Mehrfamilienhäusern in NRW, Berlin und Brandenburg.",
-    "description_2": "Ich verstehe die Komplexität und den emotionalen Wert einer Immobilie. Deshalb garantiere ich eine faire Bewertung, absolute Diskretion und eine zügige, transparente Abwicklung ohne Maklerprovision.",
+    "description_1": "Als privater Investor mit über 20 Jahren Erfahrung im Immobilienmarkt stehe ich persönlich hinter jedem Kauf. Mein Fokus liegt auf der Akquisition und dem langfristigen Halten von Mehrfamilienhäusern in NRW, Berlin und Brandenburg.",
+    "description_2": "Ich verstehe die Komplexität und den emotionalen Wert einer Immobilie. Deshalb garantiere ich eine faire Bewertung, absolute Diskretion und eine zügige, transparente Abwicklung.",
     "cta": "Immobilie anbieten",
     "signature_role": "Privatinvestor & Geschäftsführer",
     "features": {
-      "direct_buy": { "title": "Direkter Kauf", "desc": "Keine Makler, keine Provisionen" },
-      "solvency": { "title": "Solvenz", "desc": "Gesicherte Finanzierung und schnelle Liquidität" },
-      "reliability": { "title": "Verlässlichkeit", "desc": "Verbindliche Zusagen und Einhaltung von Fristen" },
-      "expertise": { "title": "Expertise", "desc": "Über 25 Jahre Branchenerfahrung" }
+      "direct_buy": {
+        "title": "Direkter Kauf",
+        "desc": "Keine Makler, keine Provisionen"
+      },
+      "solvency": {
+        "title": "Solvenz",
+        "desc": "Gesicherte Finanzierung und schnelle Liquidität"
+      },
+      "reliability": {
+        "title": "Verlässlichkeit",
+        "desc": "Verbindliche Zusagen und Einhaltung von Fristen"
+      },
+      "expertise": {
+        "title": "Expertise",
+        "desc": "Über 20 Jahre Branchenerfahrung"
+      }
     }
   },
   "Process": {
@@ -44,44 +59,77 @@
     "title_highlight": "gemacht.",
     "description": "Wir reduzieren Komplexität auf das Wesentliche. Ein schlanker, transparenter Prozess von der ersten Bewertung bis zur sofortigen Auszahlung.",
     "steps": {
-      "contact": { "title": "Kontaktaufnahme", "desc": "Senden Sie uns die Eckdaten Ihrer Immobilie. Wir prüfen diese unverzüglich und vertraulich." },
-      "valuation": { "title": "Bewertung", "desc": "Besichtigung und marktgerechte Einwertung Ihrer Immobilie binnen 48h." },
-      "offer": { "title": "Angebot", "desc": "Auf Basis der Bewertung unterbreiten wir Ihnen ein faires, provisionsfreies Kaufangebot." },
-      "closing": { "title": "Abschluss", "desc": "Wir sorgen für eine schnelle notarielle Abwicklung und sofortige Kaufpreiszahlung." }
+      "contact": {
+        "title": "Kontaktaufnahme",
+        "desc": "Senden Sie uns die Eckdaten Ihrer Immobilie. Wir prüfen diese unverzüglich und vertraulich."
+      },
+      "valuation": {
+        "title": "Bewertung",
+        "desc": "Besichtigung und marktgerechte Einwertung Ihrer Immobilie binnen 48 Stunden."
+      },
+      "offer": {
+        "title": "Angebot",
+        "desc": "Auf Basis der Bewertung unterbreiten wir Ihnen ein faires, provisionsfreies Kaufangebot."
+      },
+      "closing": {
+        "title": "Abschluss",
+        "desc": "Wir sorgen für eine schnelle notarielle Abwicklung und sofortige Kaufpreiszahlung."
+      }
     }
   },
   "InvestmentProfile": {
     "badge": "Ankaufsprofil",
     "title_start": "Wir investieren in",
-    "title_highlight": "Nordrhein-Westfalen, Berlin & Brandenburg.",
+    "title_highlight": "Nordrhein-Westfalen, Berlin und Brandenburg.",
     "download_btn": "Suchprofil laden",
     "mfh_card": {
       "title": "Mehrfamilienhäuser",
       "focus": "Primärer Fokus",
-      "cta": "MFH Anbieten",
+      "cta": "MFH anbieten",
       "criteria": {
-        "locations": { "title": "Standorte", "desc": "NRW (Münsterland, Ruhrgebiet), Berlin und Brandenburg." },
-        "volume": { "title": "Volumen", "desc": "Ankaufswert ab 2 Mio. € bis 50 Mio. €" },
-        "type": { "title": "Immobilienart", "desc": "Ausschließlich Mehrfamilienhäuser und Wohnungspakete" },
-        "condition": { "title": "Zustand", "desc": "Vom gepflegten Bestandsgebäude bis hin zu sanierungsbedürftigen Objekten" }
+        "locations": {
+          "title": "Standorte",
+          "desc": "NRW (Münsterland, Ruhrgebiet), Berlin und Brandenburg."
+        },
+        "volume": {
+          "title": "Volumen",
+          "desc": "Ankaufswert ab 2 Mio. € bis 30 Mio. €"
+        },
+        "type": {
+          "title": "Immobilienart",
+          "desc": "Ausschließlich Mehrfamilienhäuser und Wohnungspakete"
+        },
+        "condition": {
+          "title": "Zustand",
+          "desc": "Vom gepflegten Bestandsgebäude bis hin zu sanierungsbedürftigen Objekten"
+        }
       }
     },
     "land_card": {
       "title": "Baugrundstücke",
       "focus": "Sekundärer Fokus",
-      "cta": "Grundstück Anbieten",
+      "cta": "Grundstück anbieten",
       "criteria": {
-        "location": { "title": "Lage", "value": "NRW, Berlin & Brandenburg" },
-        "size": { "title": "Größe", "value": "Ab 500 m² Grundstücksgröße" },
-        "law": { "title": "Baurecht", "value": "Offen, kurzfristig schaffbar oder bestehend" }
+        "location": {
+          "title": "Lage",
+          "value": "NRW, Berlin & Brandenburg"
+        },
+        "size": {
+          "title": "Größe",
+          "value": "Je nach Lage und Entwicklungspotenzial"
+        },
+        "law": {
+          "title": "Baurecht",
+          "value": "Offen, kurzfristig schaffbar oder bereits vorhanden"
+        }
       }
     }
   },
   "Footer": {
-    "role": "Gessellschaften",
+    "role": "Privatinvestor",
     "navigation": "Navigation",
     "legal": "Rechtliches",
-    "social": "Social",
+    "social": "Social Media",
     "imprint": "Impressum",
     "privacy": "Datenschutz",
     "copyright": "© 2026 Hendrik Grau Investment. Alle Rechte vorbehalten.",
@@ -91,7 +139,7 @@
     "badge": "Kontakt",
     "title_start": "Lassen Sie uns",
     "title_end": "sprechen.",
-    "description": "Sie besitzen ein Mehrfamilienhaus oder Grundstück, das in unser Profil passt? Senden Sie uns eine Nachricht  aus oder rufen Sie uns direkt an. Wir garantieren eine diskrete Prüfung.",
+    "description": "Sie besitzen ein Mehrfamilienhaus oder Grundstück, das in unser Profil passt? Senden Sie uns die Eckdaten oder rufen Sie uns direkt an. Wir garantieren eine diskrete Prüfung.",
     "tabs": {
       "expose": "Exposé hochladen",
       "message": "Nachricht"
@@ -110,32 +158,32 @@
       "message": "Nachricht",
       "message_placeholder": "Eckdaten zur Immobilie (Adresse, Baujahr, Fläche)...",
       "submit_expose": "Exposé sicher übermitteln",
-      "submit_message": "Nachricht senden",
+      "submit_message": "Nachricht sicher übermitteln",
       "sending": "Wird gesendet...",
       "sent": "Erfolgreich übermittelt"
     },
-      "info": {
-        "email_btn": "E-Mail schreiben",
-        "call_btn": "Anrufen",
-        "address_title": "Anschrift",
-        "route": "Route planen",
-        "phone_title": "Telefon",
-        "fax_title": "Fax",
-        "ceo_title": "Geschäftsführung"
-      }
-    },
-    "DocumentUpload": {
-      "badge": "Sicherer Upload",
-      "title_start": "Dokumente",
-      "title_end": "hochladen.",
-      "description": "Laden Sie hier sicher und verschlüsselt alle relevanten Unterlagen (z.B. Mietlisten, Grundrisse, Energieausweise) hoch, anstatt sie per E-Mail zu senden.",
-      "dropzone_title": "Dateien hier ablegen oder klicken",
-      "dropzone_subtitle": "Unterstützte Formate: PDF, XLSX, DOCX, JPG (Max. 50MB)",
-      "uploading": "Wird hochgeladen...",
-      "success": "Upload erfolgreich! Wir haben Ihre Dokumente erhalten.",
-      "error": "Fehler beim Upload. Bitte versuchen Sie es erneut.",
-      "btn_upload": "Dokumente sicher übermitteln"
-    },
+    "info": {
+      "email_btn": "E-Mail schreiben",
+      "call_btn": "Anrufen",
+      "address_title": "Anschrift",
+      "route": "Route planen",
+      "phone_title": "Telefon",
+      "fax_title": "Fax",
+      "ceo_title": "Geschäftsführung"
+    }
+  },
+  "DocumentUpload": {
+    "badge": "Sicherer Upload",
+    "title_start": "Dokumente",
+    "title_end": "hochladen.",
+    "description": "Laden Sie hier sicher und verschlüsselt alle relevanten Unterlagen hoch, zum Beispiel Mietlisten, Grundrisse oder Energieausweise, anstatt sie per E-Mail zu senden.",
+    "dropzone_title": "Dateien hier ablegen oder klicken",
+    "dropzone_subtitle": "Unterstützte Formate: PDF, XLSX, DOCX, JPG (max. 50 MB)",
+    "uploading": "Wird hochgeladen...",
+    "success": "Upload erfolgreich. Wir haben Ihre Dokumente erhalten.",
+    "error": "Fehler beim Upload. Bitte versuchen Sie es erneut.",
+    "btn_upload": "Dokumente sicher übermitteln"
+  },
   "Carousel": {
     "badge": "Referenzen",
     "title": "Ausgewählte Projekte",
@@ -157,20 +205,20 @@
     "services": {
       "purchase": {
         "title": "Ankauf",
-        "desc": "Wir konzentrieren uns auf den schnellen und diskreten Ankauf von Mehrfamilienhäusern. Wir prüfen sorgfältig und fokussieren uns dabei vor allem auf den Nutzen von Potenzialen."
+        "desc": "Wir konzentrieren uns auf den schnellen und diskreten Ankauf von Mehrfamilienhäusern. Jede Immobilie prüfen wir sorgfältig mit Blick auf Lage, Substanz und Potenzial."
       },
       "development": {
         "title": "Entwicklung",
-        "desc": "Wir entwickeln nachhaltige Konzepte, um den Wert der erworbenen Immobilien zu steigern. Wir schaffen einen Mehrwert für den Immobilienmarkt und die Mieter."
+        "desc": "Wir entwickeln nachhaltige Konzepte, um den Wert erworbener Immobilien gezielt zu steigern und langfristig zu sichern."
       },
       "holding": {
         "title": "Bestandshaltung",
-        "desc": "Immobilien zu pflegen und langfristig für künftige Generationen zu erhalten, ist unser erklärtes Ziel. Verlässlichkeit und Werterhalt stehen im Fokus."
+        "desc": "Immobilien langfristig zu pflegen und für kommende Generationen zu erhalten, ist unser klares Ziel. Werterhalt und Verlässlichkeit stehen im Fokus."
       }
     },
     "company_section": {
       "title": "Grau Gruppe",
-      "description": "Ein starker Verbund. Wir decken die gesamte Wertschöpfungskette ab – von der Akquisition bis zum Bestandsmanagement."
+      "description": "Ein starker Verbund. Wir decken die gesamte Wertschöpfungskette ab - von der Akquisition bis zum Bestandsmanagement."
     },
     "companies": {
       "grau_ag": "Grau Grundbesitz AG",
@@ -186,22 +234,22 @@
     "faqs": {
       "broker_fees": {
         "question": "Muss ich Unterlagen vorbereiten?",
-        "answer": "Nein, wir unterstützen dich über den gesamten Prozess hinweg und kümmern uns um alles Wichtige gemeinsam mit dir."
+        "answer": "Nein, wir begleiten Sie durch den gesamten Prozess und unterstützen Sie bei allen relevanten Schritten."
       },
       "purchase_speed": {
-        "question": "Was unterscheidet euch von anderen Käufern?",
-        "answer": "Wir sind ehrlich, solvent und treffen schnelle Entscheidungen. Dabei ist es uns sehr wichtig für alle Parteien die bestmögliche Lösung zu finden."
+        "question": "Was unterscheidet Sie von anderen Käufern?",
+        "answer": "Wir sind ehrlich, solvent und treffen schnelle Entscheidungen. Unser Ziel ist eine faire und tragfähige Lösung für alle Beteiligten."
       },
       "renovation_objects": {
         "question": "Kaufen Sie auch sanierungsbedürftige Objekte?",
-        "answer": "Ja, absolut. Wir sind spezialisiert auf die Entwicklung von Immobilien und kaufen auch Objekte mit Instandhaltungsstau oder Leerstand."
+        "answer": "Ja, absolut. Wir sind auf die Entwicklung von Immobilien spezialisiert und erwerben auch Objekte mit Instandhaltungsstau oder Leerstand."
       }
     },
     "cta_text": "Haben Sie weitere Fragen?",
     "cta_button": "Kontaktieren Sie uns"
   },
   "Testimonials": {
-    "badge": "Echte Erfahrungen von unseren Partnern.",
+    "badge": "Echte Erfahrungen unserer Partner.",
     "title": "Was unsere Partner sagen",
     "testimonials": {
       "t1": {

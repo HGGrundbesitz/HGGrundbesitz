@@ -37,7 +37,7 @@ const Process: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 sm:py-32 lg:py-44 bg-stone-950 text-white overflow-hidden relative">
+    <section id="process" className="py-20 sm:py-32 lg:py-44 bg-stone-950 text-white overflow-hidden relative">
       {/* Background effects */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 right-0 w-[400px] sm:w-[600px] h-[400px] sm:h-[600px] bg-gold/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/4" />

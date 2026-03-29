@@ -27,8 +27,8 @@ const InvestmentProfile: React.FC = () => {
       value: t('land_card.criteria.location.value'),
     },
     {
-      title: t('land_card.criteria.size.title'),
-      value: t('land_card.criteria.size.value'),
+      title: t('land_card.criteria.law.title'),
+      value: t('land_card.criteria.law.value'),
     },
   ];
 

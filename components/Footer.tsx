@@ -4,6 +4,7 @@ import React from 'react';
 import { Linkedin } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
+import BrandLogo from './BrandLogo';
 
 const Footer: React.FC = () => {
   const t = useTranslations('Footer');
@@ -35,9 +36,7 @@ const Footer: React.FC = () => {
           
           {/* Brand & Info Column */}
           <div className="md:col-span-12 lg:col-span-6 flex flex-col items-start">
-            <span className="text-2xl font-bold text-white mb-6 tracking-tight">
-              HG Grundbesitz GmbH
-            </span>
+            <BrandLogo size="md" className="mb-6" />
             <div className="text-sm sm:text-base text-stone-400 font-light leading-relaxed max-w-sm mb-10">
               <p>48155 Münster</p>
               <p className="mt-2">
@@ -46,7 +45,10 @@ const Footer: React.FC = () => {
             </div>
             
             <motion.a
-              href="#"
+              href="https://www.linkedin.com/in/hendrikgrau/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Hendrik Grau auf LinkedIn ansehen"
               whileHover={{ scale: 1.05, backgroundColor: 'rgba(212,175,55,0.1)' }}
               whileTap={{ scale: 0.95 }}
               className="w-10 h-10 rounded-full bg-stone-900/50 flex items-center justify-center border border-stone-800/50 text-stone-400 hover:text-gold hover:border-gold/50 transition-all"

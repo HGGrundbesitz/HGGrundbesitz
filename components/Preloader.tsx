@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import BrandLogo from './BrandLogo';
 
 const Preloader: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -18,33 +19,6 @@ const Preloader: React.FC = () => {
       return () => window.removeEventListener('load', handleLoad);
     }
   }, []);
-
-  const text = "HG GRUNDBESITZ GMBH";
-  const letters = text.split("");
-
-  const container: any = {
-    hidden: { opacity: 1 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0, delayChildren: 0 },
-    },
-  };
-
-  const child: any = {
-    visible: {
-      opacity: 1,
-      y: 0,
-      filter: "blur(0px)",
-      transition: {
-        duration: 0
-      },
-    },
-    hidden: {
-      opacity: 1,
-      y: 0,
-      filter: "blur(0px)",
-    },
-  };
 
   return (
     <AnimatePresence>
@@ -66,22 +40,13 @@ const Preloader: React.FC = () => {
           />
 
           <div className="relative z-10 flex flex-col items-center">
-            {/* Elegant Heading - Scaled Down */}
             <motion.div
-              variants={container}
-              initial="hidden"
-              animate="visible"
-              className="flex flex-wrap justify-center px-10 text-center"
+              initial={{ opacity: 0, y: 24, scale: 0.96 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+              className="px-6 text-center"
             >
-              {letters.map((letter, index) => (
-                <motion.span
-                  key={index}
-                  variants={child}
-                  className={`text-2xl sm:text-4xl md:text-5xl font-serif font-bold tracking-[0.25em] text-white select-none ${letter === " " ? "mr-4 sm:mr-8" : ""}`}
-                >
-                  {letter}
-                </motion.span>
-              ))}
+              <BrandLogo size="lg" className="justify-center" />
             </motion.div>
 
             {/* Premium Animated Line */}

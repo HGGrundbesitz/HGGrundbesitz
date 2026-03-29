@@ -31,7 +31,7 @@ const Hero: React.FC = () => {
       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-[0.02] mix-blend-overlay pointer-events-none" />
 
       {/* Main Content Container */}
-      <div className="relative z-10 w-full max-w-[1600px] mx-auto px-6 sm:px-12 lg:px-20 pt-32 sm:pt-40 pb-0 flex flex-col lg:flex-row items-center lg:items-stretch h-full min-h-[100svh]">
+      <div className="relative z-10 w-full max-w-[1600px] mx-auto px-6 sm:px-12 lg:px-20 pt-32 sm:pt-40 pb-10 sm:pb-12 lg:pb-0 flex flex-col lg:flex-row items-center lg:items-stretch h-full min-h-[100svh]">
         
         {/* Text Column - High-End Typography */}
         <div className="w-full lg:w-[55%] xl:w-[50%] flex flex-col justify-center pt-4 lg:pt-0 z-20">
@@ -67,12 +67,57 @@ const Hero: React.FC = () => {
               </motion.a>
             </div>
 
-            {/* Stats - Horizontal layout for mobile premium feel */}
-            <div className="flex items-center gap-8 sm:gap-12 pt-8 sm:pt-10 border-t border-stone-800/80">
+            {/* Mobile image placement before stats */}
+            <div className="lg:hidden w-full mt-4 mb-8">
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1.2, delay: 0.2 }}
+                className="relative mx-auto w-[88%] h-[38vh] min-h-[320px] max-h-[460px]"
+              >
+                <div className="absolute bottom-0 w-full h-20 bg-gradient-to-t from-[#050505] to-transparent z-10" />
+
+                <Image
+                  src="/hendrik.png"
+                  alt="Hendrik Grau"
+                  fill
+                  className="object-contain object-bottom"
+                  priority
+                  sizes="100vw"
+                  quality={90}
+                />
+              </motion.div>
+            </div>
+
+            {/* Stats - Mobile card layout for a cleaner transition into the next section */}
+            <div className="lg:hidden mt-2">
+              <div className="relative overflow-hidden rounded-[1.75rem] border border-stone-800/90 bg-gradient-to-br from-stone-950 via-[#0a0a0a] to-black px-5 py-5 shadow-[0_24px_60px_rgba(0,0,0,0.42)]">
+                <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="flex flex-col rounded-2xl border border-stone-800/80 bg-white/[0.02] px-4 py-4">
+                    <div className="flex items-center gap-2 mb-1.5">
+                      <Award className="w-4 h-4 text-gold" />
+                      <span className="text-[2rem] leading-none font-serif text-white">20+</span>
+                    </div>
+                    <span className="text-[10px] text-stone-500 font-bold uppercase tracking-[0.2em]">{t('stat_exp')}</span>
+                  </div>
+                  <div className="flex flex-col rounded-2xl border border-stone-800/80 bg-white/[0.02] px-4 py-4">
+                    <div className="flex items-center gap-2 mb-1.5">
+                      <ShieldCheck className="w-4 h-4 text-gold" />
+                      <span className="text-[2rem] leading-none font-serif text-white">100%</span>
+                    </div>
+                    <span className="text-[10px] text-stone-500 font-bold uppercase tracking-[0.2em]">{t('stat_discretion')}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Stats - Desktop layout */}
+            <div className="hidden lg:flex items-center gap-8 sm:gap-12 pt-8 sm:pt-10 border-t border-stone-800/80">
               <div className="flex flex-col">
                 <div className="flex items-center gap-2 mb-1">
                   <Award className="w-4 h-4 text-gold" />
-                  <span className="text-2xl sm:text-3xl font-serif text-white">25+</span>
+                  <span className="text-2xl sm:text-3xl font-serif text-white">20+</span>
                 </div>
                 <span className="text-[9px] sm:text-[10px] text-stone-500 font-bold uppercase tracking-[0.2em]">{t('stat_exp')}</span>
               </div>
@@ -89,7 +134,7 @@ const Hero: React.FC = () => {
         </div>
 
         {/* Image Column - Anchored bottom right on Desktop, bottom center on mobile */}
-        <div className="w-full lg:w-[45%] xl:w-[50%] flex-1 relative flex items-end justify-center lg:justify-end mt-12 lg:mt-0 z-10 pointer-events-none">
+        <div className="hidden lg:flex w-full lg:w-[45%] xl:w-[50%] flex-1 relative items-end justify-center lg:justify-end mt-12 lg:mt-0 z-10 pointer-events-none">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
