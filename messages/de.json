@@ -30,8 +30,8 @@
     "badge": "Über uns",
     "title_start": "Ihr Partner für den",
     "title_highlight": "direkten Ankauf.",
-    "description_1": "Als privater Investor mit über 20 Jahren Erfahrung im Immobilienmarkt stehe ich persönlich hinter jedem Kauf. Mein Fokus liegt auf der Akquisition und dem langfristigen Halten von Mehrfamilienhäusern in NRW, Berlin und Brandenburg.",
-    "description_2": "Ich verstehe die Komplexität und den emotionalen Wert einer Immobilie. Deshalb garantiere ich eine faire Bewertung, absolute Diskretion und eine zügige, transparente Abwicklung.",
+    "description_1": "mit über 20 Jahren Erfahrung im Immobilienmarkt stehen wir  hinter jedem Kauf. Unser Fokus liegt auf der Akquisition und dem langfristigen Halten von Mehrfamilienhäusern in NRW, Berlin und Brandenburg.",
+    "description_2": "Wir verstehen die Komplexität und den emotionalen Wert einer Immobilie. Deshalb garantieren wir eine faire Bewertung, absolute Diskretion und eine zügige, transparente Abwicklung.",
     "cta": "Immobilie anbieten",
     "signature_role": "Privatinvestor & Geschäftsführer",
     "features": {
@@ -57,7 +57,7 @@
     "badge": "Der Prozess",
     "title_start": "Verkauf leicht",
     "title_highlight": "gemacht.",
-    "description": "Wir reduzieren Komplexität auf das Wesentliche. Ein schlanker, transparenter Prozess von der ersten Bewertung bis zur sofortigen Auszahlung.",
+    "description": "Wir reduzieren Komplexität auf das Wesentliche. Ein schlanker, transparenter Prozess von der ersten Bewertung bis zur Auszahlung des Kaufpreises.",
     "steps": {
       "contact": {
         "title": "Kontaktaufnahme",
@@ -73,7 +73,7 @@
       },
       "closing": {
         "title": "Abschluss",
-        "desc": "Wir sorgen für eine schnelle notarielle Abwicklung und sofortige Kaufpreiszahlung."
+        "desc": "Wir sorgen für eine schnelle notarielle Abwicklung und ein Transporteren und sichern Prozess."
       }
     }
   },
@@ -117,10 +117,6 @@
         "size": {
           "title": "Größe",
           "value": "Je nach Lage und Entwicklungspotenzial"
-        },
-        "law": {
-          "title": "Baurecht",
-          "value": "Offen, kurzfristig schaffbar oder bereits vorhanden"
         }
       }
     }
@@ -209,7 +205,7 @@
       },
       "development": {
         "title": "Entwicklung",
-        "desc": "Wir entwickeln nachhaltige Konzepte, um den Wert erworbener Immobilien gezielt zu steigern und langfristig zu sichern."
+        "desc": "Wir entwickeln nachhaltige Konzepte, um den Wert erworbener Immobilien gezielt zu steigern und langfristig für das Umfeld und die Miete zu sichern."
       },
       "holding": {
         "title": "Bestandshaltung",

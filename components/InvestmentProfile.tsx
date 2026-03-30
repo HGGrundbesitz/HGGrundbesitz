@@ -25,11 +25,7 @@ const InvestmentProfile: React.FC = () => {
     {
       title: t('land_card.criteria.location.title'),
       value: t('land_card.criteria.location.value'),
-    },
-    {
-      title: t('land_card.criteria.law.title'),
-      value: t('land_card.criteria.law.value'),
-    },
+    }
   ];
 
   const fadeUp = {

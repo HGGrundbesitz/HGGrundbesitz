@@ -168,7 +168,20 @@ const Contact: React.FC = () => {
                     transition={{ duration: 0.3 }}
                     className="space-y-6"
                   >
-                    {activeTab === 'expose' ? (
+                    {activeTab === 'message' ? (
+                      <div className="space-y-2">
+                        <label className="text-[10px] sm:text-xs font-semibold uppercase tracking-widest text-stone-500 ml-1">{t('form.message')}</label>
+                        <textarea 
+                          name="message"
+                          value={formState.message}
+                          onChange={handleChange}
+                          rows={6}
+                          required
+                          placeholder={t('form.message_placeholder')}
+                          className="w-full bg-stone-950/60 border border-stone-800 rounded-2xl px-5 py-4 text-white text-base focus:outline-none focus:ring-1 focus:ring-gold/50 focus:border-gold/50 transition-all placeholder:text-stone-600 resize-none shadow-inner"
+                        />
+                      </div>
+                    ) : (
                       <div className="space-y-4">
                         <div
                           onClick={() => fileInputRef.current?.click()}
@@ -209,19 +222,6 @@ const Contact: React.FC = () => {
                             ))}
                           </div>
                         )}
-                      </div>
-                    ) : (
-                      <div className="space-y-2">
-                        <label className="text-[10px] sm:text-xs font-semibold uppercase tracking-widest text-stone-500 ml-1">{t('form.message')}</label>
-                        <textarea 
-                          name="message"
-                          value={formState.message}
-                          onChange={handleChange}
-                          rows={6}
-                          required
-                          placeholder={t('form.message_placeholder')}
-                          className="w-full bg-stone-950/60 border border-stone-800 rounded-2xl px-5 py-4 text-white text-base focus:outline-none focus:ring-1 focus:ring-gold/50 focus:border-gold/50 transition-all placeholder:text-stone-600 resize-none shadow-inner"
-                        />
                       </div>
                     )}
                   </motion.div>
@@ -328,7 +328,7 @@ const Contact: React.FC = () => {
                   <div className="pt-1">
                     <h4 className="text-[10px] font-bold text-stone-500 uppercase tracking-widest mb-3">{t('info.address_title')}</h4>
                     <div className="text-lg text-white font-serif leading-relaxed">
-                      Hendrik Grau Gesellschaften <br />
+                      HG Grundbesitz GmbH <br />
                       Bremer Platz 9–11 <br />
                       48155 Münster
                     </div>

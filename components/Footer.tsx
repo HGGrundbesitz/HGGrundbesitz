@@ -105,7 +105,7 @@ const Footer: React.FC = () => {
         {/* Divider & Copyright */}
         <div className="pt-8 border-t border-stone-800/40 flex items-center justify-center text-center">
           <p className="text-sm text-stone-500 font-light">
-            © {new Date().getFullYear()} Hendrik Grau. All rights reserved.
+            © {new Date().getFullYear()}  HG Grundbesitz GmbH. All rights reserved.
           </p>
         </div>
         
