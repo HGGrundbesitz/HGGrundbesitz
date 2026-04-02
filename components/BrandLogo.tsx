@@ -4,7 +4,7 @@ import { cn } from '../lib/utils';
 type BrandLogoProps = {
   className?: string;
   size?: 'sm' | 'md' | 'lg';
-  variant?: 'dark' | 'light';
+  variant?: 'dark' | 'light' | 'adaptive';
 };
 
 const SIZE_STYLES = {
@@ -44,12 +44,18 @@ const VARIANT_STYLES = {
     border: 'border-stone-950/10',
     shadow: 'shadow-[0_18px_36px_rgba(15,23,42,0.16)]',
   },
+  adaptive: {
+    name: 'text-stone-950 dark:text-white',
+    suffix: 'text-stone-500 dark:text-white/55',
+    border: 'border-stone-950/10 dark:border-white/10',
+    shadow: 'shadow-[0_18px_36px_rgba(15,23,42,0.16)] dark:shadow-[0_18px_40px_rgba(12,74,126,0.32)]',
+  },
 } as const;
 
 const BrandLogo: React.FC<BrandLogoProps> = ({
   className,
   size = 'md',
-  variant = 'dark',
+  variant = 'adaptive',
 }) => {
   const sizeStyles = SIZE_STYLES[size];
   const variantStyles = VARIANT_STYLES[variant];

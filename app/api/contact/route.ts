@@ -114,7 +114,7 @@ export async function POST(request: NextRequest) {
       html: `
         <div style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #f9f9f9;">
           <div style="background-color: #1c1917; padding: 20px; border-radius: 8px 8px 0 0; text-align: center;">
-            <h2 style="color: #D4AF37; margin: 0; font-family: serif;">Hendrik Grau Investment</h2>
+            <h2 style="color: #1C6AA8; margin: 0; font-family: serif;">Hendrik Grau Investment</h2>
           </div>
           <div style="background: #ffffff; padding: 30px; border-radius: 0 0 8px 8px; border: 1px solid #e5e5e5; border-top: none;">
             <h3 style="color: #333; margin-top: 0;">Neue Kontaktanfrage</h3>
@@ -127,7 +127,7 @@ export async function POST(request: NextRequest) {
               </tr>
               <tr>
                 <td style="padding: 10px; border-bottom: 1px solid #eee; font-weight: bold; color: #555;">E-Mail:</td>
-                <td style="padding: 10px; border-bottom: 1px solid #eee; color: #333;"><a href="mailto:${safeEmail}" style="color: #D4AF37; text-decoration: none;">${safeEmail}</a></td>
+                <td style="padding: 10px; border-bottom: 1px solid #eee; color: #333;"><a href="mailto:${safeEmail}" style="color: #1C6AA8; text-decoration: none;">${safeEmail}</a></td>
               </tr>
               <tr>
                 <td style="padding: 10px; border-bottom: 1px solid #eee; font-weight: bold; color: #555;">Telefon:</td>
@@ -163,7 +163,7 @@ export async function POST(request: NextRequest) {
       html: `
         <div style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #f9f9f9;">
           <div style="background-color: #1c1917; padding: 30px 20px; border-radius: 8px 8px 0 0; text-align: center;">
-            <h1 style="color: #D4AF37; margin: 0; font-family: serif; font-size: 24px;">HG</h1>
+            <h1 style="color: #1C6AA8; margin: 0; font-family: serif; font-size: 24px;">HG</h1>
           </div>
           
           <div style="background: #ffffff; padding: 40px 30px; border-radius: 0 0 8px 8px; border: 1px solid #e5e5e5; border-top: none;">
@@ -177,7 +177,7 @@ export async function POST(request: NextRequest) {
               Wir prüfen Ihr Anliegen sorgfältig und diskret. Sie erhalten in der Regel innerhalb von 24 bis 48 Stunden eine persönliche Rückmeldung von uns.
             </p>
             
-            <div style="background: #f9fafb; padding: 20px; border-radius: 8px; margin: 30px 0; border-left: 3px solid #D4AF37;">
+            <div style="background: #f9fafb; padding: 20px; border-radius: 8px; margin: 30px 0; border-left: 3px solid #1C6AA8;">
               <p style="margin: 0; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: #999; margin-bottom: 8px;">Ihre Nachricht</p>
               <p style="margin: 0; color: #333; font-style: italic;">"${safeMessage || '-'}"</p>
             </div>

@@ -35,13 +35,13 @@ const About: React.FC = () => {
   return (
     <section
       id="about"
-      className="relative -mt-4 rounded-t-[2rem] border-t border-stone-200/80 bg-stone-50 py-16 text-stone-900 shadow-[0_-18px_40px_rgba(0,0,0,0.12)] overflow-hidden sm:-mt-6 sm:rounded-t-[2.5rem] sm:py-20 lg:mt-0 lg:rounded-none lg:border-t-0 lg:py-32 lg:shadow-none"
+      className="relative -mt-4 overflow-hidden rounded-t-[2rem] border-t border-stone-200/80 bg-white py-16 text-stone-900 shadow-[0_-18px_40px_rgba(15,23,42,0.06)] dark:border-[#272b33]/80 dark:bg-[linear-gradient(180deg,#060606_0%,#0a0a0b_100%)] dark:text-stone-100 dark:shadow-[0_-18px_40px_rgba(0,0,0,0.35)] sm:-mt-6 sm:rounded-t-[2.5rem] sm:py-20 lg:mt-0 lg:rounded-none lg:border-t-0 lg:py-32 lg:shadow-none"
     >
       {/* Enhanced Background Elements */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 right-0 w-[400px] sm:w-[600px] h-[400px] sm:h-[600px] bg-white rounded-full blur-[100px] sm:blur-[120px] -translate-y-1/2 translate-x-1/2 opacity-60" />
-        <div className="absolute bottom-0 left-0 w-[300px] sm:w-[400px] h-[300px] sm:h-[400px] bg-stone-200/50 rounded-full blur-[60px] sm:blur-[80px] translate-y-1/2 -translate-x-1/2" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gold/5 rounded-full blur-[150px] opacity-30" />
+        <div className="absolute top-0 right-0 h-[400px] w-[400px] rounded-full bg-gold/10 blur-[100px] opacity-45 -translate-y-1/2 translate-x-1/2 dark:bg-gold/8 dark:opacity-30 sm:h-[600px] sm:w-[600px] sm:blur-[120px]" />
+        <div className="absolute bottom-0 left-0 h-[300px] w-[300px] rounded-full bg-[#dbe8f4] blur-[60px] translate-y-1/2 -translate-x-1/2 dark:bg-white/[0.04] sm:h-[400px] sm:w-[400px] sm:blur-[80px]" />
+        <div className="absolute top-1/2 left-1/2 h-[800px] w-[800px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gold/6 opacity-40 blur-[150px] dark:bg-white/[0.025]" />
       </div>
 
       <div className="max-w-[1600px] mx-auto px-4 pt-4 sm:px-6 sm:pt-6 lg:px-12 lg:pt-0 xl:px-20 relative z-10">
@@ -65,11 +65,11 @@ const About: React.FC = () => {
             {t('badge')}
           </motion.span>
           
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-medium leading-tight text-stone-900 mb-6 sm:mb-8 px-2">
-            {t('title_start')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold to-[#B8941F]">{t('title_highlight')}</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-medium leading-tight text-stone-900 dark:text-white mb-6 sm:mb-8 px-2">
+            {t('title_start')} <span className="bg-gradient-to-r from-gold to-[#083B65] bg-clip-text text-transparent dark:from-white dark:to-[#6fa8d6]">{t('title_highlight')}</span>
           </h2>
           
-          <div className="space-y-4 sm:space-y-6 text-base sm:text-lg lg:text-xl text-stone-600 font-light leading-relaxed mb-8 sm:mb-12 max-w-3xl mx-auto px-2">
+          <div className="space-y-4 sm:space-y-6 text-base sm:text-lg lg:text-xl text-stone-600 dark:text-stone-400 font-light leading-relaxed mb-8 sm:mb-12 max-w-3xl mx-auto px-2">
             <p>{t('description_1')}</p>
             <p>{t('description_2')}</p>
           </div>
@@ -79,7 +79,7 @@ const About: React.FC = () => {
               href="#contact"
               whileHover={{ scale: 1.03, y: -2 }}
               whileTap={{ scale: 0.98 }}
-              className="w-full sm:w-auto px-8 sm:px-10 py-3.5 sm:py-4 bg-stone-900 text-white rounded-full font-bold uppercase tracking-widest text-[11px] sm:text-xs hover:bg-gold hover:text-stone-900 transition-all shadow-lg hover:shadow-2xl text-center"
+              className="w-full rounded-full bg-gold px-8 py-3.5 text-center text-[11px] font-bold uppercase tracking-widest text-white shadow-[0_18px_40px_rgba(11,78,132,0.22)] transition-all hover:bg-white hover:text-black hover:shadow-2xl dark:bg-white dark:text-black dark:hover:bg-[#4B92CA] dark:hover:text-white sm:w-auto sm:px-10 sm:py-4 sm:text-xs"
             >
               {t('cta')}
             </motion.a>
@@ -99,11 +99,11 @@ const About: React.FC = () => {
                 className="group inline-flex items-center gap-4 rounded-full pr-2 transition-all"
                 aria-label="Hendrik Grau auf LinkedIn ansehen"
               >
-                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white flex items-center justify-center border-2 border-stone-100 shadow-lg transition-all duration-300 group-hover:border-gold/50 group-hover:shadow-xl">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-[#dbe8f4] bg-white shadow-[0_14px_35px_rgba(15,23,42,0.08)] transition-all duration-300 group-hover:border-gold/50 group-hover:shadow-xl dark:border-[#272b33] dark:bg-[#15181d] dark:shadow-[0_14px_35px_rgba(0,0,0,0.35)] sm:h-14 sm:w-14">
                   <span className="font-serif text-lg sm:text-xl text-gold">HG</span>
                 </div>
                 <div>
-                  <div className="text-sm font-bold text-stone-900 uppercase tracking-wide transition-colors duration-300 group-hover:text-gold">
+                  <div className="text-sm font-bold text-stone-900 dark:text-white uppercase tracking-wide transition-colors duration-300 group-hover:text-gold">
                     Hendrik Grau
                   </div>
                 </div>
@@ -127,21 +127,21 @@ const About: React.FC = () => {
                 key={index}
                 variants={fadeInUp}
                 whileHover={{ y: -8, transition: { duration: 0.3 } }}
-                className="group relative p-6 sm:p-8 rounded-2xl sm:rounded-[2rem] bg-stone-900 border border-stone-800 hover:border-gold/50 transition-all duration-500 flex flex-col items-center sm:items-start text-center sm:text-left h-full overflow-hidden"
+                className="group relative flex h-full flex-col items-center overflow-hidden rounded-2xl border border-[#dbe8f4] bg-white p-6 text-center shadow-[0_20px_60px_rgba(15,23,42,0.06)] transition-all duration-500 hover:border-gold/40 dark:border-[#272b33] dark:bg-[#101317] dark:shadow-[0_22px_55px_rgba(0,0,0,0.3)] dark:hover:border-gold/35 sm:items-start sm:rounded-[2rem] sm:p-8 sm:text-left"
               >
                 {/* Hover glow effect */}
                 <div className="absolute inset-0 bg-gradient-to-br from-gold/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 
-                <div className="relative z-10 w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-stone-800 border border-stone-700 shadow-sm flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-black group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 mb-4 sm:mb-6">
+                <div className="relative z-10 mb-4 flex h-12 w-12 items-center justify-center rounded-xl border border-[#dbe8f4] bg-[#f4f8fc] text-gold shadow-sm transition-all duration-500 group-hover:rotate-3 group-hover:scale-110 group-hover:bg-gold group-hover:text-white dark:border-[#272b33] dark:bg-[#15181d] sm:mb-6 sm:h-14 sm:w-14 sm:rounded-2xl">
                   <Icon className="w-5 h-5 sm:w-7 sm:h-7" />
                 </div>
-                <h3 className="relative z-10 text-lg sm:text-xl font-serif text-white mb-2 sm:mb-3 group-hover:text-gold transition-colors duration-300">{feature.title}</h3>
-                <p className="relative z-10 text-sm text-stone-400 leading-relaxed group-hover:text-stone-300 transition-colors">
+                <h3 className="relative z-10 text-lg sm:text-xl font-serif text-stone-900 dark:text-white mb-2 sm:mb-3 group-hover:text-gold transition-colors duration-300">{feature.title}</h3>
+                <p className="relative z-10 text-sm text-stone-600 dark:text-stone-400 leading-relaxed group-hover:text-stone-700 dark:group-hover:text-stone-300 transition-colors">
                   {feature.description}
                 </p>
                 
                 {/* Card number */}
-                <span className="absolute top-4 right-4 sm:top-6 sm:right-6 text-stone-800 font-mono text-xs group-hover:text-gold/30 transition-colors">0{index + 1}</span>
+                <span className="absolute top-4 right-4 font-mono text-xs text-[#c3d7e8] transition-colors group-hover:text-gold/30 dark:text-stone-700 sm:top-6 sm:right-6">0{index + 1}</span>
               </motion.div>
             )
           })}

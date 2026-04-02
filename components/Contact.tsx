@@ -90,11 +90,11 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="relative py-24 lg:py-40 bg-[#050505] text-stone-200 overflow-hidden font-sans">
+    <section id="contact" className="relative overflow-hidden bg-white py-24 font-sans text-stone-900 lg:py-40 dark:bg-[linear-gradient(180deg,#060606_0%,#0a0a0b_100%)] dark:text-stone-100">
       {/* Premium Background Elements */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gold/5 rounded-full blur-[150px] -translate-y-1/2 translate-x-1/2" />
-        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-stone-800/10 rounded-full blur-[150px] translate-y-1/2 -translate-x-1/2" />
+        <div className="absolute top-0 right-0 h-[600px] w-[600px] rounded-full bg-gold/8 blur-[150px] -translate-y-1/2 translate-x-1/2 dark:bg-gold/8 dark:opacity-30" />
+        <div className="absolute bottom-0 left-0 h-[600px] w-[600px] rounded-full bg-[#dbe8f4] blur-[150px] translate-y-1/2 -translate-x-1/2 dark:bg-white/[0.04]" />
       </div>
 
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
@@ -105,15 +105,15 @@ const Contact: React.FC = () => {
             initial={{ opacity: 1, y: 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-stone-800/60 bg-stone-900/50 mb-6 shadow-xl"
+            className="mb-6 inline-flex items-center gap-2 rounded-full border border-stone-200 bg-white px-4 py-2 shadow-[0_14px_35px_rgba(15,23,42,0.06)] dark:border-[#272b33] dark:bg-[#15181d]/82 dark:shadow-[0_14px_35px_rgba(0,0,0,0.25)]"
           >
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-            <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-stone-400">{t('badge')}</span>
+            <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-stone-500 dark:text-stone-300">{t('badge')}</span>
           </motion.span>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-medium leading-tight text-white mb-6">
-            {t('title_start')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold via-[#F0DFB0] to-[#B8941F] italic pr-2">{t('title_end')}</span>
+          <h2 className="mb-6 text-4xl font-serif font-medium leading-tight text-stone-900 sm:text-5xl lg:text-6xl dark:text-white">
+            {t('title_start')} <span className="bg-gradient-to-r from-[#4B92CA] via-[#D7E8F6] to-[#7EB4DD] bg-clip-text pr-2 text-transparent italic dark:from-white dark:via-[#dbe7f4] dark:to-[#6fa8d6]">{t('title_end')}</span>
           </h2>
-          <p className="text-base sm:text-lg text-stone-400 font-light leading-relaxed">
+          <p className="text-base font-light leading-relaxed text-stone-600 sm:text-lg dark:text-stone-400">
             {t('description')}
           </p>
         </div>
@@ -128,17 +128,17 @@ const Contact: React.FC = () => {
             variants={slideInLeft}
             className="lg:col-span-7 xl:col-span-7"
           >
-            <div className="bg-stone-900/30 rounded-[2rem] sm:rounded-[2.5rem] border border-stone-800/50 shadow-2xl p-6 sm:p-10 lg:p-12 relative overflow-hidden">
+            <div className="relative overflow-hidden rounded-[2rem] border border-[#dbe8f4] bg-white p-6 shadow-[0_24px_80px_rgba(15,23,42,0.08)] sm:rounded-[2.5rem] sm:p-10 lg:p-12 dark:border-[#272b33] dark:bg-[#101317] dark:shadow-[0_24px_80px_rgba(0,0,0,0.32)]">
               
               {/* Form Tabs */}
-              <div className="flex p-1.5 bg-stone-900/50 rounded-2xl mb-10 border border-stone-800/50 relative z-10">
+              <div className="relative z-10 mb-10 flex rounded-2xl border border-stone-200 bg-[#f4f8fc] p-1.5 dark:border-[#272b33] dark:bg-[#171b21]/75">
                 <button
                   type="button"
                   onClick={() => setActiveTab('expose')}
                   className={`flex-1 py-3.5 sm:py-4 rounded-xl text-xs sm:text-sm font-bold uppercase tracking-widest transition-all duration-300 ${
                     activeTab === 'expose'
-                    ? 'bg-stone-800 text-gold shadow-md'
-                    : 'text-stone-500 hover:text-stone-300'
+                    ? 'bg-white text-gold shadow-md dark:bg-[#1a1e24] dark:text-gold'
+                    : 'text-stone-500 hover:text-stone-700 dark:text-stone-400 dark:hover:text-stone-200'
                   }`}
                 >
                   {t('tabs.expose')}
@@ -148,8 +148,8 @@ const Contact: React.FC = () => {
                   onClick={() => setActiveTab('message')}
                   className={`flex-1 py-3.5 sm:py-4 rounded-xl text-xs sm:text-sm font-bold uppercase tracking-widest transition-all duration-300 ${
                     activeTab === 'message'
-                    ? 'bg-stone-800 text-white shadow-md'
-                    : 'text-stone-500 hover:text-stone-300'
+                    ? 'bg-white text-stone-900 shadow-md dark:bg-[#1a1e24] dark:text-white'
+                    : 'text-stone-500 hover:text-stone-700 dark:text-stone-400 dark:hover:text-stone-200'
                   }`}
                 >
                   {t('tabs.message')}
@@ -170,7 +170,7 @@ const Contact: React.FC = () => {
                   >
                     {activeTab === 'message' ? (
                       <div className="space-y-2">
-                        <label className="text-[10px] sm:text-xs font-semibold uppercase tracking-widest text-stone-500 ml-1">{t('form.message')}</label>
+                        <label className="ml-1 text-[10px] font-semibold uppercase tracking-widest text-stone-500 sm:text-xs dark:text-stone-400">{t('form.message')}</label>
                         <textarea 
                           name="message"
                           value={formState.message}
@@ -178,7 +178,7 @@ const Contact: React.FC = () => {
                           rows={6}
                           required
                           placeholder={t('form.message_placeholder')}
-                          className="w-full bg-stone-950/60 border border-stone-800 rounded-2xl px-5 py-4 text-white text-base focus:outline-none focus:ring-1 focus:ring-gold/50 focus:border-gold/50 transition-all placeholder:text-stone-600 resize-none shadow-inner"
+                          className="w-full resize-none rounded-2xl border border-[#dbe8f4] bg-[#f8fbff] px-5 py-4 text-base text-stone-900 shadow-inner transition-all placeholder:text-stone-400 focus:border-gold/40 focus:outline-none focus:ring-1 focus:ring-gold/40 dark:border-[#272b33] dark:bg-[#13161b] dark:text-stone-100 dark:placeholder:text-stone-500"
                         />
                       </div>
                     ) : (
@@ -188,17 +188,17 @@ const Contact: React.FC = () => {
                           onDragOver={handleDragOver}
                           onDragLeave={handleDragLeave}
                           onDrop={handleDrop}
-                          className={`w-full border-2 border-dashed rounded-2xl p-8 sm:p-12 text-center cursor-pointer transition-all duration-300 flex flex-col items-center justify-center gap-4 ${
-                            isDragging ? 'bg-gold/5 border-gold scale-[1.02]' : 'bg-stone-950/40 border-stone-800 hover:border-stone-600 hover:bg-stone-900/40'
+                          className={`flex w-full cursor-pointer flex-col items-center justify-center gap-4 rounded-2xl border-2 border-dashed p-8 text-center transition-all duration-300 sm:p-12 ${
+                            isDragging ? 'scale-[1.02] border-gold bg-gold/5' : 'border-[#dbe8f4] bg-[#f8fbff] hover:border-gold/30 hover:bg-gold/5 dark:border-[#272b33] dark:bg-[#13161b] dark:hover:border-gold/40 dark:hover:bg-gold/10'
                           }`}
                         >
                           <input type="file" multiple ref={fileInputRef} className="hidden" onChange={handleFileChange} />
-                          <div className="w-16 h-16 rounded-full bg-stone-900 flex items-center justify-center border border-stone-800 shadow-inner mb-2">
+                          <div className="mb-2 flex h-16 w-16 items-center justify-center rounded-full border border-stone-200 bg-white shadow-inner dark:border-[#272b33] dark:bg-[#15181d]">
                             <UploadCloud className={`w-8 h-8 ${isDragging ? 'text-gold' : 'text-stone-400'}`} />
                           </div>
                           <div>
-                            <p className="text-base font-medium text-stone-200 mb-1">{tUpload('dropzone_title')}</p>
-                            <p className="text-xs text-stone-500">{tUpload('dropzone_subtitle')}</p>
+                            <p className="mb-1 text-base font-medium text-stone-900 dark:text-stone-100">{tUpload('dropzone_title')}</p>
+                            <p className="text-xs text-stone-500 dark:text-stone-400">{tUpload('dropzone_subtitle')}</p>
                           </div>
                         </div>
 
@@ -206,15 +206,15 @@ const Contact: React.FC = () => {
                         {files.length > 0 && (
                           <div className="space-y-3 pt-4">
                             {files.map((file, idx) => (
-                              <div key={idx} className="flex items-center justify-between px-5 py-4 bg-stone-950/60 border border-stone-800 rounded-xl">
+                              <div key={idx} className="flex items-center justify-between rounded-xl border border-stone-200 bg-white px-5 py-4 dark:border-[#272b33] dark:bg-[#15181d]/82">
                                 <div className="flex items-center gap-4 overflow-hidden">
                                   <FileText className="w-5 h-5 text-gold flex-shrink-0" />
-                                  <span className="text-sm text-stone-300 truncate">{file.name}</span>
+                                  <span className="truncate text-sm text-stone-700 dark:text-stone-200">{file.name}</span>
                                 </div>
                                 <button
                                   type="button"
                                   onClick={(e) => { e.stopPropagation(); removeFile(idx); }}
-                                  className="text-stone-500 hover:text-red-400 bg-stone-900 hover:bg-stone-800 p-2 rounded-lg transition-colors"
+                                  className="rounded-lg bg-stone-100 p-2 text-stone-500 transition-colors hover:bg-stone-200 hover:text-red-400 dark:bg-[#1d2128] dark:text-stone-400 dark:hover:bg-[#262b34]"
                                 >
                                   <X className="w-4 h-4" />
                                 </button>
@@ -228,10 +228,10 @@ const Contact: React.FC = () => {
                 </AnimatePresence>
 
                 {/* Common Inputs (Name, Email, Phone) */}
-                <div className="pt-6 border-t border-stone-800/50 space-y-6">
+                <div className="space-y-6 border-t border-stone-200 pt-6 dark:border-[#272b33]">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <label className="text-[10px] sm:text-xs font-semibold uppercase tracking-widest text-stone-500 ml-1">{t('form.name')}</label>
+                      <label className="ml-1 text-[10px] font-semibold uppercase tracking-widest text-stone-500 sm:text-xs dark:text-stone-400">{t('form.name')}</label>
                       <input 
                         type="text" 
                         name="name"
@@ -239,24 +239,24 @@ const Contact: React.FC = () => {
                         onChange={handleChange}
                         required
                         placeholder={t('form.name_placeholder')}
-                        className="w-full bg-stone-950/60 border border-stone-800 rounded-xl px-5 py-4 text-white text-base focus:outline-none focus:ring-1 focus:ring-gold/50 focus:border-gold/50 transition-all placeholder:text-stone-600 shadow-inner"
+                        className="w-full rounded-xl border border-[#dbe8f4] bg-[#f8fbff] px-5 py-4 text-base text-stone-900 shadow-inner transition-all placeholder:text-stone-400 focus:border-gold/40 focus:outline-none focus:ring-1 focus:ring-gold/40 dark:border-[#272b33] dark:bg-[#13161b] dark:text-stone-100 dark:placeholder:text-stone-500"
                       />
                     </div>
                     <div className="space-y-2">
-                      <label className="text-[10px] sm:text-xs font-semibold uppercase tracking-widest text-stone-500 ml-1">{t('form.phone')}</label>
+                      <label className="ml-1 text-[10px] font-semibold uppercase tracking-widest text-stone-500 sm:text-xs dark:text-stone-400">{t('form.phone')}</label>
                       <input 
                         type="tel" 
                         name="phone"
                         value={formState.phone}
                         onChange={handleChange}
                         placeholder={t('form.phone_placeholder')}
-                        className="w-full bg-stone-950/60 border border-stone-800 rounded-xl px-5 py-4 text-white text-base focus:outline-none focus:ring-1 focus:ring-gold/50 focus:border-gold/50 transition-all placeholder:text-stone-600 rtl:text-right shadow-inner"
+                        className="w-full rounded-xl border border-[#dbe8f4] bg-[#f8fbff] px-5 py-4 text-base text-stone-900 shadow-inner transition-all placeholder:text-stone-400 focus:border-gold/40 focus:outline-none focus:ring-1 focus:ring-gold/40 rtl:text-right dark:border-[#272b33] dark:bg-[#13161b] dark:text-stone-100 dark:placeholder:text-stone-500"
                       />
                     </div>
                   </div>
                   
                   <div className="space-y-2">
-                    <label className="text-[10px] sm:text-xs font-semibold uppercase tracking-widest text-stone-500 ml-1">{t('form.email')}</label>
+                    <label className="ml-1 text-[10px] font-semibold uppercase tracking-widest text-stone-500 sm:text-xs dark:text-stone-400">{t('form.email')}</label>
                     <input 
                       type="email" 
                       name="email"
@@ -264,7 +264,7 @@ const Contact: React.FC = () => {
                       onChange={handleChange}
                       required
                       placeholder={t('form.email_placeholder')}
-                      className="w-full bg-stone-950/60 border border-stone-800 rounded-xl px-5 py-4 text-white text-base focus:outline-none focus:ring-1 focus:ring-gold/50 focus:border-gold/50 transition-all placeholder:text-stone-600 rtl:text-right shadow-inner"
+                      className="w-full rounded-xl border border-[#dbe8f4] bg-[#f8fbff] px-5 py-4 text-base text-stone-900 shadow-inner transition-all placeholder:text-stone-400 focus:border-gold/40 focus:outline-none focus:ring-1 focus:ring-gold/40 rtl:text-right dark:border-[#272b33] dark:bg-[#13161b] dark:text-stone-100 dark:placeholder:text-stone-500"
                     />
                   </div>
                 </div>
@@ -277,8 +277,8 @@ const Contact: React.FC = () => {
                     whileTap={{ scale: 0.99 }}
                     className={`w-full py-5 rounded-2xl font-bold uppercase tracking-widest text-xs transition-all duration-300 disabled:cursor-not-allowed flex items-center justify-center gap-3 ${
                       isSubmitted
-                        ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20'
-                        : 'bg-gold text-black hover:bg-white shadow-xl hover:shadow-white/10'
+                        ? 'border border-emerald-500/20 bg-emerald-500/10 text-emerald-500 dark:text-emerald-400'
+                        : 'bg-gold text-white hover:bg-[#0B4E84] shadow-[0_18px_40px_rgba(11,78,132,0.18)]'
                     }`}
                   >
                     {isSubmitting ? (
@@ -301,7 +301,7 @@ const Contact: React.FC = () => {
                 </div>
                 
                 {errorMessage && (
-                  <p className="text-red-400 text-sm text-center mt-4">
+                  <p className="mt-4 text-center text-sm text-red-500 dark:text-red-400">
                     {errorMessage}
                   </p>
                 )}
@@ -322,53 +322,53 @@ const Contact: React.FC = () => {
               <div className="space-y-12">
                 {/* Address */}
                 <div className="flex items-start gap-6 group">
-                  <div className="w-14 h-14 rounded-2xl bg-stone-900/50 flex items-center justify-center text-gold border border-stone-800 group-hover:scale-105 group-hover:border-gold/50 transition-all duration-500 shadow-xl">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-[#dbe8f4] bg-white text-gold shadow-[0_16px_40px_rgba(15,23,42,0.06)] transition-all duration-500 group-hover:scale-105 group-hover:border-gold/50 dark:border-[#272b33] dark:bg-[#15181d] dark:shadow-[0_16px_40px_rgba(0,0,0,0.2)]">
                     <MapPin className="w-6 h-6" />
                   </div>
                   <div className="pt-1">
-                    <h4 className="text-[10px] font-bold text-stone-500 uppercase tracking-widest mb-3">{t('info.address_title')}</h4>
-                    <div className="text-lg text-white font-serif leading-relaxed">
+                    <h4 className="mb-3 text-[10px] font-bold uppercase tracking-widest text-stone-500 dark:text-stone-400">{t('info.address_title')}</h4>
+                    <div className="text-lg font-serif leading-relaxed text-stone-900 dark:text-stone-100">
                       HG Grundbesitz GmbH <br />
                       Bremer Platz 9–11 <br />
                       48155 Münster
                     </div>
-                    <a href="https://maps.google.com" target="_blank" className="inline-flex items-center gap-2 text-gold text-xs font-bold uppercase tracking-widest mt-5 hover:text-white transition-colors group/link">
+                    <a href="https://maps.google.com" target="_blank" className="group/link mt-5 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-gold transition-colors hover:text-stone-900 dark:hover:text-white">
                       {t('info.route')} <ArrowUpRight className="w-3.5 h-3.5 rtl:flip group-hover/link:translate-x-1 group-hover/link:-translate-y-1 transition-transform" />
                     </a>
                   </div>
                 </div>
 
-                <div className="w-full h-px bg-gradient-to-r from-stone-800 to-transparent" />
+                <div className="h-px w-full bg-gradient-to-r from-stone-300 to-transparent dark:from-stone-800" />
 
                 {/* Phone & Fax */}
                 <div className="space-y-8">
                   <div className="flex items-center gap-6 group">
-                    <div className="w-12 h-12 rounded-2xl bg-stone-900/50 flex items-center justify-center text-stone-400 border border-stone-800 group-hover:text-gold group-hover:border-gold/50 transition-all duration-500 shadow-lg">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-[#dbe8f4] bg-white text-stone-500 shadow-[0_12px_30px_rgba(15,23,42,0.05)] transition-all duration-500 group-hover:text-gold group-hover:border-gold/50 dark:border-[#272b33] dark:bg-[#15181d] dark:text-stone-300 dark:shadow-[0_12px_30px_rgba(0,0,0,0.16)]">
                       <Phone className="w-5 h-5" />
                     </div>
                     <div>
-                      <h4 className="text-[10px] font-bold text-stone-500 uppercase tracking-widest mb-1.5">{t('info.phone_title')}</h4>
-                      <a href="tel:+4925139479064" className="text-white hover:text-gold transition-colors text-lg font-medium tracking-tight">+49 251 39479064</a>
+                      <h4 className="mb-1.5 text-[10px] font-bold uppercase tracking-widest text-stone-500 dark:text-stone-400">{t('info.phone_title')}</h4>
+                      <a href="tel:+4925139479064" className="text-lg font-medium tracking-tight text-stone-900 transition-colors hover:text-gold dark:text-stone-100">+49 251 39479064</a>
                     </div>
                   </div>
                   
                   <div className="flex items-center gap-6 group">
-                    <div className="w-12 h-12 rounded-2xl bg-stone-900/50 flex items-center justify-center text-stone-400 border border-stone-800 group-hover:text-gold group-hover:border-gold/50 transition-all duration-500 shadow-lg">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-[#dbe8f4] bg-white text-stone-500 shadow-[0_12px_30px_rgba(15,23,42,0.05)] transition-all duration-500 group-hover:text-gold group-hover:border-gold/50 dark:border-[#272b33] dark:bg-[#15181d] dark:text-stone-300 dark:shadow-[0_12px_30px_rgba(0,0,0,0.16)]">
                       <Printer className="w-5 h-5" />
                     </div>
                     <div>
-                      <h4 className="text-[10px] font-bold text-stone-500 uppercase tracking-widest mb-1.5">{t('info.fax_title')}</h4>
-                      <span className="text-stone-300 text-lg ltr:text-left rtl:text-right" dir="ltr">+49 251 39479007</span>
+                      <h4 className="mb-1.5 text-[10px] font-bold uppercase tracking-widest text-stone-500 dark:text-stone-400">{t('info.fax_title')}</h4>
+                      <span className="text-lg text-stone-500 ltr:text-left rtl:text-right dark:text-stone-300" dir="ltr">+49 251 39479007</span>
                     </div>
                   </div>
                 </div>
               </div>
 
               {/* CEO Info */}
-              <div className="mt-12 bg-gradient-to-br from-stone-900/40 to-stone-900/10 rounded-3xl p-8 border border-stone-800 shadow-2xl relative overflow-hidden group">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gold/5 rounded-full blur-[50px] group-hover:bg-gold/10 transition-colors duration-700" />
-                <h4 className="text-[10px] font-bold text-stone-500 uppercase tracking-widest mb-3 relative z-10">{t('info.ceo_title')}</h4>
-                <p className="text-xl font-serif text-white relative z-10">Dipl.-Wirtsch.-Ing. <br/>Hendrik Grau LL.M.</p>
+              <div className="group relative mt-12 overflow-hidden rounded-3xl border border-[#dbe8f4] bg-[#f8fbff] p-8 shadow-[0_20px_60px_rgba(15,23,42,0.06)] dark:border-[#272b33] dark:bg-[#101317] dark:shadow-[0_20px_60px_rgba(0,0,0,0.24)]">
+                <div className="absolute top-0 right-0 h-32 w-32 rounded-full bg-gold/5 blur-[50px] transition-colors duration-700 group-hover:bg-gold/10" />
+                <h4 className="relative z-10 mb-3 text-[10px] font-bold uppercase tracking-widest text-stone-500 dark:text-stone-400">{t('info.ceo_title')}</h4>
+                <p className="relative z-10 text-xl font-serif text-stone-900 dark:text-stone-100">Dipl.-Wirtsch.-Ing. <br/>Hendrik Grau LL.M.</p>
               </div>
 
             </div>

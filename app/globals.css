@@ -1,20 +1,21 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --color-gold: #D4AF37;
-  --color-gold-50: #FEF7E4;
-  --color-gold-100: #FDF3D5;
-  --color-gold-200: #FBE4B9;
-  --color-gold-300: #F9D5A0;
-  --color-gold-400: #F4C285;
-  --color-gold-500: #D4AF37;
-  --color-gold-600: #C9A961;
-  --color-gold-700: #B8934D;
-  --color-gold-800: #A17E2F;
-  --color-gold-900: #8B6914;
-  --color-gold-light: #F4C285;
-  --color-gold-dark: #8B6914;
-  --color-gold-glow: rgba(212, 175, 55, 0.2);
+  --color-gold: #1C6AA8;
+  --color-gold-50: #EDF5FB;
+  --color-gold-100: #D7E8F6;
+  --color-gold-200: #B0D0EC;
+  --color-gold-300: #7EB4DD;
+  --color-gold-400: #4B92CA;
+  --color-gold-500: #1C6AA8;
+  --color-gold-600: #0B4E84;
+  --color-gold-700: #083B65;
+  --color-gold-800: #072D4C;
+  --color-gold-900: #041F34;
+  --color-gold-light: #7EB4DD;
+  --color-gold-dark: #041F34;
+  --color-gold-glow: rgba(28, 106, 168, 0.24);
 
   --color-charcoal: #1A1918;
 
@@ -71,10 +72,16 @@ body {
   font-family: var(--font-geist), 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #0c0a09;
-  color: #f5f5f4;
+  background-color: #f8fafc;
+  color: #1c1917;
   overflow-x: hidden;
   min-height: 100dvh;
+  transition: background-color 250ms ease, color 250ms ease;
+}
+
+html.dark body {
+  background-color: #050505;
+  color: #f5f5f4;
 }
 
 /* Mobile-first improvements */
@@ -98,19 +105,31 @@ body {
     width: 8px;
   }
   ::-webkit-scrollbar-track {
-    background: #000000;
+    background: #eef4fb;
   }
   ::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, #D4AF37 0%, #8B6914 100%);
+    background: linear-gradient(180deg, #1C6AA8 0%, #041F34 100%);
     border-radius: 4px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(180deg, #F4C285 0%, #D4AF37 100%);
+    background: linear-gradient(180deg, #7EB4DD 0%, #1C6AA8 100%);
+  }
+
+  html.dark ::-webkit-scrollbar-track {
+    background: #111827;
+  }
+
+  html.dark ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #4B92CA 0%, #041F34 100%);
+  }
+
+  html.dark ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #7EB4DD 0%, #1C6AA8 100%);
   }
 }
 
 ::selection {
-  background-color: rgba(212, 175, 55, 0.3);
+  background-color: rgba(28, 106, 168, 0.3);
   color: #f5f5f4;
 }
 
@@ -224,7 +243,7 @@ body {
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(212, 175, 55, 0.1),
+    rgba(28, 106, 168, 0.1),
     transparent
   );
   background-size: 1000px 100%;
@@ -248,7 +267,7 @@ body {
 
 /* Gradient text */
 .gradient-text {
-  background: linear-gradient(135deg, #D4AF37 0%, #F4C285 100%);
+  background: linear-gradient(135deg, #1C6AA8 0%, #7EB4DD 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -260,7 +279,7 @@ body {
 }
 
 .hover-glow:hover {
-  box-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
+  box-shadow: 0 0 30px rgba(28, 106, 168, 0.3);
 }
 
 /* Fluid Typography - Mobile optimized */
@@ -290,13 +309,13 @@ body {
 
 /* Pulse Animation */
 .pulse-dot {
-  box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7);
+  box-shadow: 0 0 0 0 rgba(28, 106, 168, 0.7);
   animation: pulse-gold 2s infinite;
 }
 @keyframes pulse-gold {
-  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7); }
-  70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(212, 175, 55, 0); }
-  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(28, 106, 168, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(28, 106, 168, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(28, 106, 168, 0); }
 }
 
 /* Marquee Animation */
@@ -309,7 +328,7 @@ body {
 
 /* Premium Button Styles */
 .btn-primary {
-  @apply px-6 py-3 bg-gold text-black rounded-full font-bold uppercase tracking-widest text-xs hover:bg-white transition-all duration-300 shadow-lg;
+  @apply px-6 py-3 bg-gold text-white rounded-full font-bold uppercase tracking-widest text-xs hover:bg-white hover:text-black transition-all duration-300 shadow-lg;
 }
 
 .btn-secondary {
@@ -357,7 +376,7 @@ input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   height: 16px; width: 16px;
   border-radius: 50%;
-  background: #D4AF37;
+  background: #1C6AA8;
   margin-top: -6px;
   box-shadow: 0 0 0 4px #1c1917, 0 2px 4px rgba(0,0,0,0.5);
   cursor: pointer;

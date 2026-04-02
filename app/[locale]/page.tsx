@@ -11,7 +11,7 @@ import ScrollToTop from '@/components/ScrollToTop';
 
 export default function Home() {
   return (
-    <main className="bg-black min-h-screen text-stone-200 font-sans selection:bg-gold/30 selection:text-white">
+    <main className="min-h-screen bg-stone-50 text-stone-900 font-sans selection:bg-gold/20 selection:text-stone-950 dark:bg-[#050505] dark:text-stone-100 dark:selection:text-white">
       <Navbar />
       <Hero />
       <ScrollToTop />

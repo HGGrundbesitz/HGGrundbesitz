@@ -29,14 +29,14 @@ const Preloader: React.FC = () => {
             opacity: 0,
             transition: { duration: 1.2, ease: [0.16, 1, 0.3, 1] }
           }}
-          className="fixed inset-0 z-[9999] bg-[#050505] flex flex-col items-center justify-center overflow-hidden"
+          className="fixed inset-0 z-[9999] bg-[#f6f8fb] dark:bg-[#050505] flex flex-col items-center justify-center overflow-hidden"
         >
-          {/* Ambient Gold Glow */}
+          {/* Ambient Blue Glow */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 4, repeat: Infinity, repeatType: "mirror" }}
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gold/5 rounded-full blur-[180px]" 
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gold/10 rounded-full blur-[180px]" 
           />
 
           <div className="relative z-10 flex flex-col items-center">
@@ -46,11 +46,11 @@ const Preloader: React.FC = () => {
               transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
               className="px-6 text-center"
             >
-              <BrandLogo size="lg" className="justify-center" />
+              <BrandLogo size="lg" variant="adaptive" className="justify-center" />
             </motion.div>
 
             {/* Premium Animated Line */}
-            <div className="w-64 h-px bg-stone-800/50 relative mt-12 overflow-hidden">
+            <div className="w-64 h-px bg-stone-200/80 dark:bg-[#272b33]/70 relative mt-12 overflow-hidden">
               <motion.div
                 initial={{ left: "-100%" }}
                 animate={{ left: "100%" }}
@@ -67,7 +67,7 @@ const Preloader: React.FC = () => {
               initial={{ opacity: 1, letterSpacing: "0.5em" }}
               animate={{ opacity: 1, letterSpacing: "0.5em" }}
               transition={{ delay: 0, duration: 0 }}
-              className="mt-8 text-gold/50 text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.5em] ml-[0.5em] text-center select-none"
+              className="mt-8 text-gold/60 text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.5em] ml-[0.5em] text-center select-none"
             >
               Excellence in Real Estate
             </motion.span>
@@ -78,13 +78,13 @@ const Preloader: React.FC = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.1 }}
             transition={{ delay: 1, duration: 1.5 }}
-            className="absolute top-10 left-10 w-24 h-24 border-l border-t border-gold pointer-events-none"
+            className="absolute top-10 left-10 w-24 h-24 border-l border-t border-gold/30 pointer-events-none"
           />
           <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.1 }}
             transition={{ delay: 1, duration: 1.5 }}
-            className="absolute bottom-10 right-10 w-24 h-24 border-r border-b border-gold pointer-events-none"
+            className="absolute bottom-10 right-10 w-24 h-24 border-r border-b border-gold/30 pointer-events-none"
           />
         </motion.div>
       )}

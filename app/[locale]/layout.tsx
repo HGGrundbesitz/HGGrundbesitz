@@ -6,6 +6,7 @@ import { getMessages, getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import SmoothScroll from '../../components/SmoothScroll';
 import Preloader from '../../components/Preloader';
+import { ThemeProvider, themeInitScript } from '../../components/ThemeProvider';
 
 import { Analytics } from "@vercel/analytics/next"
 
@@ -54,13 +55,16 @@ export default async function LocaleLayout({
   const isRtl = locale === 'ar';
 
   return (
-    <html lang={locale} dir={isRtl ? 'rtl' : 'ltr'}>
-      <body className={`${geist.variable} bg-stone-950 text-stone-200 min-h-screen flex flex-col antialiased selection:bg-gold/20 selection:text-stone-50`}>
+    <html lang={locale} dir={isRtl ? 'rtl' : 'ltr'} suppressHydrationWarning>
+      <body className={`${geist.variable} bg-stone-50 text-stone-900 dark:bg-[#050505] dark:text-stone-100 min-h-screen flex flex-col antialiased selection:bg-gold/20 selection:text-stone-950 dark:selection:text-white`}>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
         <NextIntlClientProvider messages={messages}>
-          <Preloader />
-          <SmoothScroll />
-          {children}
-                    <Analytics/>
+          <ThemeProvider>
+            <Preloader />
+            <SmoothScroll />
+            {children}
+            <Analytics/>
+          </ThemeProvider>
         </NextIntlClientProvider>
       </body>
     </html>
