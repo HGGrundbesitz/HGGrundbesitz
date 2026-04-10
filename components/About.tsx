@@ -35,7 +35,7 @@ const About: React.FC = () => {
   return (
     <section
       id="about"
-      className="relative -mt-4 overflow-hidden rounded-t-[2rem] border-t border-stone-200/80 bg-white py-16 text-stone-900 shadow-[0_-18px_40px_rgba(15,23,42,0.06)] dark:border-[#272b33]/80 dark:bg-[linear-gradient(180deg,#060606_0%,#0a0a0b_100%)] dark:text-stone-100 dark:shadow-[0_-18px_40px_rgba(0,0,0,0.35)] sm:-mt-6 sm:rounded-t-[2.5rem] sm:py-20 lg:mt-0 lg:rounded-none lg:border-t-0 lg:py-32 lg:shadow-none"
+      className="relative overflow-hidden bg-transparent py-16 text-stone-900 dark:text-stone-100 sm:py-20 lg:py-32"
     >
       {/* Enhanced Background Elements */}
       <div className="absolute inset-0 pointer-events-none">

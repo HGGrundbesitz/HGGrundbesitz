@@ -63,14 +63,7 @@ const Preloader: React.FC = () => {
               />
             </div>
 
-            <motion.span
-              initial={{ opacity: 1, letterSpacing: "0.5em" }}
-              animate={{ opacity: 1, letterSpacing: "0.5em" }}
-              transition={{ delay: 0, duration: 0 }}
-              className="mt-8 text-gold/60 text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.5em] ml-[0.5em] text-center select-none"
-            >
-              Excellence in Real Estate
-            </motion.span>
+           
           </div>
 
           {/* Corner Decors - High End Minimalist */}

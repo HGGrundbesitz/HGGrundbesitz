@@ -90,7 +90,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="relative overflow-hidden bg-white py-24 font-sans text-stone-900 lg:py-40 dark:bg-[linear-gradient(180deg,#060606_0%,#0a0a0b_100%)] dark:text-stone-100">
+    <section id="contact" className="relative overflow-hidden bg-transparent py-24 font-sans text-stone-900 lg:py-40 dark:text-stone-100">
       {/* Premium Background Elements */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 right-0 h-[600px] w-[600px] rounded-full bg-gold/8 blur-[150px] -translate-y-1/2 translate-x-1/2 dark:bg-gold/8 dark:opacity-30" />

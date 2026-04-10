@@ -102,18 +102,7 @@ export default async function DatenschutzPage({
         </p>
       </LegalCard>
 
-      <LegalCard title="7. Speicherung der Theme-Auswahl">
-        <p>
-          Damit Ihre Auswahl zwischen hellem und dunklem Darstellungsmodus erhalten bleibt, speichern wir lokal im Browser
-          einen Eintrag im Local Storage unter dem Schlüssel <span className="font-mono text-stone-700 dark:text-stone-200">hg-theme</span>.
-        </p>
-        <p>
-          Diese Speicherung ist erforderlich, um einen von Ihnen ausdrücklich gewünschten Funktionsumfang bereitzustellen.
-          Rechtsgrundlage ist § 25 Abs. 2 Nr. 2 TDDDG sowie Art. 6 Abs. 1 lit. f DSGVO.
-        </p>
-      </LegalCard>
-
-      <LegalCard title="8. Empfänger und Drittlandübermittlungen">
+      <LegalCard title="7. Empfänger und Drittlandübermittlungen">
         <p>
           Empfänger Ihrer Daten können von uns eingesetzte technische Dienstleister sein, insbesondere in den Bereichen
           Hosting, Webanalyse, E-Mail-Versand und IT-Sicherheit. Wir wählen diese Dienstleister sorgfältig aus und binden
@@ -125,7 +114,7 @@ export default async function DatenschutzPage({
         </p>
       </LegalCard>
 
-      <LegalCard title="9. Speicherdauer">
+      <LegalCard title="8. Speicherdauer">
         <p>
           Wir speichern personenbezogene Daten nur so lange, wie dies für die jeweiligen Zwecke erforderlich ist.
           Anfragen und Kommunikation werden gelöscht, sobald sie für die Bearbeitung nicht mehr benötigt werden und keine
@@ -133,12 +122,11 @@ export default async function DatenschutzPage({
         </p>
         <p>
           Technische Protokolldaten werden grundsätzlich nur für die Dauer gespeichert, die zur Sicherstellung des Betriebs,
-          zur Fehleranalyse und zur Abwehr von Missbrauch erforderlich ist. Den im Browser gespeicherten Theme-Eintrag können
-          Sie jederzeit selbst löschen.
+          zur Fehleranalyse und zur Abwehr von Missbrauch erforderlich ist.
         </p>
       </LegalCard>
 
-      <LegalCard title="10. Ihre Rechte">
+      <LegalCard title="9. Ihre Rechte">
         <p>Sie haben im Rahmen der gesetzlichen Voraussetzungen insbesondere folgende Rechte:</p>
         <ul className="list-disc space-y-2 pl-5">
           <li>Recht auf Auskunft nach Art. 15 DSGVO</li>
@@ -151,7 +139,7 @@ export default async function DatenschutzPage({
         </ul>
       </LegalCard>
 
-      <LegalCard title="11. Beschwerderecht bei einer Aufsichtsbehörde">
+      <LegalCard title="10. Beschwerderecht bei einer Aufsichtsbehörde">
         <p>
           Sie haben das Recht, sich bei einer Datenschutzaufsichtsbehörde über die Verarbeitung Ihrer personenbezogenen
           Daten zu beschweren. Für Unternehmen in Nordrhein-Westfalen ist dies insbesondere die Landesbeauftragte für

@@ -37,7 +37,7 @@ const Process: React.FC = () => {
   ];
 
   return (
-    <section id="process" className="relative overflow-hidden bg-[#f7f9fc] py-20 text-stone-900 sm:py-32 lg:py-44 dark:bg-[linear-gradient(180deg,#050505_0%,#0a0a0b_100%)] dark:text-stone-100">
+    <section id="process" className="relative overflow-hidden bg-transparent py-20 text-stone-900 sm:py-32 lg:py-44 dark:text-stone-100">
       {/* Background effects */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 right-0 h-[400px] w-[400px] rounded-full bg-gold/8 blur-[100px] -translate-y-1/2 translate-x-1/4 sm:h-[600px] sm:w-[600px] dark:bg-gold/8 dark:opacity-30" />

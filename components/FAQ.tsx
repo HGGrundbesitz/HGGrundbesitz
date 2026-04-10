@@ -36,7 +36,7 @@ const FAQ: React.FC = () => {
   };
 
   return (
-    <section id="faq" className="relative overflow-hidden bg-white py-24 font-sans text-stone-900 dark:bg-[linear-gradient(180deg,#060606_0%,#0a0a0b_100%)] dark:text-white sm:py-32 lg:py-48">
+    <section id="faq" className="relative overflow-hidden bg-transparent py-24 font-sans text-stone-900 dark:text-white sm:py-32 lg:py-48">
       {/* Enhanced Background Elements */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 right-0 h-[400px] w-[400px] rounded-full bg-gold/10 opacity-45 blur-[100px] -translate-y-1/2 translate-x-1/2 dark:bg-gold/8 dark:opacity-28 sm:h-[600px] sm:w-[600px] sm:blur-[120px]" />

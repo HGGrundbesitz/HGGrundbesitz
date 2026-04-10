@@ -36,7 +36,7 @@ const InvestmentProfile: React.FC = () => {
   };
 
   return (
-    <section id="profile" className="relative overflow-hidden bg-white py-20 text-stone-900 sm:py-32 dark:bg-[linear-gradient(180deg,#060606_0%,#0a0a0b_100%)] dark:text-stone-100">
+    <section id="profile" className="relative overflow-hidden bg-transparent py-20 text-stone-900 sm:py-32 dark:text-stone-100">
       {/* Background Decor */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 right-0 h-[50%] w-[50%] rounded-full bg-gold/8 blur-[120px] -translate-y-1/2 translate-x-1/2 dark:bg-gold/8 dark:opacity-30" />

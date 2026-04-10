@@ -66,6 +66,11 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 100px;
   -webkit-text-size-adjust: 100%;
+  background-color: #050505;
+  overflow-x: hidden;        /* kill horizontal overflow at root level */
+  scrollbar-gutter: stable;  /* reserve gutter space so content never jumps,
+                                but don't let it bleed a white/light strip */
+  scrollbar-color: #1C6AA8 #050505;
 }
 
 body {
@@ -102,25 +107,39 @@ html.dark body {
 /* Custom Scrollbar - Premium (hidden on mobile for cleaner look) */
 @media (min-width: 768px) {
   ::-webkit-scrollbar {
-    width: 8px;
+    width: 10px;
+  }
+  ::-webkit-scrollbar-button {
+    display: none;
+    width: 0;
+    height: 0;
+    background: transparent;
   }
   ::-webkit-scrollbar-track {
-    background: #eef4fb;
+    background: #050505;
+  }
+  ::-webkit-scrollbar-corner {
+    background: #050505;
   }
   ::-webkit-scrollbar-thumb {
     background: linear-gradient(180deg, #1C6AA8 0%, #041F34 100%);
-    border-radius: 4px;
+    border: 2px solid #050505;
+    border-radius: 999px;
+    background-clip: padding-box;
   }
   ::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(180deg, #7EB4DD 0%, #1C6AA8 100%);
   }
 
   html.dark ::-webkit-scrollbar-track {
-    background: #111827;
+    background: #050505; /* matches dark body background */
   }
 
   html.dark ::-webkit-scrollbar-thumb {
     background: linear-gradient(180deg, #4B92CA 0%, #041F34 100%);
+    border: 2px solid #050505; /* matches dark track */
+    border-radius: 999px;
+    background-clip: padding-box;
   }
 
   html.dark ::-webkit-scrollbar-thumb:hover {

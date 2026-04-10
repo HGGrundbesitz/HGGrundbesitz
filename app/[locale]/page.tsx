@@ -9,22 +9,30 @@ import Contact from '../../components/Contact';
 import Footer from '../../components/Footer';
 import ScrollToTop from '@/components/ScrollToTop';
 
+const SectionDivider = () => (
+  <div
+    aria-hidden="true"
+    className="mx-auto h-px w-24 max-w-[18vw] rounded-full bg-gradient-to-r from-transparent via-[#1C6AA8]/45 to-transparent"
+  />
+);
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-stone-50 text-stone-900 font-sans selection:bg-gold/20 selection:text-stone-950 dark:bg-[#050505] dark:text-stone-100 dark:selection:text-white">
       <Navbar />
       <Hero />
       <ScrollToTop />
-      <div id="about">
+      <div className="relative bg-[#f7fbff]">
         <About />
-      </div>
-      <div id="profile">
+        <SectionDivider />
         <InvestmentProfile />
-      </div>
-      <Services />
-      <Process />
-      <FAQ />
-      <div id="contact">
+        <SectionDivider />
+        <Services />
+        <SectionDivider />
+        <Process />
+        <SectionDivider />
+        <FAQ />
+        <SectionDivider />
         <Contact />
       </div>
       <Footer />

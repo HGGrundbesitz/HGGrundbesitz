@@ -1,13 +1,12 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
-import { Menu, X, ArrowUpRight, Globe, ChevronDown, Moon, SunMedium } from 'lucide-react';
+import { Menu, X, ArrowUpRight, Globe, ChevronDown } from 'lucide-react';
 import Flag from 'react-world-flags';
 import { motion, AnimatePresence, cubicBezier } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { usePathname, useRouter } from 'next/navigation';
 import BrandLogo from './BrandLogo';
-import { useTheme } from './ThemeProvider';
 import { getHomePath, getSectionHref } from '../lib/locale-path';
 
 const Navbar: React.FC = () => {
@@ -20,8 +19,6 @@ const Navbar: React.FC = () => {
   const t = useTranslations('Navbar');
   const pathname = usePathname();
   const router = useRouter();
-  const { theme, toggleTheme, mounted } = useTheme();
-  const isDark = mounted && theme === 'dark';
   const homePath = getHomePath(pathname);
   const contactHref = getSectionHref(pathname, '#contact');
 
@@ -252,17 +249,6 @@ const Navbar: React.FC = () => {
             </div>
 
             <div className="flex items-center gap-2 sm:gap-3">
-              <motion.button
-                type="button"
-                onClick={toggleTheme}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-stone-200 bg-white text-stone-600 transition-all hover:border-gold/40 hover:bg-gold/10 hover:text-gold dark:border-[#272b33] dark:bg-[#15181d]/82 dark:text-stone-300 dark:hover:border-[#343945] dark:hover:bg-white/5 dark:hover:text-white"
-                aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
-              >
-                {isDark ? <SunMedium className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
-              </motion.button>
-
               <div className="relative hidden lg:block" ref={langRef}>
                 <motion.button
                   onClick={() => setIsLangOpen(!isLangOpen)}
