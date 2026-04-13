@@ -39,7 +39,7 @@ const Hero: React.FC = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1.2, delay: 0.2 }}
           className={cn(
-            'absolute bottom-0 h-[82vh] w-full',
+            'absolute bottom-0 h-[88vh] w-full translate-y-[10px] 2xl:h-[90vh] 2xl:translate-y-[14px]',
             isRtl ? 'left-0' : 'right-0'
           )}
         >
