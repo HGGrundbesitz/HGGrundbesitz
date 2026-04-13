@@ -75,7 +75,7 @@ const Services: React.FC = () => {
           
           <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-medium leading-tight text-stone-900 dark:text-white mb-6 sm:mb-10 tracking-tight">
             {t('title_start')} <br className="hidden sm:block" />
-            <span className="bg-gradient-to-r from-[#4B92CA] via-[#D7E8F6] to-[#7EB4DD] bg-clip-text pr-2 text-transparent italic dark:from-white dark:via-[#d8e4f1] dark:to-[#6fa8d6]">{t('title_highlight')}</span>
+            <span className="pr-2 text-[#7EB4DD] italic">{t('title_highlight')}</span>
           </h2>
           
           <div className="w-12 h-1 bg-gradient-to-r from-gold via-gold/50 to-transparent rounded-full mx-auto mb-8" />

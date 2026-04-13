@@ -59,7 +59,7 @@ const InvestmentProfile: React.FC = () => {
             </motion.span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-serif font-medium leading-[1.1] text-stone-900 tracking-tight dark:text-white">
               {t('title_start')} <br className="hidden sm:block"/>
-              <span className="text-gold/80 italic dark:bg-gradient-to-r dark:from-white dark:to-[#6fa8d6] dark:bg-clip-text dark:text-transparent">{t('title_highlight')}</span>
+              <span className="text-[#7EB4DD] italic">{t('title_highlight')}</span>
             </h2>
           </motion.div>
            

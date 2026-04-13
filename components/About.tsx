@@ -66,7 +66,7 @@ const About: React.FC = () => {
           </motion.span>
           
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-medium leading-tight text-stone-900 dark:text-white mb-6 sm:mb-8 px-2">
-            {t('title_start')} <span className="bg-gradient-to-r from-gold to-[#083B65] bg-clip-text text-transparent dark:from-white dark:to-[#6fa8d6]">{t('title_highlight')}</span>
+            {t('title_start')} <span className="text-[#7EB4DD]">{t('title_highlight')}</span>
           </h2>
           
           <div className="space-y-4 sm:space-y-6 text-base sm:text-lg lg:text-xl text-stone-600 dark:text-stone-400 font-light leading-relaxed mb-8 sm:mb-12 max-w-3xl mx-auto px-2">

@@ -39,7 +39,8 @@ const Hero: React.FC = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1.2, delay: 0.2 }}
           className={cn(
-            'absolute bottom-0 h-[88vh] w-full translate-y-[10px] 2xl:h-[90vh] 2xl:translate-y-[14px]',
+            'absolute bottom-0 h-[88vh] w-full translate-y-[10px] overflow-hidden 2xl:h-[90vh] 2xl:translate-y-[14px]',
+            isRtl ? 'hero-image-fade-left' : 'hero-image-fade-right',
             isRtl ? 'left-0' : 'right-0'
           )}
         >
@@ -48,12 +49,23 @@ const Hero: React.FC = () => {
             alt="Hendrik Grau"
             fill
             className={cn(
-              'object-cover',
+              'object-cover brightness-[1.09] contrast-[0.96] saturate-[1.03]',
               isRtl ? 'object-[left_top]' : 'object-[right_top]'
             )}
             priority
             sizes={isRtl ? '(max-width: 1024px) 0vw, 38vw' : '(max-width: 1024px) 0vw, 42vw'}
             quality={90}
+          />
+          <div
+            aria-hidden="true"
+            className={cn(
+              'absolute inset-0',
+              isRtl ? 'hero-image-atmosphere-left' : 'hero-image-atmosphere-right'
+            )}
+          />
+          <div
+            aria-hidden="true"
+            className="hero-image-bottom-blend absolute inset-x-0 bottom-0 h-[30%]"
           />
         </motion.div>
       </div>
@@ -93,7 +105,7 @@ const Hero: React.FC = () => {
               {t('title_start')} <br />
               <span
                 className={cn(
-                  'bg-gradient-to-r from-[#4B92CA] via-[#D7E8F6] to-[#7EB4DD] bg-clip-text text-transparent',
+                  'text-[#7EB4DD]',
                   isRtl ? 'pl-2 not-italic' : 'pr-2 italic'
                 )}
               >

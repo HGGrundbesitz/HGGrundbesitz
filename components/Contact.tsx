@@ -111,7 +111,7 @@ const Contact: React.FC = () => {
             <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-stone-500 dark:text-stone-300">{t('badge')}</span>
           </motion.span>
           <h2 className="mb-6 text-4xl font-serif font-medium leading-tight text-stone-900 sm:text-5xl lg:text-6xl dark:text-white">
-            {t('title_start')} <span className="bg-gradient-to-r from-[#4B92CA] via-[#D7E8F6] to-[#7EB4DD] bg-clip-text pr-2 text-transparent italic dark:from-white dark:via-[#dbe7f4] dark:to-[#6fa8d6]">{t('title_end')}</span>
+            {t('title_start')} <span className="pr-2 text-[#7EB4DD] italic">{t('title_end')}</span>
           </h2>
           <p className="text-base font-light leading-relaxed text-stone-600 sm:text-lg dark:text-stone-400">
             {t('description')}

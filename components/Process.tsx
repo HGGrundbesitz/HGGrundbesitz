@@ -60,7 +60,7 @@ const Process: React.FC = () => {
             </motion.span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif font-medium leading-[1.1] text-stone-900 dark:text-white">
               {t('title_start')} <br className="hidden sm:block"/> 
-              <span className="bg-gradient-to-r from-[#4B92CA] via-[#B0D0EC] to-gold bg-clip-text text-transparent italic dark:from-white dark:via-[#d7e8f6] dark:to-[#6fa8d6]">{t('title_highlight')}</span>
+              <span className="text-[#7EB4DD] italic">{t('title_highlight')}</span>
             </h2>
           </motion.div>
           <motion.div 
