@@ -5,7 +5,6 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import SmoothScroll from '../../components/SmoothScroll';
-import Preloader from '../../components/Preloader';
 
 import { Analytics } from "@vercel/analytics/next"
 
@@ -63,7 +62,6 @@ export default async function LocaleLayout({
           }}
         />
         <NextIntlClientProvider messages={messages}>
-          <Preloader />
           <SmoothScroll />
           {children}
           <Analytics/>
