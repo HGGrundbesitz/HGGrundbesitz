@@ -13,19 +13,16 @@ const Services: React.FC = () => {
       icon: Building2,
       title: t('services.purchase.title'),
       description: t('services.purchase.desc'),
-      number: '01',
     },
     {
       icon: TrendingUp,
       title: t('services.development.title'),
       description: t('services.development.desc'),
-      number: '02',
     },
     {
       icon: Home,
       title: t('services.holding.title'),
       description: t('services.holding.desc'),
-      number: '03',
     },
   ];
 
@@ -49,13 +46,6 @@ const Services: React.FC = () => {
 
   return (
     <section id="services" className="relative overflow-hidden bg-transparent py-24 font-sans text-stone-900 dark:text-white sm:py-32 lg:py-48">
-      {/* Enhanced Background Elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 right-0 h-[400px] w-[400px] rounded-full bg-gold/10 opacity-45 blur-[100px] -translate-y-1/2 translate-x-1/2 dark:bg-gold/8 dark:opacity-28 sm:h-[600px] sm:w-[600px] sm:blur-[120px]" />
-        <div className="absolute bottom-0 left-0 h-[300px] w-[300px] rounded-full bg-[#dbe8f4] blur-[60px] translate-y-1/2 -translate-x-1/2 dark:bg-white/[0.04] sm:h-[400px] sm:w-[400px] sm:blur-[80px]" />
-        <div className="absolute top-1/2 left-1/2 h-[800px] w-[800px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gold/6 opacity-35 blur-[150px] dark:bg-white/[0.02] dark:opacity-20" />
-      </div>
-
       <div className="max-w-[1600px] mx-auto px-6 sm:px-12 lg:px-20 relative z-10">
         
         {/* Header */}
@@ -101,12 +91,11 @@ const Services: React.FC = () => {
               {/* Hover Glow */}
               <div className="absolute inset-0 bg-gradient-to-br from-gold/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
-              <div className="relative z-10 mb-10 flex justify-between items-start">
+              <div className="relative z-10 mb-10 flex items-start">
                 <div className="flex h-16 w-16 items-center justify-center rounded-2xl border border-[#dbe8f4] bg-[#f4f8fc] text-gold shadow-inner transition-all duration-500 group-hover:scale-110 group-hover:border-gold/30 group-hover:bg-gold group-hover:text-white dark:border-[#272b33] dark:bg-[#15181d] sm:h-20 sm:w-20">
                   <Icon className="w-7 h-7 sm:w-8 sm:h-8" />
                 </div>
-                  <span className="pt-2 font-mono text-sm font-bold tracking-widest text-[#17324f] transition-colors group-hover:text-gold/40 dark:text-stone-700 sm:text-base">0{service.number}</span>
-                </div>
+              </div>
                 
                 <h3 className="relative z-10 text-2xl sm:text-3xl font-serif text-stone-900 dark:text-white mb-4 sm:mb-6 group-hover:text-gold transition-colors duration-300">{service.title}</h3>
                 <p className="relative z-10 text-stone-600 dark:text-stone-400 leading-relaxed text-sm sm:text-base font-light group-hover:text-stone-700 dark:group-hover:text-stone-300 transition-colors flex-grow">

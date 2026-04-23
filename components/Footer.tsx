@@ -4,14 +4,16 @@ import React from 'react';
 import { Linkedin } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import BrandLogo from './BrandLogo';
 import { getHomePath, getSectionHref, isHomePathname } from '../lib/locale-path';
+import { COOKIE_CONSENT_NAME } from '@/lib/cookieConsent';
 
 const Footer: React.FC = () => {
   const t = useTranslations('Footer');
   const tNav = useTranslations('Navbar');
   const pathname = usePathname();
+  const router = useRouter();
   const homePath = getHomePath(pathname);
   const isHome = isHomePathname(pathname);
 
@@ -30,8 +32,13 @@ const Footer: React.FC = () => {
     }
   };
 
+  const handleCookieSettingsClick = () => {
+    document.cookie = `${COOKIE_CONSENT_NAME}=; Max-Age=0; Path=/; SameSite=Lax`;
+    router.refresh();
+  };
+
   return (
-    <footer className="bg-[#f5f8fc] dark:bg-[#050505] py-6 sm:py-10 px-4 sm:px-6 lg:px-12 relative overflow-hidden font-sans">
+    <footer className="bg-[#f7fbff] py-6 sm:py-10 px-4 sm:px-6 lg:px-12 relative overflow-hidden font-sans">
       {/* Floating Rounded Container */}
       <div className="max-w-[1400px] mx-auto bg-white dark:bg-[#101317] border border-[#dbe8f4] dark:border-[#272b33]/55 rounded-[2rem] sm:rounded-[2.5rem] p-8 sm:p-12 lg:p-16 relative overflow-hidden shadow-[0_30px_80px_rgba(15,23,42,0.08)] dark:shadow-none">
         
@@ -46,7 +53,7 @@ const Footer: React.FC = () => {
             <div className="text-sm sm:text-base text-stone-600 dark:text-stone-400 font-light leading-relaxed max-w-sm mb-10">
               <p>48155 Münster</p>
               <p className="mt-2">
-                <a href="mailto:info@hg-grundbesitz.de" className="hover:text-gold transition-colors">info@hg-grundbesitz.de</a>
+                <a href="mailto:hg@hg-grundbesitz.de" className="hover:text-gold transition-colors">info@hg-grundbesitz.de</a>
               </p>
             </div>
             
@@ -103,6 +110,15 @@ const Footer: React.FC = () => {
                 >
                   {t('privacy')}
                 </a>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  onClick={handleCookieSettingsClick}
+                  className="block text-left hover:text-gold transition-colors"
+                >
+                  {t('cookie_settings')}
+                </button>
               </li>
             </ul>
           </div>

@@ -38,12 +38,6 @@ const Process: React.FC = () => {
 
   return (
     <section id="process" className="relative overflow-hidden bg-transparent py-20 text-stone-900 sm:py-32 lg:py-44 dark:text-stone-100">
-      {/* Background effects */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 right-0 h-[400px] w-[400px] rounded-full bg-gold/8 blur-[100px] -translate-y-1/2 translate-x-1/4 sm:h-[600px] sm:w-[600px] dark:bg-gold/8 dark:opacity-30" />
-        <div className="absolute bottom-0 left-0 h-[300px] w-[300px] rounded-full bg-[#dbe8f4] blur-[80px] translate-y-1/4 -translate-x-1/4 sm:h-[500px] sm:w-[500px] dark:bg-white/[0.035]" />
-      </div>
-
       <div className="max-w-[1700px] mx-auto px-4 sm:px-6 lg:px-12 xl:px-24 relative z-10">
         
         {/* Header */}

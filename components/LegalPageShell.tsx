@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import { ArrowUpRight, Mail, Phone } from 'lucide-react';
-import Navbar from './Navbar';
+
 import Footer from './Footer';
+import Navbar from './Navbar';
 import ScrollToTop from './ScrollToTop';
 
 type LegalPageShellProps = {
@@ -65,15 +66,13 @@ export default function LegalPageShell({
             </p>
 
             <p className="mt-5 max-w-2xl text-sm leading-7 text-stone-500 dark:text-stone-400">
-              Die folgenden Angaben gelten sprachübergreifend für alle Versionen dieser Website und wurden so formuliert,
+              Die folgenden Angaben gelten sprachuebergreifend fuer alle Versionen dieser Website und wurden so formuliert,
               dass sie in Ton und Erscheinung zur Website passen.
             </p>
           </div>
 
           <div className="mt-14 grid grid-cols-1 gap-8 lg:mt-16 lg:grid-cols-12 lg:gap-10">
-            <div className="space-y-6 lg:col-span-8">
-              {children}
-            </div>
+            <div className="space-y-6 lg:col-span-8">{children}</div>
 
             <aside className="lg:col-span-4">
               <div className="space-y-6 lg:sticky lg:top-32">
@@ -86,16 +85,16 @@ export default function LegalPageShell({
                     <p>
                       Bremer Platz 9-11
                       <br />
-                      48155 Münster
+                      48155 Muenster
                       <br />
                       Deutschland
                     </p>
                     <a
-                      href="mailto:info@hg-grundbesitz.de"
+                      href="mailto:hg@hg-grundbesitz.de"
                       className="flex items-center gap-3 transition-colors hover:text-gold"
                     >
                       <Mail className="h-4 w-4" />
-                      <span>info@hg-grundbesitz.de</span>
+                      <span>hg@hg-grundbesitz.de</span>
                     </a>
                     <a
                       href="tel:+4925139479064"

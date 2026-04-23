@@ -37,13 +37,6 @@ const FAQ: React.FC = () => {
 
   return (
     <section id="faq" className="relative overflow-hidden bg-transparent py-24 font-sans text-stone-900 dark:text-white sm:py-32 lg:py-48">
-      {/* Enhanced Background Elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 right-0 h-[400px] w-[400px] rounded-full bg-gold/10 opacity-45 blur-[100px] -translate-y-1/2 translate-x-1/2 dark:bg-gold/8 dark:opacity-28 sm:h-[600px] sm:w-[600px] sm:blur-[120px]" />
-        <div className="absolute bottom-0 left-0 h-[300px] w-[300px] rounded-full bg-[#dbe8f4] blur-[60px] translate-y-1/2 -translate-x-1/2 dark:bg-white/[0.04] sm:h-[400px] sm:w-[400px] sm:blur-[80px]" />
-        <div className="absolute top-1/2 left-1/2 h-[800px] w-[800px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gold/6 opacity-35 blur-[150px] dark:bg-white/[0.02] dark:opacity-20" />
-      </div>
-
       <div className="max-w-[1000px] mx-auto px-6 sm:px-12 relative z-10">
         
         {/* Header */}

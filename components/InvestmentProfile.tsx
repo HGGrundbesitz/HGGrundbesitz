@@ -37,12 +37,6 @@ const InvestmentProfile: React.FC = () => {
 
   return (
     <section id="profile" className="relative overflow-hidden bg-transparent py-20 text-stone-900 sm:py-32 dark:text-stone-100">
-      {/* Background Decor */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 right-0 h-[50%] w-[50%] rounded-full bg-gold/8 blur-[120px] -translate-y-1/2 translate-x-1/2 dark:bg-gold/8 dark:opacity-30" />
-        <div className="absolute bottom-0 left-0 h-[30%] w-[30%] rounded-full bg-[#dbe8f4] blur-[100px] translate-y-1/2 -translate-x-1/2 dark:bg-white/[0.04]" />
-      </div>
-      
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
         
         {/* Header */}

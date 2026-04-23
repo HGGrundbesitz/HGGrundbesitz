@@ -22,7 +22,10 @@ export default function Home() {
       <Navbar />
       <Hero />
       <ScrollToTop />
-      <div className="relative bg-[#f7fbff]">
+      <div className="relative overflow-hidden bg-[linear-gradient(180deg,#f7fbff_0%,#f6fafe_36%,#f7fbff_100%)]">
+        <div className="pointer-events-none absolute inset-0">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_12%_22%,rgba(176,208,236,0.18),transparent_30%),radial-gradient(circle_at_84%_18%,rgba(217,234,251,0.3),transparent_28%),radial-gradient(circle_at_50%_78%,rgba(237,245,252,0.58),transparent_32%)]" />
+        </div>
         <About />
         <SectionDivider />
         <InvestmentProfile />

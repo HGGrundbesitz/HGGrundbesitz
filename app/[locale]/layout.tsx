@@ -1,12 +1,15 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import '../globals.css';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations } from 'next-intl/server';
+import { cookies } from 'next/headers';
 import { notFound } from 'next/navigation';
-import SmoothScroll from '../../components/SmoothScroll';
+import { Analytics } from '@vercel/analytics/next';
 
-import { Analytics } from "@vercel/analytics/next"
+import '../globals.css';
+import CookieConsentBanner from '../../components/CookieConsentBanner';
+import SmoothScroll from '../../components/SmoothScroll';
+import { COOKIE_CONSENT_NAME, isCookieConsentValue } from '@/lib/cookieConsent';
 
 const geist = Inter({
   subsets: ['latin'],
@@ -23,12 +26,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     description: t('description'),
     keywords: t('keywords'),
     icons: {
-      icon: '/newlogo.png',
+      icon: '/favicon.ico',
+      shortcut: '/favicon.ico',
     },
     openGraph: {
       title: t('title'),
       description: t('description'),
-      locale: locale,
+      locale,
       type: 'website',
     },
   };
@@ -36,25 +40,26 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 export default async function LocaleLayout({
   children,
-  params
+  params,
 }: {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
 
-  // Validate that the incoming `locale` parameter is valid
-  if (!['de', 'en', 'ar'].includes(locale as any)) notFound();
+  if (!['de', 'en', 'ar'].includes(locale)) {
+    notFound();
+  }
 
-  // Providing all messages to the client
-  // side is the easiest way to get started
   const messages = await getMessages();
-
+  const cookieStore = await cookies();
+  const cookieConsentRaw = cookieStore.get(COOKIE_CONSENT_NAME)?.value;
+  const cookieConsent = isCookieConsentValue(cookieConsentRaw) ? cookieConsentRaw : null;
   const isRtl = locale === 'ar';
 
   return (
     <html lang={locale} dir={isRtl ? 'rtl' : 'ltr'} suppressHydrationWarning>
-      <body className={`${geist.variable} bg-stone-50 text-stone-900 min-h-screen flex flex-col antialiased selection:bg-gold/20 selection:text-stone-950`}>
+      <body className={`${geist.variable} min-h-screen bg-stone-50 font-sans text-stone-900 antialiased selection:bg-gold/20 selection:text-stone-950`}>
         <script
           dangerouslySetInnerHTML={{
             __html:
@@ -64,7 +69,8 @@ export default async function LocaleLayout({
         <NextIntlClientProvider messages={messages}>
           <SmoothScroll />
           {children}
-          <Analytics/>
+          <CookieConsentBanner initialConsent={cookieConsent} locale={locale} />
+          {cookieConsent === 'accepted' ? <Analytics /> : null}
         </NextIntlClientProvider>
       </body>
     </html>
