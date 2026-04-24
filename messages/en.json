@@ -1,8 +1,8 @@
 {
   "Metadata": {
     "title": "Hendrik Grau Investment | Buying Apartment Buildings Without Brokers",
-    "description": "Private investor for the direct purchase of apartment buildings in NRW, Berlin, and Brandenburg. No broker commission, fast execution, discreet handling, and proven solvency.",
-    "keywords": "real estate acquisition, sell apartment building, without broker, private investor, NRW, Berlin, Brandenburg, Hendrik Grau, real estate investment, residential portfolio"
+    "description": "Private investor for the direct acquisition of apartment buildings in NRW, Berlin and Brandenburg. No broker commission, fast execution, discreet handling and proven solvency.",
+    "keywords": "property acquisition, sell apartment building, no broker, private investor, NRW, Berlin, Brandenburg, Hendrik Grau, real estate investment, residential portfolio"
   },
   "Navbar": {
     "about": "About Us",
@@ -10,28 +10,28 @@
     "services": "Expertise",
     "process": "Process",
     "faq": "FAQ",
-    "companies": "Our Companies",
+    "companies": "Companies",
     "references": "References",
     "contact": "Contact"
   },
   "Hero": {
     "title_start": "We buy",
     "title_end": "Apartment Buildings",
-    "subtitle": "Your partner for discreet and direct real estate transactions.",
-    "subtitle_highlight": "No brokers. No detours.",
+    "subtitle": "Your partner for discreet and direct property acquisition.",
+    "subtitle_highlight": "No detours.",
     "cta_offer": "Offer Property",
     "cta_more": "Learn More",
-    "stat_exp": "Years Experience",
+    "stat_exp": "Years of Experience",
     "stat_discretion": "Discretion",
     "stat_credit": "Solvency",
     "scroll": "Scroll"
   },
   "About": {
-    "badge": "About Me",
+    "badge": "About Us",
     "title_start": "Your partner for",
     "title_highlight": "direct acquisition.",
-    "description_1": "As a private investor with more than 20 years of experience in the real estate market, I personally stand behind every acquisition. My focus is on acquiring and holding apartment buildings long term in NRW, Berlin, and Brandenburg.",
-    "description_2": "I understand the complexity and emotional value of real estate. That is why I offer fair valuations, full discretion, and a fast, transparent process.",
+    "description_1": "With more than 20 years of experience in the real estate market, we stand behind every acquisition. Our focus is on the acquisition and long-term holding of apartment buildings in NRW, Berlin and Brandenburg.",
+    "description_2": "We understand the complexity and emotional value of real estate. That is why we guarantee a fair valuation, full discretion and a fast, transparent process.",
     "cta": "Offer Property",
     "signature_role": "Private Investor & Managing Director",
     "features": {
@@ -45,7 +45,7 @@
       },
       "reliability": {
         "title": "Reliability",
-        "desc": "Clear commitments and dependable timelines"
+        "desc": "Binding commitments and dependable timelines"
       },
       "expertise": {
         "title": "Expertise",
@@ -57,11 +57,11 @@
     "badge": "The Process",
     "title_start": "Selling made",
     "title_highlight": "easy.",
-    "description": "We reduce complexity to what matters most. A lean, transparent process from the first review to immediate payment.",
+    "description": "We reduce complexity to what matters most. A lean, transparent process from the first valuation to payment of the purchase price.",
     "steps": {
       "contact": {
         "title": "Initial Contact",
-        "desc": "Send us the key details of your property. We review everything promptly and confidentially."
+        "desc": "Send us the key details of your property. We review them promptly and confidentially."
       },
       "valuation": {
         "title": "Valuation",
@@ -69,18 +69,18 @@
       },
       "offer": {
         "title": "Offer",
-        "desc": "Based on the valuation, we submit a fair purchase offer with no broker commission."
+        "desc": "Based on the valuation, we submit a fair purchase offer free of commission."
       },
       "closing": {
         "title": "Closing",
-        "desc": "We ensure a fast notarization process and immediate payment of the purchase price."
+        "desc": "We arrange a fast notarized closing and a secure completion process."
       }
     }
   },
   "InvestmentProfile": {
     "badge": "Acquisition Profile",
     "title_start": "We invest in",
-    "title_highlight": "North Rhine-Westphalia, Berlin, and Brandenburg.",
+    "title_highlight": "North Rhine-Westphalia, Berlin and Brandenburg.",
     "download_btn": "Download Profile",
     "mfh_card": {
       "title": "Apartment Buildings",
@@ -89,11 +89,11 @@
       "criteria": {
         "locations": {
           "title": "Locations",
-          "desc": "NRW (Münsterland and Ruhr area), Berlin, and Brandenburg."
+          "desc": "NRW (Münsterland, Ruhr region), Berlin and Brandenburg."
         },
         "volume": {
           "title": "Volume",
-          "desc": "Purchase volume from €2 million to €30 million"
+          "desc": "Purchase value from €2 million up to €30 million"
         },
         "type": {
           "title": "Property Type",
@@ -101,7 +101,7 @@
         },
         "condition": {
           "title": "Condition",
-          "desc": "From well-maintained existing buildings to properties in need of refurbishment"
+          "desc": "From well-kept existing buildings to properties in need of renovation"
         }
       }
     },
@@ -115,12 +115,8 @@
           "value": "NRW, Berlin & Brandenburg"
         },
         "size": {
-          "title": "Size",
+          "title": "Scope",
           "value": "Depending on location and development potential"
-        },
-        "law": {
-          "title": "Building Rights",
-          "value": "Existing, achievable at short notice, or currently being created"
         }
       }
     }
@@ -129,7 +125,7 @@
     "role": "Private Investor",
     "navigation": "Navigation",
     "legal": "Legal",
-    "social": "Social",
+    "social": "Social Media",
     "imprint": "Imprint",
     "privacy": "Privacy Policy",
     "cookie_settings": "Cookie Settings",
@@ -140,13 +136,13 @@
     "badge": "Contact",
     "title_start": "Let's",
     "title_end": "talk.",
-    "description": "Do you own an apartment building or plot that matches our profile? Send us the key details or call us directly. We guarantee a discreet review.",
+    "description": "Do you own an apartment building or plot that fits our profile? Send us the key details or call us directly. We guarantee a discreet review.",
     "tabs": {
       "expose": "Upload Exposé",
       "message": "Message"
     },
     "errors": {
-      "missing_document": "Please add at least one document (Exposé).",
+      "missing_document": "Please add at least one document (exposé).",
       "general": "Please try again later."
     },
     "form": {
@@ -159,15 +155,15 @@
       "message": "Message",
       "message_placeholder": "Property details such as address, year of construction, size...",
       "submit_expose": "Submit Exposé Securely",
-      "submit_message": "Transmit Message Securely",
+      "submit_message": "Send Message Securely",
       "sending": "Sending...",
-      "sent": "Successfully Submitted"
+      "sent": "Successfully Sent"
     },
     "info": {
       "email_btn": "Send Email",
-      "call_btn": "Call Now",
+      "call_btn": "Call",
       "address_title": "Address",
-      "route": "Get Directions",
+      "route": "Plan Route",
       "phone_title": "Phone",
       "fax_title": "Fax",
       "ceo_title": "Management"
@@ -177,7 +173,7 @@
     "badge": "Secure Upload",
     "title_start": "Upload",
     "title_end": "documents.",
-    "description": "Securely upload all relevant documents here, such as rent rolls, floor plans, or energy certificates, instead of sending them by email.",
+    "description": "Upload all relevant documents here securely and in encrypted form, for example rent rolls, floor plans or energy certificates, instead of sending them by email.",
     "dropzone_title": "Drop files here or click to browse",
     "dropzone_subtitle": "Supported formats: PDF, XLSX, DOCX, JPG (max. 50 MB)",
     "uploading": "Uploading...",
@@ -188,11 +184,11 @@
   "Carousel": {
     "badge": "References",
     "title": "Selected Projects",
-    "description": "A glimpse into our portfolio of successfully realized residential projects and long-term developments.",
+    "description": "A look at selected projects and developments from our real estate portfolio.",
     "view_project": "View Project",
     "details": {
       "location": "Location",
-      "realization": "Completion",
+      "realization": "Realization",
       "status": "Status",
       "status_value": "Completed",
       "description_title": "Project Description",
@@ -206,20 +202,20 @@
     "services": {
       "purchase": {
         "title": "Acquisition",
-        "desc": "We focus on the fast and discreet acquisition of apartment buildings, with careful review of location, asset quality, and upside potential."
+        "desc": "We focus on the fast and discreet acquisition of apartment buildings. Each property is reviewed carefully with a clear eye on location, substance and potential."
       },
       "development": {
         "title": "Development",
-        "desc": "We develop sustainable concepts that increase the value of acquired properties and strengthen their long-term performance."
+        "desc": "We develop sustainable concepts to increase the value of acquired properties and secure them for the long term for both the area and the rental market."
       },
       "holding": {
         "title": "Long-Term Holding",
-        "desc": "Maintaining and preserving properties for the long run is a core part of our strategy. Reliability and value retention remain our focus."
+        "desc": "Maintaining properties over the long term and preserving them for future generations is a clear goal for us. Value retention and reliability remain at the center."
       }
     },
     "company_section": {
       "title": "Grau Group",
-      "description": "A strong group with coverage across the full value chain - from acquisition to long-term asset management."
+      "description": "A strong group. We cover the entire value chain - from acquisition to long-term asset management."
     },
     "companies": {
       "grau_ag": "Grau Grundbesitz AG",
@@ -234,29 +230,29 @@
     "title": "Frequently Asked Questions.",
     "faqs": {
       "broker_fees": {
-        "question": "Do I need to prepare documents in advance?",
-        "answer": "No. We guide you through the entire process and help you with every relevant step."
+        "question": "Do I need to prepare documents?",
+        "answer": "No, we guide you through the entire process and support you with every relevant step."
       },
       "purchase_speed": {
         "question": "What sets you apart from other buyers?",
-        "answer": "We are straightforward, solvent, and quick to decide. Our goal is to find a fair and workable solution for everyone involved."
+        "answer": "We are straightforward, solvent and quick to decide. Our goal is a fair and workable solution for everyone involved."
       },
       "renovation_objects": {
         "question": "Do you also buy properties in need of renovation?",
-        "answer": "Yes, absolutely. We specialize in real estate development and also acquire properties with deferred maintenance or vacancy."
+        "answer": "Yes, absolutely. We specialize in property development and also acquire assets with maintenance backlog or vacancy."
       }
     },
     "cta_text": "Do you have further questions?",
-    "cta_button": "Get in Touch"
+    "cta_button": "Contact Us"
   },
   "Testimonials": {
     "badge": "Real experiences from our partners.",
     "title": "What our partners say",
     "testimonials": {
       "t1": {
-        "quote": "Working with Mr. Grau was defined by professionalism and reliability. The transaction was completed quickly and discreetly.",
+        "quote": "Working with Mr. Grau was marked by absolute professionalism and reliability. The transaction was completed quickly and discreetly.",
         "name": "Dr. Hans-Peter Müller",
-        "role": "Real Estate Consultant"
+        "role": "Real Estate Advisor"
       },
       "t2": {
         "quote": "We value the transparent communication and fair valuation. We can recommend Mr. Grau without reservation.",
@@ -264,7 +260,7 @@
         "role": "Property Manager"
       },
       "t3": {
-        "quote": "A true partner on equal footing. The entire process was handled with maximum discretion and efficiency.",
+        "quote": "A partner on equal footing. The entire process was handled with maximum discretion and efficiency.",
         "name": "Thomas Becker",
         "role": "Private Seller"
       }
