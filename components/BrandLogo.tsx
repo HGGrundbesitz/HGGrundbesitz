@@ -3,7 +3,9 @@ import { cn } from '../lib/utils';
 
 type BrandLogoProps = {
   className?: string;
+  mode?: 'badge' | 'wordmark';
   size?: 'sm' | 'md' | 'lg';
+  showSuffix?: boolean;
   variant?: 'dark' | 'light' | 'adaptive';
 };
 
@@ -15,8 +17,11 @@ const SIZE_STYLES = {
     underline: 'h-[0.34rem]',
     mark: 'text-[2rem]',
     stack: 'gap-[0.12rem] pt-[0.05rem]',
+    stackCompact: 'justify-center pt-[0.3rem]',
     name: 'text-[1.12rem]',
     suffix: 'text-[0.48rem]',
+    wordmark: 'text-[1.24rem]',
+    wordmarkGap: 'gap-1.5',
   },
   md: {
     container: 'gap-3',
@@ -25,8 +30,11 @@ const SIZE_STYLES = {
     underline: 'h-[0.42rem]',
     mark: 'text-[2.55rem]',
     stack: 'gap-[0.18rem] pt-[0.08rem]',
+    stackCompact: 'justify-center pt-[0.5rem]',
     name: 'text-[1.55rem]',
     suffix: 'text-[0.66rem]',
+    wordmark: 'text-[1.72rem]',
+    wordmarkGap: 'gap-2',
   },
   lg: {
     container: 'gap-4',
@@ -35,8 +43,11 @@ const SIZE_STYLES = {
     underline: 'h-[0.62rem] sm:h-[0.72rem]',
     mark: 'text-[3.6rem] sm:text-[4.35rem]',
     stack: 'gap-[0.24rem] pt-[0.15rem]',
+    stackCompact: 'justify-center pt-[0.7rem] sm:pt-[0.85rem]',
     name: 'text-[2.1rem] sm:text-[2.8rem]',
     suffix: 'text-[0.85rem] sm:text-[1rem]',
+    wordmark: 'text-[2.4rem] sm:text-[3rem]',
+    wordmarkGap: 'gap-2.5',
   },
 } as const;
 
@@ -63,11 +74,44 @@ const VARIANT_STYLES = {
 
 const BrandLogo: React.FC<BrandLogoProps> = ({
   className,
+  mode = 'badge',
   size = 'md',
+  showSuffix = true,
   variant = 'adaptive',
 }) => {
   const sizeStyles = SIZE_STYLES[size];
   const variantStyles = VARIANT_STYLES[variant];
+
+  if (mode === 'wordmark') {
+    return (
+      <div
+        className={cn(
+          'inline-flex items-center leading-none',
+          sizeStyles.wordmarkGap,
+          className
+        )}
+      >
+        <span
+          className={cn(
+            'font-[850] tracking-[-0.07em]',
+            sizeStyles.wordmark,
+            variantStyles.name
+          )}
+        >
+          HG
+        </span>
+        <span
+          className={cn(
+            'font-[800] tracking-[-0.055em]',
+            sizeStyles.wordmark,
+            variantStyles.name
+          )}
+        >
+          Grundbesitz
+        </span>
+      </div>
+    );
+  }
 
   return (
     <div className={cn('inline-flex items-start', sizeStyles.container, className)}>
@@ -89,7 +133,12 @@ const BrandLogo: React.FC<BrandLogoProps> = ({
         />
       </div>
 
-      <div className={cn('flex min-w-0 flex-col leading-none', sizeStyles.stack)}>
+      <div
+        className={cn(
+          'flex min-w-0 flex-col leading-none',
+          showSuffix ? sizeStyles.stack : sizeStyles.stackCompact
+        )}
+      >
         <span
           className={cn(
             'font-[800] tracking-[-0.055em] text-balance',
@@ -99,15 +148,17 @@ const BrandLogo: React.FC<BrandLogoProps> = ({
         >
           Grundbesitz
         </span>
-        <span
-          className={cn(
-            'self-end font-[700] tracking-[-0.02em]',
-            sizeStyles.suffix,
-            variantStyles.suffix
-          )}
-        >
-          GmbH
-        </span>
+        {showSuffix && (
+          <span
+            className={cn(
+              'self-end font-[700] tracking-[-0.02em]',
+              sizeStyles.suffix,
+              variantStyles.suffix
+            )}
+          >
+            GmbH
+          </span>
+        )}
       </div>
     </div>
   );

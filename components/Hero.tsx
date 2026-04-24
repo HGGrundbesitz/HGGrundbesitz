@@ -72,7 +72,7 @@ const Hero: React.FC = () => {
 
       <div
         className={cn(
-          'relative z-20 mx-auto flex h-full w-full max-w-[1600px] flex-col items-center px-7 pb-14 pt-28 sm:px-10 sm:pb-16 sm:pt-32 lg:min-h-[100svh] lg:items-stretch lg:px-12 lg:pb-0 lg:pt-32',
+          'relative z-20 mx-auto flex h-full w-full max-w-[1600px] flex-col items-center px-7 pb-2 pt-28 sm:px-10 sm:pb-4 sm:pt-32 lg:min-h-[100svh] lg:items-stretch lg:px-12 lg:pb-0 lg:pt-32',
           isRtl ? 'lg:flex-row lg:pl-0 lg:pr-20' : 'lg:flex-row lg:pl-20 lg:pr-0'
         )}
       >
@@ -125,7 +125,7 @@ const Hero: React.FC = () => {
 
             <div
               className={cn(
-                'mb-8 flex flex-col gap-4 sm:mb-10 sm:flex-row',
+                'mb-5 flex flex-col gap-4 sm:mb-7 sm:flex-row',
                 isRtl ? 'sm:justify-end' : 'items-center lg:items-start'
               )}
             >
@@ -139,26 +139,34 @@ const Hero: React.FC = () => {
               </motion.a>
             </div>
 
-            <div className="mt-1 w-full lg:hidden">
-              <div className="relative mx-auto max-w-[30rem] overflow-hidden rounded-[1.9rem] border border-[#dbe8f4] bg-white/82 p-3 shadow-[0_24px_60px_rgba(11,78,132,0.12)] backdrop-blur-md sm:p-4">
-                <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#1C6AA8]/24 to-transparent" />
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="flex flex-col rounded-[1.45rem] border border-[#dbe8f4] bg-[#fbfdff] px-4 py-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.75)]">
-                    <div className="mb-1.5 flex items-center gap-2">
-                      <Award className="h-4 w-4 text-gold" />
-                      <span className="font-serif text-[1.9rem] leading-none text-stone-950">20+</span>
-                    </div>
-                    <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-stone-500">{t('stat_exp')}</span>
-                  </div>
-                  <div className="flex flex-col rounded-[1.45rem] border border-[#dbe8f4] bg-[#fbfdff] px-4 py-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.75)]">
-                    <div className="mb-1.5 flex items-center gap-2">
-                      <ShieldCheck className="h-4 w-4 text-gold" />
-                      <span className="font-serif text-[1.9rem] leading-none text-stone-950">100%</span>
-                    </div>
-                    <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-stone-500">{t('stat_discretion')}</span>
-                  </div>
-                </div>
-              </div>
+            <div className="mb-0 w-full pt-14 sm:pt-16 lg:hidden">
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1.1, delay: 0.15 }}
+                className="hero-image-fade-mobile relative left-1/2 aspect-[0.94] w-[calc(100vw+0.2rem)] max-w-none -translate-x-1/2 overflow-hidden sm:w-[calc(100vw-0.2rem)] sm:max-w-[32rem]"
+              >
+                <Image
+                  src="/hendrik.png"
+                  alt="Hendrik Grau"
+                  fill
+                  className={cn(
+                    'object-cover brightness-[1.08] contrast-[0.97] saturate-[1.02]',
+                    isRtl ? 'object-[center_top]' : 'object-[center_top]'
+                  )}
+                  priority
+                  sizes="(max-width: 640px) 96vw, 448px"
+                  quality={90}
+                />
+                <div
+                  aria-hidden="true"
+                  className="hero-image-atmosphere-mobile absolute inset-0"
+                />
+                <div
+                  aria-hidden="true"
+                  className="hero-image-bottom-blend absolute inset-x-0 bottom-0 h-[28%]"
+                />
+              </motion.div>
             </div>
 
             <div
