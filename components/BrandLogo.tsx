@@ -20,8 +20,9 @@ const SIZE_STYLES = {
     stackCompact: 'justify-center pt-[0.3rem]',
     name: 'text-[1.12rem]',
     suffix: 'text-[0.48rem]',
-    wordmark: 'text-[1.24rem]',
-    wordmarkGap: 'gap-1.5',
+    wordmark: 'text-[1.14rem]',
+    wordmarkGap: 'gap-1',
+    wordmarkSuffix: 'text-[0.84rem]',
   },
   md: {
     container: 'gap-3',
@@ -33,8 +34,9 @@ const SIZE_STYLES = {
     stackCompact: 'justify-center pt-[0.5rem]',
     name: 'text-[1.55rem]',
     suffix: 'text-[0.66rem]',
-    wordmark: 'text-[1.72rem]',
-    wordmarkGap: 'gap-2',
+    wordmark: 'text-[1.5rem]',
+    wordmarkGap: 'gap-1.5',
+    wordmarkSuffix: 'text-[1.05rem]',
   },
   lg: {
     container: 'gap-4',
@@ -46,8 +48,9 @@ const SIZE_STYLES = {
     stackCompact: 'justify-center pt-[0.7rem] sm:pt-[0.85rem]',
     name: 'text-[2.1rem] sm:text-[2.8rem]',
     suffix: 'text-[0.85rem] sm:text-[1rem]',
-    wordmark: 'text-[2.4rem] sm:text-[3rem]',
-    wordmarkGap: 'gap-2.5',
+    wordmark: 'text-[2.15rem] sm:text-[2.7rem]',
+    wordmarkGap: 'gap-2',
+    wordmarkSuffix: 'text-[1.45rem] sm:text-[1.8rem]',
   },
 } as const;
 
@@ -93,7 +96,7 @@ const BrandLogo: React.FC<BrandLogoProps> = ({
       >
         <span
           className={cn(
-            'font-[850] tracking-[-0.07em]',
+            'font-medium tracking-[-0.045em]',
             sizeStyles.wordmark,
             variantStyles.name
           )}
@@ -102,13 +105,24 @@ const BrandLogo: React.FC<BrandLogoProps> = ({
         </span>
         <span
           className={cn(
-            'font-[800] tracking-[-0.055em]',
+            'font-medium tracking-[-0.04em]',
             sizeStyles.wordmark,
             variantStyles.name
           )}
         >
           Grundbesitz
         </span>
+        {showSuffix && (
+          <span
+            className={cn(
+              'font-medium tracking-[-0.03em]',
+              sizeStyles.wordmarkSuffix,
+              variantStyles.suffix
+            )}
+          >
+            GmbH
+          </span>
+        )}
       </div>
     );
   }

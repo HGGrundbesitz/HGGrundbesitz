@@ -49,7 +49,7 @@ const Footer: React.FC = () => {
           
           {/* Brand & Info Column */}
           <div className="md:col-span-12 lg:col-span-6 flex flex-col items-start">
-            <BrandLogo size="md" variant="adaptive" className="mb-6" />
+            <BrandLogo mode="wordmark" size="md" showSuffix={true} variant="adaptive" className="mb-6" />
             <div className="text-sm sm:text-base text-stone-600 dark:text-stone-400 font-light leading-relaxed max-w-sm mb-10">
               <p>48155 Münster</p>
               <p className="mt-2">

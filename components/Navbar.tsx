@@ -132,7 +132,7 @@ const Navbar: React.FC = () => {
                       Navigation
                     </span>
                     <a href={homePath} aria-label="HG Grundbesitz" className="inline-flex">
-                      <BrandLogo mode="wordmark" size="sm" variant="adaptive" className="tracking-tight" />
+                      <BrandLogo mode="wordmark" size="sm" showSuffix={true} variant="adaptive" className="tracking-tight" />
                     </a>
                   </div>
 
@@ -251,6 +251,7 @@ const Navbar: React.FC = () => {
               <BrandLogo
                 mode="wordmark"
                 size="sm"
+                showSuffix={true}
                 variant="adaptive"
                 className="transition-transform duration-300 group-hover:scale-[1.02]"
               />

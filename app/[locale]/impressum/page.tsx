@@ -33,7 +33,10 @@ export default async function ImpressumPage({
 
       <LegalCard title="Kontakt">
         <p>
-          Telefon: <a href="tel:+4925139479064" className="transition-colors hover:text-gold">+49 251 39479064</a>
+          Telefon:{' '}
+          <a href="tel:+4925139479064" className="transition-colors hover:text-gold">
+            +49 251 39479064
+          </a>
           <br />
           Fax: +49 251 39479007
           <br />
@@ -56,10 +59,30 @@ export default async function ImpressumPage({
         <p>Entwicklung sowie An- und Verkauf von bebauten und unbebauten Grundstücken.</p>
       </LegalCard>
 
+      <LegalCard title="Aufsichtsbehörde">
+        <p>
+          Ordnungsamt Münster
+          <br />
+          Klemensstraße 10 (Stadthaus 1)
+          <br />
+          48143 Münster
+        </p>
+        <p className="mt-4">
+          <a
+            href="https://www.stadt-muenster.de/ordnungsamt/startseite"
+            target="_blank"
+            rel="noreferrer"
+            className="transition-colors hover:text-gold"
+          >
+            https://www.stadt-muenster.de/ordnungsamt/startseite
+          </a>
+        </p>
+      </LegalCard>
+
       <LegalCard title="Verantwortlich für den Inhalt">
         <p>
-          Verantwortlich für die Inhalte dieser Website ist die HG Grundbesitz GmbH,
-          vertreten durch Hendrik Grau, Anschrift wie oben.
+          Verantwortlich für die Inhalte dieser Website ist die HG Grundbesitz GmbH, vertreten durch
+          Hendrik Grau, Anschrift wie oben.
         </p>
       </LegalCard>
 
