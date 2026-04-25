@@ -91,7 +91,7 @@ const Hero: React.FC = () => {
             className={cn(
               isRtl
                 ? 'mx-auto w-full max-w-[23rem] text-right sm:max-w-[31rem] lg:mx-0 lg:max-w-[36rem] xl:max-w-[40rem]'
-                : 'mx-auto max-w-[23rem] text-center sm:max-w-[31rem] lg:mx-0 lg:max-w-xl lg:text-left xl:max-w-2xl'
+                : 'mx-auto w-full max-w-[20.5rem] text-center sm:max-w-[31rem] lg:mx-0 lg:max-w-xl lg:text-left xl:max-w-2xl'
             )}
           >
             <h1
@@ -99,7 +99,7 @@ const Hero: React.FC = () => {
                 'mb-5 font-serif font-medium tracking-[-0.045em] text-stone-950 sm:mb-7',
                 isRtl
                   ? 'text-[2.9rem] leading-[1.18] sm:text-[4.25rem] lg:text-[4rem] xl:text-[4.8rem]'
-                  : 'text-[2.95rem] leading-[1.02] sm:text-[4.4rem] lg:text-[4.5rem] xl:text-[5.5rem]'
+                  : 'mx-auto max-w-[18.75rem] text-[2.4rem] leading-[0.98] sm:max-w-none sm:text-[4.4rem] lg:mx-0 lg:text-[4.5rem] xl:text-[5.5rem]'
               )}
             >
               {t('title_start')} <br />
@@ -115,7 +115,7 @@ const Hero: React.FC = () => {
 
             <p
               className={cn(
-                'mb-8 text-[1.02rem] font-light leading-relaxed text-stone-600 sm:mb-9 sm:text-lg lg:mb-10 lg:text-xl',
+                'mb-8 text-[0.98rem] font-light leading-[1.72] text-stone-600 sm:mb-9 sm:text-lg lg:mb-10 lg:text-xl',
                 isRtl ? 'max-w-[32rem]' : 'mx-auto max-w-[20rem] sm:max-w-[28rem] lg:mx-0 lg:max-w-lg'
               )}
             >
@@ -125,7 +125,7 @@ const Hero: React.FC = () => {
 
             <div
               className={cn(
-                'mb-5 flex flex-col gap-4 sm:mb-7 sm:flex-row',
+                'mb-5 flex flex-col items-center gap-4 sm:mb-7 sm:flex-row',
                 isRtl ? 'sm:justify-end' : 'items-center lg:items-start'
               )}
             >
