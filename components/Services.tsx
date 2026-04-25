@@ -92,7 +92,7 @@ const Services: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-gold/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
               <div className="relative z-10 mb-10 flex items-start">
-                <div className="surface-chip flex h-16 w-16 items-center justify-center rounded-2xl text-gold transition-all duration-500 group-hover:scale-110 group-hover:border-gold/25 group-hover:bg-gold group-hover:text-white dark:border-[#272b33] dark:bg-[#15181d] sm:h-20 sm:w-20">
+                <div className="surface-chip flex h-16 w-16 items-center justify-center rounded-2xl text-gold transition-all duration-500 group-hover:scale-110 group-hover:border-gold/25 group-hover:bg-[#edf5fb] group-hover:text-[#1c6aa8] group-hover:shadow-[0_18px_34px_rgba(28,106,168,0.12)] dark:border-[#272b33] dark:bg-[#15181d] dark:group-hover:bg-[#15181d] dark:group-hover:text-gold sm:h-20 sm:w-20">
                   <Icon className="w-7 h-7 sm:w-8 sm:h-8" />
                 </div>
               </div>

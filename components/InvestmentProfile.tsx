@@ -139,7 +139,7 @@ const InvestmentProfile: React.FC = () => {
               href="#contact"
               whileHover={{ scale: 1.01 }}
               whileTap={{ scale: 0.99 }}
-              className="surface-chip relative z-10 flex w-full items-center justify-center gap-3 rounded-[1.5rem] py-5 text-center text-[11px] font-bold uppercase tracking-widest text-stone-900 transition-all hover:border-gold/35 hover:bg-gold hover:text-white group/btn sm:rounded-[2.5rem] sm:py-6 sm:text-xs dark:border-[#272b33] dark:bg-[#15181d] dark:text-stone-100 dark:hover:bg-gold"
+              className="surface-chip relative z-10 flex w-full items-center justify-center gap-3 rounded-[1.5rem] py-5 text-center text-[11px] font-bold uppercase tracking-widest text-[#0b4e84] transition-all hover:border-[#1c6aa8]/24 hover:bg-[#dfeefe] hover:text-[#0b4e84] hover:shadow-[0_18px_34px_rgba(28,106,168,0.12)] group/btn sm:rounded-[2.5rem] sm:py-6 sm:text-xs dark:border-[#272b33] dark:bg-[#15181d] dark:text-stone-100 dark:hover:bg-[#1c6aa8]"
             >
               <span>{t('land_card.cta')}</span>
               <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
