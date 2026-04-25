@@ -1,8 +1,8 @@
 {
   "Metadata": {
-    "title": "Wir kaufen Mehrfamilienhäuser in Berlin , NRW und Brandenburg",
-    "description": "Wir kaufen Mehrfamilienhäuser in Berlin , NRW und Brandenburg.",
-    "keywords": "Immobilienankauf, Mehrfamilienhaus verkaufen, ohne Makler, Privatinvestor, NRW, Berlin, Brandenburg,Münster, Hendrik Grau, Immobilien Investment, Wohnungspaket"
+    "title": "HG Grundbesitz GmbH | Wir kaufen Mehrfamilienhäuser in Berlin, NRW und Brandenburg",
+    "description": "Wir kaufen Mehrfamilienhäuser in Berlin, NRW und Brandenburg.",
+    "keywords": "Immobilienankauf, Mehrfamilienhaus verkaufen, NRW, Berlin, Brandenburg, Münster, Hendrik Grau, Immobilien Investment, Wohnungspaket"
   },
   "Navbar": {
     "about": "Über uns",
@@ -30,14 +30,14 @@
     "badge": "Über uns",
     "title_start": "Ihr Partner für den",
     "title_highlight": "direkten Ankauf.",
-    "description_1": "mit über 20 Jahren Erfahrung im Immobilienmarkt stehen wir  hinter jedem Kauf. Unser Fokus liegt auf der Akquisition und dem langfristigen Halten von Mehrfamilienhäusern in NRW, Berlin und Brandenburg.",
+    "description_1": "Mit über 20 Jahren Erfahrung im Immobilienmarkt stehen wir hinter jedem Kauf. Unser Fokus liegt auf der Akquisition und dem langfristigen Halten von Mehrfamilienhäusern in NRW, Berlin und Brandenburg.",
     "description_2": "Wir verstehen die Komplexität und den emotionalen Wert einer Immobilie. Deshalb garantieren wir eine faire Bewertung, absolute Diskretion und eine zügige, transparente Abwicklung.",
     "cta": "Immobilie anbieten",
     "signature_role": "Privatinvestor & Geschäftsführer",
     "features": {
       "direct_buy": {
         "title": "Direkter Kauf",
-        "desc": "K"
+        "desc": "Keine Makler, keine Provisionen"
       },
       "solvency": {
         "title": "Solvenz",
@@ -73,7 +73,7 @@
       },
       "closing": {
         "title": "Abschluss",
-        "desc": "Wir sorgen für eine schnelle notarielle Abwicklung und ein Transporteren und sichern Prozess."
+        "desc": "Wir sorgen für eine schnelle notarielle Abwicklung und einen transparenten, sicheren Prozess."
       }
     }
   },

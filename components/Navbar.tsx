@@ -1,8 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
-import { Menu, X, ArrowUpRight, Globe, ChevronDown } from 'lucide-react';
-import Flag from 'react-world-flags';
+import { Menu, X, ArrowUpRight, Languages, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence, cubicBezier } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { usePathname, useRouter } from 'next/navigation';
@@ -82,9 +81,9 @@ const Navbar: React.FC = () => {
   ];
 
   const languages = [
-    { code: 'de', flag: 'DE', label: 'Deutsch' },
-    { code: 'en', flag: 'GB', label: 'English' },
-    { code: 'ar', flag: 'AE', label: '\u0627\u0644\u0639\u0631\u0628\u064a\u0629' },
+    { code: 'de', short: 'DE', label: 'Deutsch' },
+    { code: 'en', short: 'EN', label: 'English' },
+    { code: 'ar', short: 'AR', label: '\u0627\u0644\u0639\u0631\u0628\u064a\u0629' },
   ];
 
   const menuVariants = {
@@ -123,38 +122,25 @@ const Navbar: React.FC = () => {
               onClick={(event) => event.stopPropagation()}
               className="relative ml-auto flex h-[calc(100svh-1rem)] w-full max-w-[410px] flex-col overflow-hidden rounded-[2rem] border border-[rgba(197,217,235,0.8)] bg-[linear-gradient(180deg,rgba(255,255,255,0.96),rgba(247,250,255,0.92))] shadow-[-24px_0_70px_rgba(15,23,42,0.14),inset_0_1px_0_rgba(255,255,255,0.9)] backdrop-blur-2xl sm:h-[calc(100svh-1.5rem)]"
             >
-              <div className="pointer-events-none absolute inset-x-0 top-0 h-32 bg-[radial-gradient(circle_at_top,rgba(126,180,221,0.2),transparent_70%)]" />
+              <div className="pointer-events-none absolute inset-x-0 top-0 h-12 bg-[radial-gradient(circle_at_top,rgba(126,180,221,0.12),transparent_74%)]" />
 
-              <div className="relative border-b border-[rgba(199,217,233,0.7)] px-6 pb-6 pt-[max(env(safe-area-inset-top),1.35rem)]">
-                <div className="mb-5 flex items-start justify-between gap-4">
-                  <div className="space-y-3">
-                    <span className="block text-[10px] font-semibold uppercase tracking-[0.34em] text-[#7f8794]">
-                      Navigation
-                    </span>
-                    <a href={homePath} aria-label="HG Grundbesitz" className="inline-flex">
-                      <BrandLogo mode="wordmark" size="sm" showSuffix={true} variant="adaptive" className="tracking-tight" />
-                    </a>
-                  </div>
-
+              <div className="relative flex justify-end border-b border-[rgba(199,217,233,0.7)] px-5 pb-2 pt-[max(env(safe-area-inset-top),0.7rem)]">
+                <div className="flex items-start justify-end gap-4">
                   <motion.button
                     onClick={toggleMenu}
                     whileTap={{ scale: 0.94 }}
-                    className="flex h-12 w-12 items-center justify-center rounded-full border border-[rgba(199,217,233,0.85)] bg-white/88 text-stone-500 shadow-[0_12px_26px_rgba(148,163,184,0.12),inset_0_1px_0_rgba(255,255,255,0.85)] transition-all hover:border-[#c4d8ea] hover:bg-[#fbfdff] hover:text-stone-800"
+                    className="flex h-10 w-10 items-center justify-center rounded-full border border-[rgba(199,217,233,0.85)] bg-white/88 text-stone-500 shadow-[0_10px_22px_rgba(148,163,184,0.1),inset_0_1px_0_rgba(255,255,255,0.85)] transition-all hover:border-[#c4d8ea] hover:bg-[#fbfdff] hover:text-stone-800"
                   >
                     <X className="h-4 w-4" />
                   </motion.button>
                 </div>
-
-                <p className="max-w-[17rem] text-[13px] leading-6 text-stone-500">
-                  Direkter Immobilienankauf mit ruhiger, klarer Navigation.
-                </p>
               </div>
 
               <motion.div
                 variants={menuVariants}
                 initial="closed"
                 animate="open"
-                className="flex flex-1 flex-col overflow-y-auto px-5 py-5"
+                className="drawer-scroll-hidden flex flex-1 flex-col overflow-y-auto px-5 py-5"
               >
                 <div className="space-y-3">
                   {navLinks.map((link, index) => (
@@ -170,9 +156,6 @@ const Navbar: React.FC = () => {
                       </span>
 
                       <div className="flex items-center gap-2.5">
-                        <span className="text-[10px] font-mono uppercase tracking-[0.28em] text-stone-400">
-                          {String(index + 1).padStart(2, '0')}
-                        </span>
                         <span className="flex h-8 w-8 items-center justify-center rounded-full border border-[rgba(201,219,235,0.8)] bg-[rgba(246,250,254,0.96)] text-stone-500 shadow-[inset_0_1px_0_rgba(255,255,255,0.8)] transition-colors duration-300 group-hover:border-[#c7dbec] group-hover:bg-[#edf5fb] group-hover:text-[#1C6AA8]">
                           <ArrowUpRight className="h-3.5 w-3.5" />
                         </span>
@@ -196,8 +179,7 @@ const Navbar: React.FC = () => {
                             : 'border border-transparent bg-white/86 text-stone-600 hover:border-[rgba(201,219,235,0.75)] hover:bg-[#f5f9fd] hover:text-stone-900'
                         }`}
                       >
-                        <Flag code={lang.flag} style={{ width: '16px', height: '12px' }} />
-                        {lang.code.toUpperCase()}
+                        {lang.short}
                       </button>
                     ))}
                   </div>
@@ -280,7 +262,10 @@ const Navbar: React.FC = () => {
                     isLangOpen ? 'bg-gold/10 text-gold dark:bg-[#1a1e24]/80 dark:text-white' : 'hover:bg-gold/10 dark:hover:bg-white/5'
                   }`}
                 >
-                  <Globe className="w-4 h-4" />
+                  <Languages className="w-4 h-4" />
+                  <span className="text-[10px] font-bold uppercase tracking-[0.18em]">
+                    {currentLocale}
+                  </span>
                   <ChevronDown className={`w-3 h-3 transition-transform duration-200 ${isLangOpen ? 'rotate-180' : ''}`} />
                 </motion.button>
 
@@ -301,7 +286,9 @@ const Navbar: React.FC = () => {
                             idx !== languages.length - 1 ? 'border-b border-stone-200 dark:border-[#272b33]/55' : ''
                           }`}
                         >
-                          <Flag code={lang.flag} style={{ width: '20px', height: '15px' }} />
+                          <span className="inline-flex min-w-[2.2rem] text-[10px] font-bold uppercase tracking-[0.18em] text-stone-400 transition-colors group-hover:text-gold">
+                            {lang.short}
+                          </span>
                           <span>{lang.label}</span>
                         </button>
                       ))}

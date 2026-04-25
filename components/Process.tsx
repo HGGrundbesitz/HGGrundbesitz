@@ -12,25 +12,21 @@ const Process: React.FC = () => {
   const steps = [
     {
       icon: Mail,
-      number: '01',
       title: t('steps.contact.title'),
       description: t('steps.contact.desc'),
     },
     {
       icon: Eye,
-      number: '02',
       title: t('steps.valuation.title'),
       description: t('steps.valuation.desc'),
     },
     {
       icon: FileText,
-      number: '03',
       title: t('steps.offer.title'),
       description: t('steps.offer.desc'),
     },
     {
       icon: CheckCircle,
-      number: '04',
       title: t('steps.closing.title'),
       description: t('steps.closing.desc'),
     },
@@ -93,13 +89,13 @@ const Process: React.FC = () => {
                   transition={{ duration: 0 }}
                   className="group relative rounded-2xl border border-stone-200 bg-white p-5 shadow-[0_16px_40px_rgba(15,23,42,0.04)] sm:border-0 sm:bg-transparent sm:p-0 sm:shadow-none dark:border-[#272b33] dark:bg-[#101317] dark:shadow-[0_16px_40px_rgba(0,0,0,0.22)]"
                 >
-                  {/* Step number circle */}
+                  {/* Step icon circle */}
                   <div className="flex items-center gap-4 sm:gap-0 sm:justify-center mb-4 sm:mb-10">
                     <motion.div 
                       whileHover={{ scale: 1.1 }}
-                      className="relative z-10 flex h-14 w-14 items-center justify-center rounded-full border-2 border-[#dbe8f4] bg-white font-serif text-lg text-gold shadow-[0_10px_30px_rgba(15,23,42,0.08)] transition-all duration-500 group-hover:border-gold/50 group-hover:text-gold sm:h-24 sm:w-24 sm:text-2xl lg:h-28 lg:w-28 dark:border-[#272b33] dark:bg-[#15181d] dark:shadow-[0_10px_30px_rgba(0,0,0,0.25)]"
+                      className="relative z-10 flex h-14 w-14 items-center justify-center rounded-full border-2 border-[#dbe8f4] bg-white text-gold shadow-[0_10px_30px_rgba(15,23,42,0.08)] transition-all duration-500 group-hover:border-gold/50 group-hover:text-gold sm:h-24 sm:w-24 lg:h-28 lg:w-28 dark:border-[#272b33] dark:bg-[#15181d] dark:shadow-[0_10px_30px_rgba(0,0,0,0.25)]"
                     >
-                      {step.number}
+                      <Icon className="h-5 w-5 sm:h-8 sm:w-8 lg:h-9 lg:w-9" />
                       {/* Ring animation on hover */}
                       <div className="absolute inset-0 scale-110 rounded-full border border-gold/20 opacity-0 transition-all duration-500 group-hover:scale-125 group-hover:opacity-100" />
                     </motion.div>
@@ -112,7 +108,7 @@ const Process: React.FC = () => {
                     <h3 className="mb-3 hidden text-xl font-serif text-stone-900 transition-colors duration-300 group-hover:text-gold sm:mb-4 sm:block sm:text-2xl dark:text-white">{step.title}</h3>
                     <p className="mb-4 text-sm leading-relaxed text-stone-600 transition-colors group-hover:text-stone-700 sm:mb-8 dark:text-stone-400 dark:group-hover:text-stone-300">{step.description}</p>
                     
-                    <motion.div 
+                    <motion.div
                       whileHover={{ scale: 1.1 }}
                       className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-[#dbe8f4] bg-white text-stone-500 transition-all duration-500 group-hover:border-gold group-hover:bg-gold group-hover:text-white sm:h-12 sm:w-12 sm:rounded-2xl dark:border-[#272b33] dark:bg-[#15181d] dark:text-stone-300"
                     >
