@@ -63,23 +63,20 @@ const FAQ: React.FC = () => {
               key={index}
               {...fadeUp}
               transition={{ delay: index * 0.1, duration: 0.6 }}
-              className={`cursor-pointer rounded-[1.5rem] border bg-white px-6 py-6 shadow-[0_20px_60px_rgba(15,23,42,0.06)] transition-all duration-500 group hover:shadow-[0_24px_60px_rgba(15,23,42,0.08)] hover:shadow-gold/5 dark:bg-[#101317] dark:shadow-xl dark:hover:shadow-[0_24px_60px_rgba(0,0,0,0.35)] sm:rounded-[2rem] sm:px-10 sm:py-8 ${
-                openIndex === index ? 'border-gold/30 bg-[#f8fbff] dark:bg-[#171b21]' : 'border-stone-200 dark:border-[#272b33] hover:border-gold/20'
+              className={`surface-card cursor-pointer rounded-[1.5rem] px-6 py-6 transition-all duration-500 group hover:shadow-[0_24px_52px_rgba(15,23,42,0.06)] dark:bg-[#101317] dark:shadow-xl dark:hover:shadow-[0_24px_60px_rgba(0,0,0,0.35)] sm:rounded-[2rem] sm:px-10 sm:py-8 ${
+                openIndex === index ? 'border-gold/18 bg-[#fbfdff] dark:bg-[#171b21]' : 'hover:border-[#d6e3ed] dark:border-[#272b33] hover:border-gold/14'
               }`}
               onClick={() => toggleAccordion(index)}
             >
               <div className="flex justify-between items-center gap-4 sm:gap-6">
                 <div className="flex items-center gap-4 sm:gap-6">
-                  <span className="hidden sm:flex w-12 h-12 rounded-full bg-stone-50 dark:bg-[#15181d] border border-stone-200 dark:border-[#272b33] items-center justify-center text-stone-500 font-mono text-sm font-medium tracking-widest group-hover:text-gold transition-all duration-500 shadow-inner">
-                    0{index + 1}
-                  </span>
                   <h3 className="text-lg sm:text-xl lg:text-2xl font-serif text-stone-900 dark:text-white group-hover:text-gold transition-colors duration-500 leading-snug">{item.question}</h3>
                 </div>
                 <motion.div 
                   animate={{ rotate: openIndex === index ? 180 : 0 }}
                   transition={{ duration: 0.3 }}
-                  className={`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-500 border ${
-                    openIndex === index ? 'bg-gold border-gold text-white shadow-lg shadow-gold/20' : 'bg-stone-50 dark:bg-[#15181d] border-stone-200 dark:border-[#272b33] text-stone-400 group-hover:border-gold/50 group-hover:text-gold'
+                  className={`flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full transition-all duration-500 ${
+                    openIndex === index ? 'border border-gold/30 bg-gold text-white shadow-[0_12px_28px_rgba(11,78,132,0.2)]' : 'surface-chip text-stone-400 group-hover:border-gold/28 group-hover:text-gold dark:border-[#272b33] dark:bg-[#15181d]'
                   }`}
                 >
                   <ChevronDown className="w-5 h-5" />
@@ -94,7 +91,7 @@ const FAQ: React.FC = () => {
                     transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
                     className="overflow-hidden"
                   >
-                    <div className="pt-6 text-stone-600 dark:text-stone-400 leading-relaxed text-sm sm:text-lg font-light border-t border-stone-200 dark:border-[#272b33]/60 mt-6 sm:pl-[4.5rem]">
+                    <div className="surface-divider mt-6 border-t pt-6 text-sm font-light leading-relaxed text-stone-600 dark:border-[#272b33]/60 dark:text-stone-400 sm:pl-[4.5rem] sm:text-lg">
                       {item.answer}
                     </div>
                   </motion.div>
@@ -114,7 +111,7 @@ const FAQ: React.FC = () => {
             href="#contact"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-gold text-white rounded-full font-bold uppercase tracking-widest text-[11px] sm:text-xs hover:bg-[#0B4E84] transition-all shadow-[0_18px_40px_rgba(11,78,132,0.18)]"
+            className="btn-beam-blue inline-flex items-center justify-center gap-3 rounded-full px-10 py-5 text-[11px] font-bold uppercase tracking-widest text-white sm:text-xs"
           >
             {t('cta_button')}
           </motion.a>

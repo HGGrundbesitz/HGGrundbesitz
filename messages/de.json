@@ -160,9 +160,16 @@
       "sent": "Erfolgreich übermittelt"
     },
     "info": {
+      "email_title": "E-Mail",
+      "email_note": "Einfach kopieren oder direkt eine E-Mail senden.",
+      "copy_label": "E-Mail kopieren",
       "email_btn": "E-Mail schreiben",
+      "copied": "Kopiert",
       "call_btn": "Anrufen",
       "address_title": "Anschrift",
+      "address_company": "HG Grundbesitz GmbH",
+      "address_street": "Bremer Platz 9-11",
+      "address_city": "48155 Münster",
       "route": "Route planen",
       "phone_title": "Telefon",
       "fax_title": "Fax",

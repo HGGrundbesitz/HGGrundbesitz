@@ -40,7 +40,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-[#f7fbff] py-6 sm:py-10 px-4 sm:px-6 lg:px-12 relative overflow-hidden font-sans">
       {/* Floating Rounded Container */}
-      <div className="max-w-[1400px] mx-auto bg-white dark:bg-[#101317] border border-[#dbe8f4] dark:border-[#272b33]/55 rounded-[2rem] sm:rounded-[2.5rem] p-8 sm:p-12 lg:p-16 relative overflow-hidden shadow-[0_30px_80px_rgba(15,23,42,0.08)] dark:shadow-none">
+      <div className="surface-card-strong max-w-[1400px] mx-auto rounded-[2rem] sm:rounded-[2.5rem] p-8 sm:p-12 lg:p-16 relative overflow-hidden dark:bg-[#101317] dark:border-[#272b33]/55 dark:shadow-none">
         
         {/* Subtle Background Glow inside the container */}
         <div className="absolute top-[-50%] right-[-10%] w-[400px] h-[400px] bg-gold/10 rounded-full blur-[100px] opacity-40 pointer-events-none" />
@@ -64,7 +64,7 @@ const Footer: React.FC = () => {
               aria-label="Hendrik Grau auf LinkedIn ansehen"
               whileHover={{ scale: 1.05, backgroundColor: 'rgba(28,106,168,0.12)' }}
               whileTap={{ scale: 0.95 }}
-              className="w-10 h-10 rounded-full bg-stone-50 dark:bg-[#15181d]/75 flex items-center justify-center border border-stone-200 dark:border-[#272b33]/60 text-stone-500 dark:text-stone-400 hover:text-gold hover:border-gold/50 transition-all"
+              className="surface-chip flex h-10 w-10 items-center justify-center rounded-full text-stone-500 transition-all hover:border-gold/30 hover:text-gold dark:bg-[#15181d]/75 dark:border-[#272b33]/60 dark:text-stone-400"
             >
               <Linkedin className="w-[18px] h-[18px]" />
             </motion.a>
@@ -125,7 +125,7 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Divider & Copyright */}
-        <div className="pt-8 border-t border-stone-200/80 dark:border-[#272b33]/55 flex items-center justify-center text-center">
+        <div className="surface-divider flex items-center justify-center border-t pt-8 text-center dark:border-[#272b33]/55">
           <p className="text-sm text-stone-500 font-light">
             © {new Date().getFullYear()}  HG Grundbesitz GmbH. All rights reserved.
           </p>

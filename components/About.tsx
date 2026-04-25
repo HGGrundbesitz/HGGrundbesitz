@@ -72,7 +72,7 @@ const About: React.FC = () => {
               href="#contact"
               whileHover={{ scale: 1.03, y: -2 }}
               whileTap={{ scale: 0.98 }}
-              className="w-full rounded-full bg-gold px-8 py-3.5 text-center text-[11px] font-bold uppercase tracking-widest text-white shadow-[0_18px_40px_rgba(11,78,132,0.22)] transition-all hover:bg-white hover:text-black hover:shadow-2xl dark:bg-white dark:text-black dark:hover:bg-[#4B92CA] dark:hover:text-white sm:w-auto sm:px-10 sm:py-4 sm:text-xs"
+              className="btn-beam-blue w-full rounded-full px-8 py-3.5 text-center text-[11px] font-bold uppercase tracking-widest text-white sm:w-auto sm:px-10 sm:py-4 sm:text-xs"
             >
               {t('cta')}
             </motion.a>
@@ -92,7 +92,7 @@ const About: React.FC = () => {
                 className="group inline-flex items-center gap-4 rounded-full pr-2 transition-all"
                 aria-label="Hendrik Grau auf LinkedIn ansehen"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-[#dbe8f4] bg-white shadow-[0_14px_35px_rgba(15,23,42,0.08)] transition-all duration-300 group-hover:border-gold/50 group-hover:shadow-xl dark:border-[#272b33] dark:bg-[#15181d] dark:shadow-[0_14px_35px_rgba(0,0,0,0.35)] sm:h-14 sm:w-14">
+                <div className="surface-chip flex h-12 w-12 items-center justify-center rounded-full transition-all duration-300 group-hover:border-gold/35 group-hover:shadow-[0_16px_34px_rgba(15,23,42,0.08)] dark:border-[#272b33] dark:bg-[#15181d] dark:shadow-[0_14px_35px_rgba(0,0,0,0.35)] sm:h-14 sm:w-14">
                   <span className="font-serif text-lg sm:text-xl text-gold">HG</span>
                 </div>
                 <div>
@@ -120,21 +120,18 @@ const About: React.FC = () => {
                 key={index}
                 variants={fadeInUp}
                 whileHover={{ y: -8, transition: { duration: 0.3 } }}
-                className="group relative flex h-full flex-col items-center overflow-hidden rounded-2xl border border-[#dbe8f4] bg-white p-6 text-center shadow-[0_20px_60px_rgba(15,23,42,0.06)] transition-all duration-500 hover:border-gold/40 dark:border-[#272b33] dark:bg-[#101317] dark:shadow-[0_22px_55px_rgba(0,0,0,0.3)] dark:hover:border-gold/35 sm:items-start sm:rounded-[2rem] sm:p-8 sm:text-left"
+                className="surface-card group relative flex h-full flex-col items-center overflow-hidden rounded-2xl p-6 text-center transition-all duration-500 hover:border-gold/25 hover:shadow-[0_24px_52px_rgba(15,23,42,0.06)] dark:border-[#272b33] dark:bg-[#101317] dark:shadow-[0_22px_55px_rgba(0,0,0,0.3)] dark:hover:border-gold/35 sm:items-start sm:rounded-[2rem] sm:p-8 sm:text-left"
               >
                 {/* Hover glow effect */}
                 <div className="absolute inset-0 bg-gradient-to-br from-gold/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 
-                <div className="relative z-10 mb-4 flex h-12 w-12 items-center justify-center rounded-xl border border-[#dbe8f4] bg-[#f4f8fc] text-gold shadow-sm transition-all duration-500 group-hover:rotate-3 group-hover:scale-110 group-hover:bg-gold group-hover:text-white dark:border-[#272b33] dark:bg-[#15181d] sm:mb-6 sm:h-14 sm:w-14 sm:rounded-2xl">
+                <div className="surface-chip relative z-10 mb-4 flex h-12 w-12 items-center justify-center rounded-xl text-gold transition-all duration-500 group-hover:rotate-3 group-hover:scale-110 group-hover:bg-gold group-hover:text-white dark:border-[#272b33] dark:bg-[#15181d] sm:mb-6 sm:h-14 sm:w-14 sm:rounded-2xl">
                   <Icon className="w-5 h-5 sm:w-7 sm:h-7" />
                 </div>
                 <h3 className="relative z-10 text-lg sm:text-xl font-serif text-stone-900 dark:text-white mb-2 sm:mb-3 group-hover:text-gold transition-colors duration-300">{feature.title}</h3>
                 <p className="relative z-10 text-sm text-stone-600 dark:text-stone-400 leading-relaxed group-hover:text-stone-700 dark:group-hover:text-stone-300 transition-colors">
                   {feature.description}
                 </p>
-                
-                {/* Card number */}
-                <span className="absolute top-4 right-4 font-mono text-xs text-[#c3d7e8] transition-colors group-hover:text-gold/30 dark:text-stone-700 sm:top-6 sm:right-6">0{index + 1}</span>
               </motion.div>
             )
           })}

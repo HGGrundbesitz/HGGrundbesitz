@@ -86,13 +86,13 @@ const Services: React.FC = () => {
               key={index}
               variants={fadeUp}
               whileHover={{ y: -8 }}
-              className="group relative flex h-full flex-col overflow-hidden rounded-[2rem] border border-[#dbe8f4] bg-white p-8 shadow-xl transition-all duration-500 hover:border-gold/40 hover:shadow-[0_26px_70px_rgba(15,23,42,0.08)] dark:border-[#272b33] dark:bg-[#101317] dark:hover:border-gold/35 dark:hover:shadow-[0_26px_70px_rgba(0,0,0,0.35)] sm:rounded-[2.5rem] sm:p-10 lg:p-12"
+              className="surface-card group relative flex h-full flex-col overflow-hidden rounded-[2rem] p-8 transition-all duration-500 hover:border-gold/25 hover:shadow-[0_26px_60px_rgba(15,23,42,0.06)] dark:border-[#272b33] dark:bg-[#101317] dark:hover:border-gold/35 dark:hover:shadow-[0_26px_70px_rgba(0,0,0,0.35)] sm:rounded-[2.5rem] sm:p-10 lg:p-12"
             >
               {/* Hover Glow */}
               <div className="absolute inset-0 bg-gradient-to-br from-gold/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
               <div className="relative z-10 mb-10 flex items-start">
-                <div className="flex h-16 w-16 items-center justify-center rounded-2xl border border-[#dbe8f4] bg-[#f4f8fc] text-gold shadow-inner transition-all duration-500 group-hover:scale-110 group-hover:border-gold/30 group-hover:bg-gold group-hover:text-white dark:border-[#272b33] dark:bg-[#15181d] sm:h-20 sm:w-20">
+                <div className="surface-chip flex h-16 w-16 items-center justify-center rounded-2xl text-gold transition-all duration-500 group-hover:scale-110 group-hover:border-gold/25 group-hover:bg-gold group-hover:text-white dark:border-[#272b33] dark:bg-[#15181d] sm:h-20 sm:w-20">
                   <Icon className="w-7 h-7 sm:w-8 sm:h-8" />
                 </div>
               </div>

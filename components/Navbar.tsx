@@ -120,16 +120,16 @@ const Navbar: React.FC = () => {
               exit={{ x: 42, opacity: 0.96 }}
               transition={{ duration: 0.26, ease: [0.16, 1, 0.3, 1] }}
               onClick={(event) => event.stopPropagation()}
-              className="relative ml-auto flex h-[calc(100svh-1rem)] w-full max-w-[410px] flex-col overflow-hidden rounded-[2rem] border border-[rgba(197,217,235,0.8)] bg-[linear-gradient(180deg,rgba(255,255,255,0.96),rgba(247,250,255,0.92))] shadow-[-24px_0_70px_rgba(15,23,42,0.14),inset_0_1px_0_rgba(255,255,255,0.9)] backdrop-blur-2xl sm:h-[calc(100svh-1.5rem)]"
+              className="surface-glass relative ml-auto flex h-[calc(100svh-1rem)] w-full max-w-[410px] flex-col overflow-hidden rounded-[2rem] bg-[linear-gradient(180deg,rgba(255,255,255,0.94),rgba(248,251,255,0.9))] shadow-[-24px_0_70px_rgba(15,23,42,0.08),inset_0_1px_0_rgba(255,255,255,0.82)] backdrop-blur-2xl sm:h-[calc(100svh-1.5rem)]"
             >
               <div className="pointer-events-none absolute inset-x-0 top-0 h-12 bg-[radial-gradient(circle_at_top,rgba(126,180,221,0.12),transparent_74%)]" />
 
-              <div className="relative flex justify-end border-b border-[rgba(199,217,233,0.7)] px-5 pb-2 pt-[max(env(safe-area-inset-top),0.7rem)]">
+              <div className="surface-divider relative flex justify-end border-b px-5 pb-2 pt-[max(env(safe-area-inset-top),0.7rem)]">
                 <div className="flex items-start justify-end gap-4">
                   <motion.button
                     onClick={toggleMenu}
                     whileTap={{ scale: 0.94 }}
-                    className="flex h-10 w-10 items-center justify-center rounded-full border border-[rgba(199,217,233,0.85)] bg-white/88 text-stone-500 shadow-[0_10px_22px_rgba(148,163,184,0.1),inset_0_1px_0_rgba(255,255,255,0.85)] transition-all hover:border-[#c4d8ea] hover:bg-[#fbfdff] hover:text-stone-800"
+                    className="surface-chip flex h-10 w-10 items-center justify-center rounded-full text-stone-500 transition-all hover:border-[#c9d9e6] hover:bg-[#fbfdff] hover:text-stone-800"
                   >
                     <X className="h-4 w-4" />
                   </motion.button>
@@ -143,20 +143,20 @@ const Navbar: React.FC = () => {
                 className="drawer-scroll-hidden flex flex-1 flex-col overflow-y-auto px-5 py-5"
               >
                 <div className="space-y-3">
-                  {navLinks.map((link, index) => (
+                  {navLinks.map((link) => (
                     <motion.a
                       key={link.href}
                       href={link.href}
                       onClick={toggleMenu}
                       variants={menuItemVariants}
-                      className="group flex items-center justify-between rounded-[1.7rem] border border-[rgba(201,219,235,0.75)] bg-white/84 px-5 py-4 shadow-[0_14px_30px_rgba(148,163,184,0.08),inset_0_1px_0_rgba(255,255,255,0.75)] backdrop-blur-xl transition-all duration-300 hover:border-[#c7dbec] hover:bg-[#fcfdff] hover:shadow-[0_20px_36px_rgba(148,163,184,0.12)]"
+                      className="surface-chip group flex items-center justify-between rounded-[1.7rem] px-5 py-4 backdrop-blur-xl transition-all duration-300 hover:border-[#c7dbec] hover:bg-[#fcfdff] hover:shadow-[0_20px_36px_rgba(148,163,184,0.1)]"
                     >
                       <span className="text-[1.08rem] font-semibold tracking-[-0.03em] text-stone-900">
                         {link.label}
                       </span>
 
                       <div className="flex items-center gap-2.5">
-                        <span className="flex h-8 w-8 items-center justify-center rounded-full border border-[rgba(201,219,235,0.8)] bg-[rgba(246,250,254,0.96)] text-stone-500 shadow-[inset_0_1px_0_rgba(255,255,255,0.8)] transition-colors duration-300 group-hover:border-[#c7dbec] group-hover:bg-[#edf5fb] group-hover:text-[#1C6AA8]">
+                        <span className="surface-chip flex h-8 w-8 items-center justify-center rounded-full text-stone-500 transition-colors duration-300 group-hover:border-[#c7dbec] group-hover:bg-[#edf5fb] group-hover:text-[#1C6AA8]">
                           <ArrowUpRight className="h-3.5 w-3.5" />
                         </span>
                       </div>
@@ -168,15 +168,15 @@ const Navbar: React.FC = () => {
                   <span className="mb-3 block text-[10px] font-semibold uppercase tracking-[0.34em] text-[#7f8794]">
                     Sprache
                   </span>
-                  <div className="grid grid-cols-3 gap-2 rounded-[1.5rem] border border-[rgba(201,219,235,0.78)] bg-white/78 p-2 shadow-[0_12px_28px_rgba(148,163,184,0.08),inset_0_1px_0_rgba(255,255,255,0.75)]">
+                  <div className="surface-chip grid grid-cols-3 gap-2 rounded-[1.5rem] p-2">
                     {languages.map((lang) => (
                       <button
                         key={lang.code}
                         onClick={() => changeLanguage(lang.code)}
                         className={`flex items-center justify-center gap-2 rounded-[1rem] px-3 py-3 text-[12px] font-semibold uppercase tracking-[0.16em] transition-all ${
                           currentLocale === lang.code
-                            ? 'border border-[rgba(195,216,234,0.9)] bg-[#edf5fb] text-[#1C6AA8] shadow-[0_10px_20px_rgba(28,106,168,0.1)]'
-                            : 'border border-transparent bg-white/86 text-stone-600 hover:border-[rgba(201,219,235,0.75)] hover:bg-[#f5f9fd] hover:text-stone-900'
+                            ? 'surface-chip-active text-[#1C6AA8]'
+                            : 'border border-transparent bg-white/72 text-stone-600 hover:border-[#d3e0eb] hover:bg-[#f5f9fd] hover:text-stone-900'
                         }`}
                       >
                         {lang.short}
@@ -191,13 +191,13 @@ const Navbar: React.FC = () => {
                 initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-                className="relative border-t border-[rgba(199,217,233,0.7)] bg-[linear-gradient(180deg,rgba(255,255,255,0.68),rgba(248,251,255,0.78))] px-5 pb-[max(env(safe-area-inset-bottom),1.2rem)] pt-5 backdrop-blur-xl"
+                className="surface-divider relative border-t bg-[linear-gradient(180deg,rgba(255,255,255,0.62),rgba(248,251,255,0.76))] px-5 pb-[max(env(safe-area-inset-bottom),1.2rem)] pt-5 backdrop-blur-xl"
               >
                 <motion.a
                   href={contactHref}
                   onClick={toggleMenu}
                   whileTap={{ scale: 0.98 }}
-                  className="flex w-full items-center justify-center rounded-[1.2rem] bg-gold px-6 py-4 text-center text-[12px] font-bold uppercase tracking-[0.22em] text-white shadow-[0_18px_35px_rgba(28,106,168,0.2)] transition-colors hover:bg-[#0B4E84]"
+                  className="btn-beam-blue flex w-full items-center justify-center rounded-[1.2rem] px-6 py-4 text-center text-[12px] font-bold uppercase tracking-[0.22em] text-white"
                 >
                   {t('contact')}
                 </motion.a>
@@ -223,10 +223,10 @@ const Navbar: React.FC = () => {
         <div className="w-full">
           <motion.div
             transition={{ duration: 0.3 }}
-            className={`flex items-center justify-between px-4 sm:px-6 lg:px-8 xl:px-10 py-2.5 sm:py-3 lg:py-3.5 rounded-full backdrop-blur-xl border border-transparent ${
+            className={`surface-glass flex items-center justify-between px-4 sm:px-6 lg:px-8 xl:px-10 py-2.5 sm:py-3 lg:py-3.5 rounded-full ${
               scrolled
-                ? 'bg-white/92 shadow-[0_20px_50px_rgba(15,23,42,0.1)] dark:bg-[rgba(15,17,21,0.88)] dark:border-[#2c313b]/55 dark:shadow-black/40'
-                : 'bg-white/74 shadow-[0_12px_30px_rgba(15,23,42,0.06)] dark:bg-[rgba(15,17,21,0.55)] dark:border-[#2c313b]/35 dark:shadow-black/10'
+                ? 'bg-white/84 shadow-[0_14px_34px_rgba(15,23,42,0.06)] dark:bg-[rgba(15,17,21,0.88)] dark:border-[#2c313b]/55 dark:shadow-black/40'
+                : 'bg-white/70 shadow-[0_8px_24px_rgba(15,23,42,0.05)] dark:bg-[rgba(15,17,21,0.55)] dark:border-[#2c313b]/35 dark:shadow-black/10'
             }`}
           >
             <a href={homePath} aria-label="HG Grundbesitz" className="flex items-center group relative shrink-0">
@@ -276,7 +276,7 @@ const Navbar: React.FC = () => {
                       animate={{ opacity: 1, y: 0, scale: 1 }}
                       exit={{ opacity: 0, y: 8, scale: 0.95 }}
                       transition={{ duration: 0.2 }}
-                      className="absolute top-full right-0 mt-3 bg-white/95 backdrop-blur-xl border border-stone-200 rounded-2xl overflow-hidden shadow-[0_24px_50px_rgba(15,23,42,0.12)] min-w-[140px] dark:bg-[#15181d]/95 dark:border-[#272b33] dark:shadow-black/50"
+                      className="surface-glass absolute top-full right-0 mt-3 min-w-[140px] overflow-hidden rounded-2xl bg-white/92 dark:bg-[#15181d]/95 dark:border-[#272b33] dark:shadow-black/50"
                     >
                       {languages.map((lang, idx) => (
                         <button
@@ -301,7 +301,7 @@ const Navbar: React.FC = () => {
                 href={contactHref}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="hidden sm:flex items-center gap-2 px-5 lg:px-6 py-2.5 lg:py-3 bg-gold text-white rounded-full text-[10px] lg:text-xs font-bold uppercase tracking-widest hover:bg-[#0B4E84] transition-colors duration-300 shadow-[0_18px_35px_rgba(11,78,132,0.18)]"
+                className="btn-beam-blue hidden sm:flex items-center gap-2 rounded-full px-5 py-2.5 text-[10px] font-bold uppercase tracking-widest text-white lg:px-6 lg:py-3 lg:text-xs"
               >
                 <span>{t('contact')}</span>
                 <ArrowUpRight className="w-3 h-3 lg:w-3.5 lg:h-3.5 rtl:flip" />
@@ -311,7 +311,7 @@ const Navbar: React.FC = () => {
                 onClick={toggleMenu}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="lg:hidden w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white border border-stone-200 flex items-center justify-center text-stone-900 hover:border-gold/50 hover:text-gold transition-all dark:bg-[#15181d]/82 dark:border-[#272b33] dark:text-white"
+                className="surface-chip lg:hidden flex h-11 w-11 items-center justify-center rounded-full text-stone-900 transition-all hover:border-gold/40 hover:text-gold dark:bg-[#15181d]/82 dark:border-[#272b33] dark:text-white sm:h-12 sm:w-12"
               >
                 <Menu className="w-5 h-5" />
               </motion.button>

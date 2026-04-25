@@ -132,7 +132,7 @@ const Hero: React.FC = () => {
               <motion.a
                 href="#contact"
                 whileTap={{ scale: 0.98 }}
-                className="flex w-full items-center justify-center gap-3 rounded-full bg-gold px-8 py-4 text-xs font-bold uppercase tracking-[0.2em] text-white shadow-[0_18px_40px_rgba(28,106,168,0.18)] transition-colors hover:bg-[#0B4E84] sm:w-auto sm:min-w-[21rem] sm:py-5 lg:min-w-0"
+                className="btn-beam-blue flex w-full items-center justify-center gap-3 rounded-full px-8 py-4 text-xs font-bold uppercase tracking-[0.2em] text-white sm:w-auto sm:min-w-[21rem] sm:py-5 lg:min-w-0"
               >
                 <span>{t('cta_offer')}</span>
                 <ArrowRight className="h-4 w-4 rtl:rotate-180" />

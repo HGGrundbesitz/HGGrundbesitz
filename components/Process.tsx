@@ -43,7 +43,7 @@ const Process: React.FC = () => {
               initial={{ opacity: 1, y: 0 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="mb-4 inline-flex items-center gap-2 rounded-full border border-stone-200 bg-white px-4 py-2 text-xs font-bold uppercase tracking-widest text-stone-500 sm:mb-6 dark:border-[#272b33] dark:bg-[#15181d]/82 dark:text-stone-300"
+              className="surface-chip mb-4 inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-bold uppercase tracking-widest text-stone-500 sm:mb-6 dark:border-[#272b33] dark:bg-[#15181d]/82 dark:text-stone-300"
             >
               <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
               {t('badge')}
@@ -55,7 +55,7 @@ const Process: React.FC = () => {
           </motion.div>
           <motion.div 
             {...fadeInUp}
-            className="max-w-md border-l-2 border-[#dbe8f4] pl-6 sm:pl-8 dark:border-[#272b33]"
+            className="surface-divider max-w-md border-l pl-6 sm:pl-8 dark:border-[#272b33]"
           >
             <p className="text-sm leading-relaxed text-stone-600 sm:text-base dark:text-stone-400">
               {t('description')}
@@ -87,13 +87,13 @@ const Process: React.FC = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0 }}
-                  className="group relative rounded-2xl border border-stone-200 bg-white p-5 shadow-[0_16px_40px_rgba(15,23,42,0.04)] sm:border-0 sm:bg-transparent sm:p-0 sm:shadow-none dark:border-[#272b33] dark:bg-[#101317] dark:shadow-[0_16px_40px_rgba(0,0,0,0.22)]"
+                  className="surface-card group relative rounded-2xl p-5 sm:!border-0 sm:!bg-transparent sm:!shadow-none sm:p-0 dark:border-[#272b33] dark:bg-[#101317] dark:shadow-[0_16px_40px_rgba(0,0,0,0.22)]"
                 >
                   {/* Step icon circle */}
                   <div className="flex items-center gap-4 sm:gap-0 sm:justify-center mb-4 sm:mb-10">
                     <motion.div 
                       whileHover={{ scale: 1.1 }}
-                      className="relative z-10 flex h-14 w-14 items-center justify-center rounded-full border-2 border-[#dbe8f4] bg-white text-gold shadow-[0_10px_30px_rgba(15,23,42,0.08)] transition-all duration-500 group-hover:border-gold/50 group-hover:text-gold sm:h-24 sm:w-24 lg:h-28 lg:w-28 dark:border-[#272b33] dark:bg-[#15181d] dark:shadow-[0_10px_30px_rgba(0,0,0,0.25)]"
+                      className="surface-chip relative z-10 flex h-14 w-14 items-center justify-center rounded-full text-gold transition-all duration-500 group-hover:border-gold/30 group-hover:text-gold sm:h-24 sm:w-24 lg:h-28 lg:w-28 dark:border-[#272b33] dark:bg-[#15181d] dark:shadow-[0_10px_30px_rgba(0,0,0,0.25)]"
                     >
                       <Icon className="h-5 w-5 sm:h-8 sm:w-8 lg:h-9 lg:w-9" />
                       {/* Ring animation on hover */}
@@ -110,7 +110,7 @@ const Process: React.FC = () => {
                     
                     <motion.div
                       whileHover={{ scale: 1.1 }}
-                      className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-[#dbe8f4] bg-white text-stone-500 transition-all duration-500 group-hover:border-gold group-hover:bg-gold group-hover:text-white sm:h-12 sm:w-12 sm:rounded-2xl dark:border-[#272b33] dark:bg-[#15181d] dark:text-stone-300"
+                      className="surface-chip inline-flex h-10 w-10 items-center justify-center rounded-xl text-stone-500 transition-all duration-500 group-hover:border-gold/35 group-hover:bg-gold group-hover:text-white sm:h-12 sm:w-12 sm:rounded-2xl dark:border-[#272b33] dark:bg-[#15181d] dark:text-stone-300"
                     >
                       <Icon className="w-4 h-4 sm:w-5 sm:h-5" />
                     </motion.div>

@@ -109,7 +109,7 @@ const Carousel: React.FC = () => {
               onClick={prevSlide}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="flex h-14 w-14 items-center justify-center rounded-full border border-stone-200 bg-white text-stone-900 shadow-sm transition-all duration-300 hover:border-gold/40 hover:bg-gold/10 hover:text-gold sm:h-16 sm:w-16 dark:border-[#272b33] dark:bg-[#15181d]/82 dark:text-stone-200 dark:hover:border-[#343945] dark:hover:bg-[#1e232b]"
+              className="surface-chip flex h-14 w-14 items-center justify-center rounded-full text-stone-900 transition-all duration-300 hover:border-gold/25 hover:bg-gold/10 hover:text-gold dark:border-[#272b33] dark:bg-[#15181d]/82 dark:text-stone-200 dark:hover:border-[#343945] dark:hover:bg-[#1e232b] sm:h-16 sm:w-16"
             >
               <ArrowLeft className="h-5 w-5" />
             </motion.button>
@@ -117,7 +117,7 @@ const Carousel: React.FC = () => {
               onClick={nextSlide}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="flex h-14 w-14 items-center justify-center rounded-full bg-gold text-white shadow-[0_18px_35px_rgba(11,78,132,0.18)] transition-all duration-300 hover:bg-[#0B4E84] sm:h-16 sm:w-16 dark:shadow-[0_18px_35px_rgba(2,8,23,0.45)]"
+              className="btn-beam-blue flex h-14 w-14 items-center justify-center rounded-full text-white sm:h-16 sm:w-16"
             >
               <ArrowRight className="h-5 w-5" />
             </motion.button>
@@ -212,7 +212,7 @@ const Carousel: React.FC = () => {
               initial={{ scale: 0.9 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0.9 }}
-              className="flex max-h-[90vh] w-full max-w-5xl flex-col overflow-hidden rounded-[2.5rem] border border-[#dbe8f4] bg-white shadow-[0_30px_100px_rgba(15,23,42,0.16)] lg:flex-row lg:rounded-[3.5rem] dark:border-[#272b33] dark:bg-[#101317] dark:shadow-[0_30px_100px_rgba(0,0,0,0.45)]"
+              className="surface-card-strong flex max-h-[90vh] w-full max-w-5xl flex-col overflow-hidden rounded-[2.5rem] bg-white lg:flex-row lg:rounded-[3.5rem] dark:border-[#272b33] dark:bg-[#101317] dark:shadow-[0_30px_100px_rgba(0,0,0,0.45)]"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="relative h-56 min-h-[250px] w-full lg:h-auto lg:w-1/2">
@@ -228,7 +228,7 @@ const Carousel: React.FC = () => {
                   <h3 className="text-3xl font-serif text-stone-900 sm:text-4xl lg:text-5xl dark:text-white">{selectedCard.title}</h3>
                   <button
                     onClick={() => setSelectedCard(null)}
-                    className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full border border-stone-200 bg-white transition-all hover:bg-gold hover:text-white dark:border-[#272b33] dark:bg-[#15181d] dark:hover:border-gold"
+                    className="surface-chip flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full transition-all hover:border-gold/25 hover:bg-gold hover:text-white dark:border-[#272b33] dark:bg-[#15181d] dark:hover:border-gold"
                   >
                     <X className="h-6 w-6 text-stone-400 dark:text-stone-500" />
                   </button>
@@ -274,11 +274,11 @@ const Carousel: React.FC = () => {
                   </p>
                 </div>
 
-                <div className="mt-auto border-t border-stone-200 pt-10 dark:border-[#272b33]">
+                <div className="surface-divider mt-auto border-t pt-10 dark:border-[#272b33]">
                   <motion.button
                     whileHover={{ scale: 1.01 }}
                     whileTap={{ scale: 0.99 }}
-                    className="w-full rounded-[1.5rem] bg-gold py-5 text-[11px] font-bold uppercase tracking-widest text-white shadow-[0_18px_40px_rgba(11,78,132,0.18)] transition-all hover:bg-[#0B4E84] sm:text-xs"
+                    className="btn-beam-blue w-full rounded-[1.5rem] py-5 text-[11px] font-bold uppercase tracking-widest text-white sm:text-xs"
                   >
                     {t('details.expose_btn')}
                   </motion.button>

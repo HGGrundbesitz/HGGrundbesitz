@@ -21,7 +21,7 @@ type LegalCardProps = {
 
 export function LegalCard({ title, children }: LegalCardProps) {
   return (
-    <section className="rounded-[2rem] border border-[#dbe8f4] bg-white p-6 shadow-[0_24px_70px_rgba(15,23,42,0.06)] sm:p-8 dark:border-[#272b33] dark:bg-[#101317] dark:shadow-[0_24px_70px_rgba(0,0,0,0.22)]">
+    <section className="surface-card rounded-[2rem] p-6 sm:p-8 dark:border-[#272b33] dark:bg-[#101317] dark:shadow-[0_24px_70px_rgba(0,0,0,0.22)]">
       <h2 className="mb-5 text-2xl font-serif text-stone-900 dark:text-white">{title}</h2>
       <div className="space-y-4 text-sm leading-7 text-stone-600 sm:text-[15px] dark:text-stone-300">
         {children}
@@ -52,7 +52,7 @@ export default function LegalPageShell({
 
         <div className="relative z-10 mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-12">
           <div className="max-w-3xl">
-            <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-stone-200 bg-white px-4 py-2 text-[10px] font-bold uppercase tracking-[0.24em] text-stone-500 shadow-[0_14px_35px_rgba(15,23,42,0.06)] sm:text-xs dark:border-[#272b33] dark:bg-[#15181d]/82 dark:text-stone-300 dark:shadow-[0_14px_35px_rgba(0,0,0,0.22)]">
+            <span className="surface-chip mb-6 inline-flex items-center gap-2 rounded-full px-4 py-2 text-[10px] font-bold uppercase tracking-[0.24em] text-stone-500 sm:text-xs dark:border-[#272b33] dark:bg-[#15181d]/82 dark:text-stone-300 dark:shadow-[0_14px_35px_rgba(0,0,0,0.22)]">
               <span className="h-1.5 w-1.5 rounded-full bg-gold" />
               {badge}
             </span>
@@ -76,7 +76,7 @@ export default function LegalPageShell({
 
             <aside className="lg:col-span-4">
               <div className="space-y-6 lg:sticky lg:top-32">
-                <div className="rounded-[2rem] border border-[#dbe8f4] bg-white p-6 shadow-[0_24px_70px_rgba(15,23,42,0.06)] sm:p-8 dark:border-[#272b33] dark:bg-[#101317] dark:shadow-[0_24px_70px_rgba(0,0,0,0.22)]">
+                <div className="surface-card rounded-[2rem] p-6 sm:p-8 dark:border-[#272b33] dark:bg-[#101317] dark:shadow-[0_24px_70px_rgba(0,0,0,0.22)]">
                   <span className="text-[10px] font-bold uppercase tracking-[0.24em] text-stone-500 dark:text-stone-400">
                     Ansprechpartner
                   </span>
@@ -106,7 +106,7 @@ export default function LegalPageShell({
                   </div>
                 </div>
 
-                <div className="rounded-[2rem] border border-[#dbe8f4] bg-[linear-gradient(180deg,#f8fbff_0%,#eef5fb_100%)] p-6 sm:p-8 dark:border-[#272b33] dark:bg-[linear-gradient(180deg,#11151b_0%,#0b0f14_100%)]">
+                <div className="surface-card-tint rounded-[2rem] p-6 sm:p-8 dark:border-[#272b33] dark:bg-[linear-gradient(180deg,#11151b_0%,#0b0f14_100%)]">
                   <span className="text-[10px] font-bold uppercase tracking-[0.24em] text-stone-500 dark:text-stone-400">
                     Website
                   </span>
@@ -115,7 +115,7 @@ export default function LegalPageShell({
                   </p>
                   <Link
                     href={homeHref}
-                    className="mt-6 inline-flex items-center gap-2 rounded-full bg-gold px-5 py-3 text-[11px] font-bold uppercase tracking-[0.2em] text-white transition-colors hover:bg-[#0B4E84]"
+                    className="btn-beam-blue mt-6 inline-flex items-center gap-2 rounded-full px-5 py-3 text-[11px] font-bold uppercase tracking-[0.2em] text-white"
                   >
                     Zur Startseite
                     <ArrowUpRight className="h-3.5 w-3.5" />

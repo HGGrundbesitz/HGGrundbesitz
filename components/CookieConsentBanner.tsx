@@ -70,10 +70,10 @@ export default function CookieConsentBanner({
 
   return (
     <div className="fixed inset-x-4 bottom-4 z-[80] sm:inset-x-6 lg:left-1/2 lg:right-auto lg:w-[min(960px,calc(100vw-3rem))] lg:-translate-x-1/2">
-      <div className="overflow-hidden rounded-[1.75rem] border border-[#dbe8f4] bg-white/96 p-5 shadow-[0_24px_80px_rgba(15,23,42,0.12)] backdrop-blur xl:p-6">
+      <div className="surface-card-strong overflow-hidden rounded-[1.75rem] bg-white/94 p-5 backdrop-blur xl:p-6">
         <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-3xl">
-            <span className="mb-3 inline-flex items-center gap-2 rounded-full border border-[#dbe8f4] bg-[#f8fbff] px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.22em] text-stone-600">
+            <span className="surface-chip mb-3 inline-flex items-center gap-2 rounded-full px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.22em] text-stone-600">
               <ShieldCheck className="h-3.5 w-3.5 text-[#1C6AA8]" />
               {labels.badge}
             </span>
@@ -90,14 +90,14 @@ export default function CookieConsentBanner({
             <button
               type="button"
               onClick={() => handleChoice('rejected')}
-              className="rounded-full border border-stone-300 px-5 py-3 text-[11px] font-bold uppercase tracking-[0.18em] text-stone-700 transition-colors hover:border-stone-900 hover:text-stone-900"
+              className="surface-chip rounded-full px-5 py-3 text-[11px] font-bold uppercase tracking-[0.18em] text-stone-700 transition-colors hover:border-[#cad9e5] hover:text-stone-900"
             >
               {labels.reject}
             </button>
             <button
               type="button"
               onClick={() => handleChoice('accepted')}
-              className="rounded-full bg-[#1C6AA8] px-5 py-3 text-[11px] font-bold uppercase tracking-[0.18em] text-white transition-colors hover:bg-[#0B4E84]"
+              className="btn-beam-blue rounded-full px-5 py-3 text-[11px] font-bold uppercase tracking-[0.18em] text-white"
             >
               {labels.accept}
             </button>
