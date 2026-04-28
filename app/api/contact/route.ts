@@ -107,14 +107,14 @@ export async function POST(request: NextRequest) {
     }
 
     const emailResult = await resend.emails.send({
-      from: `Hendrik Grau Website <${SENDER_EMAIL}>`,
+      from: `HG Grundbesitz Website <${SENDER_EMAIL}>`,
       to: [CONTACT_EMAIL],
       replyTo: safeEmail,
       subject: `Neue Immobilien-Anfrage von ${safeName}`,
       html: `
         <div style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #f9f9f9;">
           <div style="background-color: #1c1917; padding: 20px; border-radius: 8px 8px 0 0; text-align: center;">
-            <h2 style="color: #1C6AA8; margin: 0; font-family: serif;">Hendrik Grau Investment</h2>
+            <h2 style="color: #1C6AA8; margin: 0; font-family: serif;">HG Grundbesitz GmbH</h2>
           </div>
           <div style="background: #ffffff; padding: 30px; border-radius: 0 0 8px 8px; border: 1px solid #e5e5e5; border-top: none;">
             <h3 style="color: #333; margin-top: 0;">Neue Kontaktanfrage</h3>
@@ -157,9 +157,9 @@ export async function POST(request: NextRequest) {
 
     // 5. Send Confirmation to User 
     await resend.emails.send({
-      from: `Hendrik Grau Team <${SENDER_EMAIL}>`,
+      from: `HG Grundbesitz Team <${SENDER_EMAIL}>`,
       to: [safeEmail],
-      subject: 'Eingangsbestätigung: Ihre Anfrage an Hendrik Grau Investment',
+      subject: 'Eingangsbestätigung: Ihre Anfrage an HG Grundbesitz GmbH',
       html: `
         <div style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #f9f9f9;">
           <div style="background-color: #1c1917; padding: 30px 20px; border-radius: 8px 8px 0 0; text-align: center;">

@@ -130,7 +130,7 @@ const Hero: React.FC = () => {
               )}
             >
               <motion.a
-                href="#contact"
+                href="#quick-check"
                 whileTap={{ scale: 0.98 }}
                 className="btn-beam-blue flex w-full items-center justify-center gap-3 rounded-full px-8 py-4 text-xs font-bold uppercase tracking-[0.2em] text-white sm:w-auto sm:min-w-[21rem] sm:py-5 lg:min-w-0"
               >
@@ -223,3 +223,4 @@ const Hero: React.FC = () => {
 };
 
 export default Hero;
+
