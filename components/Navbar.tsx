@@ -5,7 +5,6 @@ import { Menu, X, ArrowUpRight, Languages, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence, cubicBezier } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { usePathname, useRouter } from 'next/navigation';
-import BrandLogo from './BrandLogo';
 import { getHomePath, getSectionHref } from '../lib/locale-path';
 
 const Navbar: React.FC = () => {
@@ -230,13 +229,9 @@ const Navbar: React.FC = () => {
             }`}
           >
             <a href={homePath} aria-label="HG Grundbesitz" className="flex items-center group relative shrink-0">
-              <BrandLogo
-                mode="wordmark"
-                size="sm"
-                showSuffix={true}
-                variant="adaptive"
-                className="transition-transform duration-300 group-hover:scale-[1.02]"
-              />
+              <span className="relative py-2.5 text-[11px] font-bold uppercase tracking-widest text-stone-600 transition-all duration-300 group-hover:text-stone-950 xl:text-xs dark:text-stone-400 dark:group-hover:text-white">
+                HG Grundbesitz GmbH
+              </span>
             </a>
 
             <div className="hidden lg:flex items-center gap-2 xl:gap-3">
