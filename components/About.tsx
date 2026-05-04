@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
 import { Check, Award, Shield, Zap, Linkedin } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { fadeInUp, staggerContainer } from '@/lib/animations';
@@ -85,33 +84,29 @@ const About: React.FC = () => {
               transition={{ delay: 0.3 }}
               className="w-full sm:w-auto"
             >
-              <motion.a
-                href="https://www.linkedin.com/in/hendrikgrau/"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ y: -3 }}
-                whileTap={{ scale: 0.985 }}
-                className="surface-card group mx-auto flex w-full max-w-[18rem] flex-col items-center rounded-[2rem] px-5 py-5 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[#1c6aa8]/18 hover:shadow-[0_24px_50px_rgba(28,106,168,0.12)] sm:min-w-[14.5rem] sm:px-6 sm:py-6"
-                aria-label="Hendrik Grau auf LinkedIn ansehen"
-              >
-                <div className="relative mb-4 h-20 w-20 overflow-hidden rounded-full border border-[rgba(20,40,80,0.09)] bg-white shadow-[0_14px_28px_rgba(15,23,42,0.08)] sm:h-24 sm:w-24">
-                  <Image
-                    src="/grau.png"
-                    alt="Hendrik Grau"
-                    fill
-                    sizes="96px"
-                    className="object-cover"
-                  />
-                </div>
-                <div className="text-base font-bold text-stone-900 transition-colors duration-300 group-hover:text-[#1c6aa8] sm:text-lg">
-                  Hendrik Grau
-                </div>
-                <div className="mt-3 flex items-center justify-center">
-                  <span className="surface-chip inline-flex h-11 w-11 items-center justify-center rounded-full text-[#1c6aa8] transition-all duration-300 group-hover:border-[#1c6aa8]/20 group-hover:bg-[#1c6aa8]/6 group-hover:shadow-[0_14px_28px_rgba(28,106,168,0.12)]">
-                    <Linkedin className="h-4 w-4 sm:h-[18px] sm:w-[18px]" />
-                  </span>
-                </div>
-              </motion.a>
+             <motion.a
+  href="https://www.linkedin.com/in/hendrikgrau/"
+  target="_blank"
+  rel="noopener noreferrer"
+  initial={{ opacity: 0, x: -20 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  viewport={{ once: true }}
+  transition={{ delay: 0.3 }}
+  whileHover={{ y: -2 }}
+  whileTap={{ scale: 0.985 }}
+  className="group flex items-center justify-center gap-3"
+  aria-label="Hendrik Grau auf LinkedIn ansehen"
+>
+  <div className="flex h-11 w-11 items-center justify-center rounded-full border border-[rgba(20,40,80,0.09)] bg-white shadow-[0_10px_24px_rgba(15,23,42,0.08)] transition-all duration-300 group-hover:border-[#1c6aa8]/20 group-hover:shadow-[0_14px_30px_rgba(28,106,168,0.12)]">
+    <span className="font-serif text-[1rem] font-medium text-[#1c6aa8]">
+      HG
+    </span>
+  </div>
+
+  <span className="text-[11px] font-bold uppercase tracking-widest text-stone-900 transition-colors duration-300 group-hover:text-[#1c6aa8] dark:text-white">
+    Hendrik Grau
+  </span>
+</motion.a>
             </motion.div>
           </div>
         </motion.div>
