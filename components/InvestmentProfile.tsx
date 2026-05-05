@@ -128,9 +128,9 @@ const InvestmentProfile: React.FC = () => {
 
             <div className="relative z-10 space-y-6 sm:space-y-8 mb-12 sm:mb-16 flex-1">
               {landCriteria.map((item, idx) => (
-                <div key={idx} className="surface-divider flex items-center justify-between border-b pb-5 transition-colors duration-500 group-hover:border-gold/20 dark:border-[#272b33]">
+                <div key={idx} className="surface-divider flex flex-col items-start gap-3 border-b pb-5 transition-colors duration-500 group-hover:border-gold/20 sm:flex-row sm:items-center sm:justify-between dark:border-[#272b33]">
                   <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-stone-500 dark:text-stone-400">{item.title}</h4>
-                  <p className="text-xl font-serif text-stone-900 dark:text-stone-100">{item.value}</p>
+                  <p className="text-left text-xl leading-tight font-serif text-stone-900 sm:text-right dark:text-stone-100">{item.value}</p>
                 </div>
               ))}
             </div>
