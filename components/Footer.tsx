@@ -5,7 +5,6 @@ import { Linkedin } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { usePathname, useRouter } from 'next/navigation';
-import BrandLogo from './BrandLogo';
 import { getHomePath, getSectionHref, isHomePathname } from '../lib/locale-path';
 import { COOKIE_CONSENT_NAME } from '@/lib/cookieConsent';
 
@@ -49,7 +48,11 @@ const Footer: React.FC = () => {
           
           {/* Brand & Info Column */}
           <div className="md:col-span-12 lg:col-span-6 flex flex-col items-start">
-            <BrandLogo mode="wordmark" size="md" showSuffix={true} variant="adaptive" className="mb-6" />
+            <a href={homePath} aria-label="HG Grundbesitz" className="mb-6 flex items-center group relative shrink-0">
+              <span className="relative py-2.5 text-[11px] font-bold uppercase tracking-widest text-stone-600 transition-all duration-300 group-hover:text-stone-950 xl:text-xs dark:text-stone-400 dark:group-hover:text-white">
+                HG Grundbesitz GmbH
+              </span>
+            </a>
             <div className="text-sm sm:text-base text-stone-600 dark:text-stone-400 font-light leading-relaxed max-w-sm mb-10">
               <p>48155 Münster</p>
               <p className="mt-2">
