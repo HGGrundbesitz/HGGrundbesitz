@@ -30,8 +30,8 @@ const Hero: React.FC = () => {
         className={cn(
           'pointer-events-none absolute inset-y-0 z-10 hidden lg:block',
           isRtl
-            ? 'left-0 w-[38vw] min-w-[500px] max-w-[720px]'
-            : 'right-0 w-[42vw] min-w-[580px] max-w-[840px]'
+            ? 'left-0 w-[38vw] min-w-[500px] max-w-[720px] 2xl:w-[41vw] 2xl:max-w-[820px]'
+            : 'right-0 w-[42vw] min-w-[580px] max-w-[840px] xl:w-[44vw] xl:max-w-[900px] 2xl:w-[47vw] 2xl:max-w-[1040px]'
         )}
       >
         <motion.div
@@ -40,7 +40,6 @@ const Hero: React.FC = () => {
           transition={{ duration: 1.2, delay: 0.2 }}
           className={cn(
             'absolute bottom-0 h-[88vh] w-full translate-y-[10px] overflow-hidden 2xl:h-[90vh] 2xl:translate-y-[14px]',
-            isRtl ? 'hero-image-fade-left' : 'hero-image-fade-right',
             isRtl ? 'left-0' : 'right-0'
           )}
         >
@@ -55,17 +54,6 @@ const Hero: React.FC = () => {
             priority
             sizes={isRtl ? '(max-width: 1024px) 0vw, 38vw' : '(max-width: 1024px) 0vw, 42vw'}
             quality={90}
-          />
-          <div
-            aria-hidden="true"
-            className={cn(
-              'absolute inset-0',
-              isRtl ? 'hero-image-atmosphere-left' : 'hero-image-atmosphere-right'
-            )}
-          />
-          <div
-            aria-hidden="true"
-            className="hero-image-bottom-blend absolute inset-x-0 bottom-0 h-[30%]"
           />
         </motion.div>
       </div>
@@ -144,7 +132,7 @@ const Hero: React.FC = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1.1, delay: 0.15 }}
-                className="hero-image-fade-mobile relative left-1/2 aspect-[0.94] w-[calc(100vw+0.2rem)] max-w-none -translate-x-1/2 overflow-hidden sm:w-[calc(100vw-0.2rem)] sm:max-w-[32rem]"
+                className="relative left-1/2 aspect-[0.94] w-[calc(100vw+0.2rem)] max-w-none -translate-x-1/2 overflow-hidden sm:w-[calc(100vw-0.2rem)] sm:max-w-[32rem]"
               >
                 <Image
                   src="/hendrik.png"
@@ -157,14 +145,6 @@ const Hero: React.FC = () => {
                   priority
                   sizes="(max-width: 640px) 96vw, 448px"
                   quality={90}
-                />
-                <div
-                  aria-hidden="true"
-                  className="hero-image-atmosphere-mobile absolute inset-0"
-                />
-                <div
-                  aria-hidden="true"
-                  className="hero-image-bottom-blend absolute inset-x-0 bottom-0 h-[28%]"
                 />
               </motion.div>
             </div>
@@ -223,4 +203,3 @@ const Hero: React.FC = () => {
 };
 
 export default Hero;
-
