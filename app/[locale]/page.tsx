@@ -5,6 +5,7 @@ import InvestmentProfile from '../../components/InvestmentProfile';
 import Services from '../../components/Services';
 import Process from '../../components/Process';
 import FAQ from '../../components/FAQ';
+import QuickCheck from '../../components/QuickCheck';
 import Contact from '../../components/Contact';
 import Footer from '../../components/Footer';
 import ScrollToTop from '@/components/ScrollToTop';
@@ -29,6 +30,8 @@ export default function Home() {
         <SectionDivider />
         <About />
         <SectionDivider />
+        <QuickCheck />
+        <SectionDivider />
         <InvestmentProfile />
         <SectionDivider />
         <Services />
@@ -37,12 +40,12 @@ export default function Home() {
         <SectionDivider />
         <FAQ />
         <SectionDivider />
+        
         <Contact />
       </div>
       <Footer />
     </main>
   );
 }
-
 
 
