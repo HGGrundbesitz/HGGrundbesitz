@@ -1,5 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
+import { createQuickCheckRequest, isQuickCheckSupabaseConfigured } from '@/lib/quickCheckSupabase';
+
+export const runtime = 'nodejs';
 
 const resendApiKey = process.env.RESEND_API_KEY;
 const resend = resendApiKey ? new Resend(resendApiKey) : null;
@@ -101,24 +104,31 @@ function renderDocumentList(files: File[]) {
   `;
 }
 
+function errorResponse(message: string, status: number) {
+  return NextResponse.json({ error: message }, { status });
+}
+
+function getDebugSuffix(error: unknown) {
+  if (process.env.NODE_ENV === 'production' || !(error instanceof Error)) {
+    return '';
+  }
+
+  return ` (${error.message})`;
+}
+
 export async function POST(request: NextRequest) {
   try {
     const ip = request.headers.get('x-forwarded-for') || request.headers.get('x-real-ip') || 'unknown';
 
     if (isRateLimited(ip)) {
-      return NextResponse.json({ error: 'Zu viele Anfragen. Bitte versuchen Sie es später erneut.' }, { status: 429 });
-    }
-
-    if (!resend) {
-      console.error('Resend API key missing');
-      return NextResponse.json({ error: 'Serverkonfiguration unvollständig.' }, { status: 500 });
+      return errorResponse('Zu viele Anfragen. Bitte versuchen Sie es später erneut.', 429);
     }
 
     const formData = await request.formData();
     const payloadRaw = formData.get('payload');
 
     if (typeof payloadRaw !== 'string') {
-      return NextResponse.json({ error: 'Ungültige Anfrage.' }, { status: 400 });
+      return errorResponse('Ungültige Anfrage.', 400);
     }
 
     const payload = JSON.parse(payloadRaw) as QuickCheckPayload;
@@ -131,34 +141,72 @@ export async function POST(request: NextRequest) {
     const summary = Array.isArray(payload.summary) ? payload.summary : [];
 
     if (!firstName || !lastName || !email || !phone) {
-      return NextResponse.json({ error: 'Bitte füllen Sie alle Pflichtfelder aus.' }, { status: 400 });
+      return errorResponse('Bitte füllen Sie alle Pflichtfelder aus.', 400);
     }
 
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      return NextResponse.json({ error: 'Ungültige E-Mail-Adresse.' }, { status: 400 });
+      return errorResponse('Ungültige E-Mail-Adresse.', 400);
     }
 
     const files = formData.getAll('documents').filter((item): item is File => item instanceof File);
     const totalSize = files.reduce((total, file) => total + file.size, 0);
 
     if (files.length > MAX_DOCUMENTS) {
-      return NextResponse.json({ error: 'Es können maximal 5 PDF-Dateien angehängt werden.' }, { status: 400 });
+      return errorResponse('Es können maximal 5 PDF-Dateien angehängt werden.', 400);
     }
 
     if (totalSize > MAX_DOCUMENT_TOTAL_SIZE) {
-      return NextResponse.json({ error: 'Die gesamte Dokumentenmenge darf 20 MB nicht überschreiten.' }, { status: 400 });
+      return errorResponse('Die gesamte Dokumentenmenge darf 20 MB nicht überschreiten.', 400);
     }
 
     for (const file of files) {
       const isPdf = file.type === 'application/pdf' || file.name.toLowerCase().endsWith('.pdf');
 
       if (!isPdf) {
-        return NextResponse.json({ error: 'Bitte nur PDF-Dateien hochladen.' }, { status: 400 });
+        return errorResponse('Bitte nur PDF-Dateien hochladen.', 400);
       }
 
       if (file.size > MAX_DOCUMENT_SIZE) {
-        return NextResponse.json({ error: 'Eine Datei ist zu groß. Erlaubt sind maximal 7 MB pro PDF.' }, { status: 400 });
+        return errorResponse('Eine Datei ist zu groß. Erlaubt sind maximal 7 MB pro PDF.', 400);
       }
+    }
+
+    let dashboardSaved = false;
+    let dashboardError: unknown = null;
+    const dashboardConfigured = isQuickCheckSupabaseConfigured();
+
+    try {
+      const savedRequest = await createQuickCheckRequest({ payload, files, ip });
+      dashboardSaved = Boolean(savedRequest);
+    } catch (error) {
+      dashboardError = error;
+      console.error('Quick-check Supabase save failed:', error);
+    }
+
+    if (dashboardConfigured && !dashboardSaved) {
+      return errorResponse(
+        `QuickCheck konnte nicht im Dashboard gespeichert werden. Bitte Supabase-Tabelle, Bucket und Service-Key prüfen.${getDebugSuffix(dashboardError)}`,
+        500
+      );
+    }
+
+    if (!resend) {
+      if (dashboardSaved) {
+        return NextResponse.json(
+          {
+            message: 'Schnellcheck gespeichert. Die E-Mail-Benachrichtigung ist noch nicht konfiguriert.',
+            dashboardSaved: true,
+            emailSent: false,
+          },
+          { status: 200 }
+        );
+      }
+
+      console.error('Quick-check failed: missing Resend API key and dashboard save failed.', dashboardError);
+      return errorResponse(
+        `QuickCheck konnte nicht gespeichert werden. Bitte Supabase- und E-Mail-Konfiguration prüfen.${getDebugSuffix(dashboardError)}`,
+        500
+      );
     }
 
     const attachments = await Promise.all(
@@ -218,10 +266,22 @@ export async function POST(request: NextRequest) {
 
     if (adminResult.error) {
       console.error('Resend quick-check admin error:', adminResult.error);
-      return NextResponse.json({ error: 'Fehler beim Senden. Bitte versuchen Sie es später erneut.' }, { status: 500 });
+
+      if (dashboardSaved) {
+        return NextResponse.json(
+          {
+            message: 'Schnellcheck gespeichert. Die E-Mail-Benachrichtigung konnte nicht gesendet werden.',
+            dashboardSaved: true,
+            emailSent: false,
+          },
+          { status: 200 }
+        );
+      }
+
+      return errorResponse('Fehler beim Senden. Bitte versuchen Sie es später erneut.', 500);
     }
 
-    await resend.emails.send({
+    const confirmationResult = await resend.emails.send({
       from: `HG Grundbesitz Team <${SENDER_EMAIL}>`,
       to: [email],
       subject: 'Eingangsbestätigung: Ihr Schnellcheck bei HG Grundbesitz',
@@ -242,9 +302,20 @@ export async function POST(request: NextRequest) {
       `,
     });
 
-    return NextResponse.json({ message: 'Schnellcheck erfolgreich gesendet.' }, { status: 200 });
+    if (confirmationResult.error) {
+      console.error('Resend quick-check confirmation error:', confirmationResult.error);
+    }
+
+    return NextResponse.json(
+      {
+        message: dashboardSaved ? 'Schnellcheck erfolgreich gesendet.' : 'Schnellcheck per E-Mail gesendet.',
+        dashboardSaved,
+        emailSent: true,
+      },
+      { status: 200 }
+    );
   } catch (error) {
     console.error('Quick-check API error:', error);
-    return NextResponse.json({ error: 'Interner Serverfehler.' }, { status: 500 });
+    return errorResponse(`Interner Serverfehler.${getDebugSuffix(error)}`, 500);
   }
 }
