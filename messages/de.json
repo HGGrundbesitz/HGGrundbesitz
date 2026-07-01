@@ -37,7 +37,7 @@
     "features": {
       "direct_buy": {
         "title": "Direkter Kauf",
-        "desc": "Keine Makler, keine Provisionen"
+        "desc": ""
       },
       "solvency": {
         "title": "Finanzstark",

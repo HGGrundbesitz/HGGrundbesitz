@@ -37,7 +37,7 @@
     "features": {
       "direct_buy": {
         "title": "شراء مباشر",
-        "desc": "بدون وسطاء وبدون عمولات"
+        "desc": ""
       },
       "solvency": {
         "title": "ملاءة مالية",

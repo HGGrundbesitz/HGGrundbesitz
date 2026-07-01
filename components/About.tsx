@@ -135,9 +135,11 @@ const About: React.FC = () => {
                   <Icon className="w-5 h-5 sm:w-7 sm:h-7" />
                 </div>
                 <h3 className="relative z-10 text-lg sm:text-xl font-serif text-stone-900 dark:text-white mb-2 sm:mb-3 group-hover:text-gold transition-colors duration-300">{feature.title}</h3>
-                <p className="relative z-10 text-sm text-stone-600 dark:text-stone-400 leading-relaxed group-hover:text-stone-700 dark:group-hover:text-stone-300 transition-colors">
-                  {feature.description}
-                </p>
+                {feature.description ? (
+                  <p className="relative z-10 text-sm text-stone-600 dark:text-stone-400 leading-relaxed group-hover:text-stone-700 dark:group-hover:text-stone-300 transition-colors">
+                    {feature.description}
+                  </p>
+                ) : null}
               </motion.div>
             )
           })}

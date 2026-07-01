@@ -37,7 +37,7 @@
     "features": {
       "direct_buy": {
         "title": "Direct Purchase",
-        "desc": "No brokers, no commissions"
+        "desc": ""
       },
       "solvency": {
         "title": "Solvency",
