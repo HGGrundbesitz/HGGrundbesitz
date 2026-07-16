@@ -1,7 +1,7 @@
 'use client';
 
-import {type ReactNode, useId, useState} from 'react';
-import {ArrowRight, ChevronDown, FileCheck2, Handshake, Mail, Sparkles} from 'lucide-react';
+import {useId, useState} from 'react';
+import {ChevronDown, Mail} from 'lucide-react';
 import {useTranslations} from 'next-intl';
 
 export default function AcquisitionTeasers() {
@@ -18,7 +18,6 @@ export default function AcquisitionTeasers() {
           label={t('direct.label')}
           title={t('direct.title')}
           intro={t('direct.intro')}
-          icon={<Handshake size={24} />}
           items={directCopy}
           closing={t('direct.closing')}
           subject={t('direct.subject')}
@@ -30,7 +29,6 @@ export default function AcquisitionTeasers() {
           label={t('developer.label')}
           title={t('developer.title')}
           intro={t('developer.intro')}
-          icon={<Sparkles size={24} />}
           items={developerCopy}
           closing={t('developer.closing')}
           subject={t('developer.subject')}
@@ -40,17 +38,9 @@ export default function AcquisitionTeasers() {
 
         <div className="surface-card relative overflow-hidden rounded-[2rem] shadow-[var(--shadow-card)]">
           <div aria-hidden="true" className="absolute inset-y-0 left-0 w-1.5 bg-[linear-gradient(180deg,#7eb4dd,#1c6aa8)]" />
-          <div className="grid min-w-0 items-center gap-4 p-5 pl-7 sm:p-6 sm:pl-9 lg:grid-cols-[auto_minmax(0,1fr)_auto] lg:gap-6">
-            <div className="flex min-w-0 items-center gap-3 lg:block">
-              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[0.9rem] bg-[var(--color-accent-soft)] text-[var(--color-accent)] shadow-[inset_0_1px_0_rgba(255,255,255,0.85)] sm:h-12 sm:w-12">
-                <FileCheck2 size={23} />
-              </div>
-              <div className="text-[10px] font-extrabold uppercase tracking-[0.24em] text-[var(--color-accent)] lg:hidden">
-                {t('rnd.label')}
-              </div>
-            </div>
+          <div className="grid min-w-0 items-center gap-4 p-5 pl-7 sm:p-6 sm:pl-9 lg:grid-cols-[minmax(0,1fr)_auto] lg:gap-6">
             <div className="min-w-0">
-              <div className="mb-1.5 hidden text-[10px] font-extrabold uppercase tracking-[0.24em] text-[var(--color-accent)] lg:block">
+              <div className="mb-1.5 text-[10px] font-extrabold uppercase tracking-[0.24em] text-[var(--color-accent)]">
                 {t('rnd.label')}
               </div>
               <h3 className="font-heading text-[1.375rem] font-semibold leading-tight tracking-[-0.035em] text-[var(--color-ink)] sm:text-[1.625rem]">
@@ -60,15 +50,14 @@ export default function AcquisitionTeasers() {
                 {t('rnd.text')}
               </p>
             </div>
-            <a
-              href="https://restnutzungsdauer.hg-grund.de/"
-              target="_blank"
-              rel="noreferrer"
-              className="btn-beam-blue w-full justify-center sm:w-fit"
+            <button
+              type="button"
+              disabled
+              aria-disabled="true"
+              className="btn-beam-blue w-full cursor-not-allowed justify-center opacity-50 sm:w-fit"
             >
               <span>{t('buttons.rnd')}</span>
-              <ArrowRight size={18} />
-            </a>
+            </button>
           </div>
         </div>
       </div>
@@ -80,7 +69,6 @@ function TeaserCard({
   label,
   title,
   intro,
-  icon,
   items,
   closing,
   subject,
@@ -90,7 +78,6 @@ function TeaserCard({
   label: string;
   title: string;
   intro: string;
-  icon: ReactNode;
   items: string[];
   closing: string;
   subject: string;
@@ -106,14 +93,9 @@ function TeaserCard({
       <div aria-hidden="true" className="absolute inset-y-0 left-0 w-1 bg-[linear-gradient(180deg,#7eb4dd,#1c6aa8_62%,transparent)]" />
 
       <div className="relative flex min-h-full min-w-0 flex-col p-5 pl-7 sm:p-6 sm:pl-9">
-        <div className="mb-5 flex min-w-0 items-center gap-3">
-          <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[0.9rem] bg-[var(--color-accent-soft)] text-[var(--color-accent)] shadow-[inset_0_1px_0_rgba(255,255,255,0.9)] transition-transform duration-300 group-hover:-rotate-3 group-hover:scale-105 sm:h-12 sm:w-12">
-            {icon}
-          </div>
-          <div className="inline-flex min-w-0 items-center gap-2 text-[10px] font-extrabold uppercase tracking-[0.22em] text-[var(--color-text-muted)]">
-            <span className="h-2 w-2 rounded-full bg-[var(--color-accent)] shadow-[0_0_0_6px_var(--color-accent-soft)]" />
-            {label}
-          </div>
+        <div className="mb-5 inline-flex min-w-0 items-center gap-2 text-[10px] font-extrabold uppercase tracking-[0.22em] text-[var(--color-text-muted)]">
+          <span className="h-2 w-2 rounded-full bg-[var(--color-accent)] shadow-[0_0_0_6px_var(--color-accent-soft)]" />
+          {label}
         </div>
 
         <h3 className="max-w-3xl font-heading text-[1.75rem] font-semibold leading-[1.12] tracking-[-0.04em] text-[var(--color-ink)] sm:text-[2.125rem]">
