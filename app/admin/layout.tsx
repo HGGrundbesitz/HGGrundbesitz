@@ -1,5 +1,4 @@
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import {Inter} from 'next/font/google';
 import '../globals.css';
 
 const inter = Inter({
@@ -8,19 +7,10 @@ const inter = Inter({
   display: 'swap',
 });
 
-export const metadata: Metadata = {
-  title: 'Admin | HG Grundbesitz GmbH',
-  description: 'QuickCheck Admin-Dashboard der HG Grundbesitz GmbH.',
-  robots: {
-    index: false,
-    follow: false,
-  },
-};
-
-export default function AdminLayout({ children }: { children: React.ReactNode }) {
+export default function AdminLayout({children}: {children: React.ReactNode}) {
   return (
-    <html lang="de" suppressHydrationWarning>
-      <body className={`${inter.variable} min-h-screen bg-[#eef5fb] font-sans text-stone-950 antialiased`}>
+    <html lang="de">
+      <body className={`${inter.variable} min-h-screen bg-[var(--color-bg)] font-sans text-[var(--color-ink)] antialiased selection:bg-[var(--color-accent)] selection:text-[var(--color-contrast-ink)]`}>
         {children}
       </body>
     </html>

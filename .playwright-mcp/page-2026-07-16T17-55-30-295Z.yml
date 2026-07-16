@@ -1,0 +1,280 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e5]:
+        - link "HG Grundbesitz" [ref=e6] [cursor=pointer]:
+          - /url: /de
+          - generic [ref=e7]: HG Grundbesitz GmbH
+        - generic [ref=e8]:
+          - link "Über uns" [ref=e9] [cursor=pointer]:
+            - /url: "#about"
+          - link "Ankaufsprofil" [ref=e10] [cursor=pointer]:
+            - /url: "#profile"
+          - link "Kompetenz" [ref=e11] [cursor=pointer]:
+            - /url: "#services"
+          - link "Prozess" [ref=e12] [cursor=pointer]:
+            - /url: "#process"
+          - link "FAQ" [ref=e13] [cursor=pointer]:
+            - /url: "#faq"
+        - generic [ref=e14]:
+          - button "de" [ref=e16]
+          - link "Kontakt" [ref=e24] [cursor=pointer]:
+            - /url: "#contact"
+    - generic [ref=e29]:
+      - generic:
+        - generic:
+          - img "Hendrik Grau"
+      - generic [ref=e32]:
+        - heading "Wir kaufen Mehrfamilienhäuser" [level=1] [ref=e33]
+        - paragraph [ref=e34]:
+          - text: Ihr Partner für den diskreten und direkten Immobilienankauf.
+          - generic [ref=e35]: Ohne Umwege.
+        - link "Immobilie anbieten" [ref=e37] [cursor=pointer]:
+          - /url: "#schnellcheck"
+        - generic [ref=e41]:
+          - generic [ref=e42]:
+            - generic [ref=e43]: 20+
+            - generic [ref=e48]: Jahre Erfahrung
+          - generic [ref=e50]:
+            - generic [ref=e51]: 100%
+            - generic [ref=e56]: Diskretion
+      - generic [ref=e58] [cursor=pointer]: Scrollen
+    - generic [ref=e63]:
+      - generic [ref=e66]:
+        - generic [ref=e67]:
+          - generic [ref=e68]: Über uns
+          - heading "Ihr Partner für den direkten Ankauf." [level=2] [ref=e70]
+          - generic [ref=e71]:
+            - paragraph [ref=e72]: Mit über 20 Jahren Erfahrung im Immobilienmarkt stehen wir hinter jedem Kauf. Unser Fokus liegt auf der Akquisition und dem langfristigen Halten von Mehrfamilienhäusern in NRW, Berlin und Brandenburg.
+            - paragraph [ref=e73]: Wir verstehen die Komplexität und den emotionalen Wert einer Immobilie. Deshalb garantieren wir eine faire Bewertung, absolute Diskretion und eine zügige, transparente Abwicklung.
+          - generic [ref=e74]:
+            - link "Immobilie anbieten" [ref=e75] [cursor=pointer]:
+              - /url: "#contact"
+            - link "Hendrik Grau auf LinkedIn ansehen" [ref=e77] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/hendrikgrau/
+              - generic [ref=e78]: HG
+              - generic [ref=e80]: Hendrik Grau
+        - generic [ref=e81]:
+          - heading "Direkter Kauf" [level=3] [ref=e87]
+          - generic [ref=e88]:
+            - heading "Finanzstark" [level=3] [ref=e93]
+            - paragraph [ref=e94]: Gesicherte Finanzierung und schnelle Liquidität
+          - generic [ref=e95]:
+            - heading "Verlässlichkeit" [level=3] [ref=e101]
+            - paragraph [ref=e102]: Verbindliche Zusagen und Einhaltung von Fristen
+          - generic [ref=e103]:
+            - heading "Expertise" [level=3] [ref=e108]
+            - paragraph [ref=e109]: Über 20 Jahre Branchenerfahrung
+      - generic [ref=e112]:
+        - generic [ref=e113]:
+          - generic [ref=e114]:
+            - generic [ref=e115]: Ankaufsprofil
+            - heading "Wir investieren in Nordrhein-Westfalen, Berlin und Brandenburg." [level=2] [ref=e117]
+          - link "Suchprofil laden" [ref=e118] [cursor=pointer]:
+            - /url: "#"
+        - generic [ref=e122]:
+          - generic [ref=e123]:
+            - heading "Mehrfamilienhäuser" [level=3] [ref=e130]
+            - generic [ref=e131]:
+              - generic [ref=e132]:
+                - heading "Standorte" [level=4] [ref=e133]
+                - paragraph [ref=e134]: NRW (Münsterland, Ruhrgebiet), Berlin und Brandenburg.
+              - generic [ref=e135]:
+                - heading "Volumen" [level=4] [ref=e136]
+                - paragraph [ref=e137]: Ankaufswert ab 2 Mio. € bis 30 Mio. €
+            - link "MFH anbieten" [ref=e138] [cursor=pointer]:
+              - /url: "#contact"
+          - generic [ref=e141]:
+            - heading "Baugrundstücke" [level=3] [ref=e147]
+            - generic [ref=e149]:
+              - heading "Lage" [level=4] [ref=e150]
+              - paragraph [ref=e151]: NRW, Berlin & Brandenburg
+            - link "Grundstück anbieten" [ref=e152] [cursor=pointer]:
+              - /url: "#contact"
+      - generic [ref=e157]:
+        - generic [ref=e158]:
+          - article [ref=e159]:
+            - generic [ref=e160]:
+              - generic [ref=e161]: Direktkauf
+              - heading "Wir kaufen Ihre Immobilie. Schnell und direkt." [level=3] [ref=e170]
+              - paragraph [ref=e171]: Direkter Ankauf ohne Makler und ohne Umwege.
+              - button "Mehr erfahren" [ref=e172]
+              - generic [ref=e176]:
+                - paragraph [ref=e177]: Wir sind Ihr Partner in schweren Zeiten und zahlen Ihnen immer einen fairen Preis.
+                - paragraph [ref=e178]: Wir kaufen jede Art von Immobilie und Grundstück direkt an.
+                - paragraph [ref=e179]: Dank unseres Netzwerks aus Banken und Notaren läuft die Abwicklung sehr schnell.
+                - paragraph [ref=e180]: Die Abwicklung erfolgt über ein Verkäuferdarlehen, das durch eine Grundschuld abgesichert ist. Das ermöglicht uns Preise, die Sie sonst nicht bekommen würden.
+                - paragraph [ref=e181]: Unsere Objektbewertung führen wir ausschließlich mit qualifizierten Sachverständigen durch.
+                - paragraph [ref=e182]: Sie wollen Ihr Objekt schnell verkaufen? Schreiben Sie uns eine E-Mail mit dem Betreff "Direktkauf".
+              - link "E-Mail senden" [ref=e183] [cursor=pointer]:
+                - /url: mailto:hg@hg-grundbesitz.de?subject=Direktkauf
+          - article [ref=e187]:
+            - generic [ref=e188]:
+              - generic [ref=e189]: Bauträger
+              - heading "Wir kaufen Bauträgerprojekte. In jeder Projektphase." [level=3] [ref=e196]
+              - paragraph [ref=e197]: Vom Grundstück bis zum fertigen Objekt - direkt vom Bauträger, bundesweit.
+              - button "Mehr erfahren" [ref=e198]
+              - generic [ref=e202]:
+                - paragraph [ref=e203]: Wir kaufen Projekte direkt von Bauträgern an - in jeder Projektstufe, vom Grundstück bis zum fertiggestellten Objekt.
+                - paragraph [ref=e204]: Auch notleidende Projekte, Projekte mit Bau- oder Rechtsmängeln sowie anprivatisierte Aufteilungsmaßnahmen.
+                - paragraph [ref=e205]: Share Deal und Asset Deal sind gleichermaßen möglich.
+                - paragraph [ref=e206]: Bundesweit.
+                - paragraph [ref=e207]: Sie wollen uns ein Projekt anbieten? Schreiben Sie uns eine E-Mail mit dem Betreff "Bauträger".
+              - link "E-Mail senden" [ref=e208] [cursor=pointer]:
+                - /url: mailto:hg@hg-grundbesitz.de?subject=Bautr%C3%A4ger
+        - generic [ref=e213]:
+          - generic [ref=e219]:
+            - generic [ref=e220]: Restnutzungsdauer
+            - heading "Sie benötigen ein Restnutzungsdauergutachten?" [level=3] [ref=e221]
+            - paragraph [ref=e222]: Wir haben den richtigen Partner für Sie.
+          - link "Zur RND Seite" [ref=e223] [cursor=pointer]:
+            - /url: "#schnellcheck"
+      - generic [ref=e227]:
+        - generic [ref=e228]:
+          - generic [ref=e229]: Schnellcheck
+          - heading "Immobilie anbieten. Schnell und strukturiert." [level=2] [ref=e231]
+          - paragraph [ref=e232]: Wenige Pflichtangaben, optional Unterlagen hochladen und direkt eine erste Einordnung anstoßen.
+        - generic [ref=e233]:
+          - generic [ref=e234]:
+            - button "Zurück" [disabled] [ref=e235]
+            - generic [ref=e239]:
+              - generic [ref=e240]: Schritt 1 von 5
+              - generic [ref=e241]: 20%
+          - generic [ref=e246]:
+            - heading "Um welche Immobilie handelt es sich?" [level=3] [ref=e253]
+            - generic [ref=e254]:
+              - button "Eigentumswohnung" [ref=e255]
+              - button "Einfamilienhaus" [ref=e262]
+              - button "Mehrfamilienhaus" [ref=e268]
+              - button "Wohn- & Geschäftshaus" [ref=e274]
+              - button "Gewerbeobjekt" [ref=e281]
+              - button "Grundstück" [ref=e287]
+      - generic [ref=e295]:
+        - generic [ref=e296]:
+          - generic [ref=e297]: Unsere Kompetenz
+          - heading "Werte schaffen. Langfristig." [level=2] [ref=e299]
+        - generic [ref=e301]:
+          - generic [ref=e302]:
+            - heading "Ankauf" [level=3] [ref=e310]
+            - paragraph [ref=e311]: Wir konzentrieren uns auf den schnellen und diskreten Ankauf von Mehrfamilienhäusern. Jede Immobilie prüfen wir sorgfältig mit Blick auf Lage, Substanz und Potenzial.
+          - generic [ref=e312]:
+            - heading "Entwicklung" [level=3] [ref=e319]
+            - paragraph [ref=e320]: Wir entwickeln nachhaltige Konzepte, um den Wert erworbener Immobilien gezielt zu steigern und langfristig für das Umfeld und die Miete zu sichern.
+          - generic [ref=e321]:
+            - heading "Bestandshaltung" [level=3] [ref=e328]
+            - paragraph [ref=e329]: Immobilien langfristig zu pflegen und für kommende Generationen zu erhalten, ist unser klares Ziel. Werterhalt und Verlässlichkeit stehen im Fokus.
+      - generic [ref=e332]:
+        - generic [ref=e333]:
+          - generic [ref=e334]:
+            - generic [ref=e335]: Der Prozess
+            - heading "Verkauf leicht gemacht." [level=2] [ref=e337]
+          - paragraph [ref=e339]: Wir reduzieren Komplexität auf das Wesentliche. Ein schlanker, transparenter Prozess von der ersten Bewertung bis zur Auszahlung des Kaufpreises.
+        - generic [ref=e342]:
+          - generic [ref=e350]:
+            - heading "Kontaktaufnahme" [level=3] [ref=e351]
+            - paragraph [ref=e352]: Senden Sie uns die Eckdaten Ihrer Immobilie. Wir prüfen diese unverzüglich und vertraulich.
+          - generic [ref=e364]:
+            - heading "Bewertung" [level=3] [ref=e365]
+            - paragraph [ref=e366]: Besichtigung und marktgerechte Einwertung Ihrer Immobilie binnen 48 Stunden.
+          - generic [ref=e378]:
+            - heading "Angebot" [level=3] [ref=e379]
+            - paragraph [ref=e380]: Auf Basis der Bewertung unterbreiten wir Ihnen ein faires, provisionsfreies Kaufangebot.
+          - generic [ref=e392]:
+            - heading "Abschluss" [level=3] [ref=e393]
+            - paragraph [ref=e394]: Wir sorgen für eine schnelle notarielle Abwicklung und einen transparenten, sicheren Prozess.
+      - generic [ref=e401]:
+        - generic [ref=e402]:
+          - generic [ref=e403]: Wissenswertes
+          - heading "Häufige Fragen." [level=2] [ref=e405]
+        - generic [ref=e407]:
+          - heading "Muss ich Unterlagen vorbereiten?" [level=3] [ref=e411] [cursor=pointer]
+          - heading "Was unterscheidet Sie von anderen Käufern?" [level=3] [ref=e418] [cursor=pointer]
+          - heading "Kaufen Sie auch sanierungsbedürftige Objekte?" [level=3] [ref=e425] [cursor=pointer]
+        - generic [ref=e429]:
+          - paragraph [ref=e430]: Haben Sie weitere Fragen?
+          - link "Kontaktieren Sie uns" [ref=e431] [cursor=pointer]:
+            - /url: "#contact"
+      - generic [ref=e434]:
+        - generic [ref=e435]:
+          - generic [ref=e436]: Kontakt
+          - heading "Lassen Sie uns sprechen." [level=2] [ref=e439]
+          - paragraph [ref=e440]: Sie besitzen ein Mehrfamilienhaus oder Grundstück, das in unser Profil passt? Senden Sie uns die Eckdaten oder rufen Sie uns direkt an. Wir garantieren eine diskrete Prüfung.
+        - generic [ref=e441]:
+          - generic [ref=e449]:
+            - generic [ref=e450]:
+              - generic [ref=e456]:
+                - heading "E-Mail" [level=3] [ref=e457]
+                - paragraph [ref=e458]: Einfach kopieren oder direkt eine E-Mail senden.
+              - generic [ref=e459]:
+                - link "E-Mail schreiben" [ref=e460] [cursor=pointer]:
+                  - /url: mailto:hg@hg-grundbesitz.de
+                - generic [ref=e464]:
+                  - button "E-Mail kopieren" [ref=e465]
+                  - generic: Kopiert
+            - link "hg@hg-grundbesitz.de" [ref=e475] [cursor=pointer]:
+              - /url: mailto:hg@hg-grundbesitz.de
+          - generic [ref=e481]:
+            - generic [ref=e485]:
+              - generic [ref=e491]:
+                - heading "Anschrift" [level=4] [ref=e492]
+                - generic [ref=e493]: HG Grundbesitz GmbH Bremer Platz 9-11 48155 Münster
+              - link "Route planen" [ref=e495] [cursor=pointer]:
+                - /url: https://maps.google.com
+            - generic [ref=e502]:
+              - generic [ref=e503]:
+                - generic [ref=e508]:
+                  - heading "Telefon" [level=4] [ref=e509]
+                  - link "+49 251 39479064" [ref=e510] [cursor=pointer]:
+                    - /url: tel:+4925139479064
+                - link "Anrufen" [ref=e511] [cursor=pointer]:
+                  - /url: tel:+4925139479064
+              - generic [ref=e522]:
+                - heading "Fax" [level=4] [ref=e523]
+                - text: +49 251 39479007
+            - generic [ref=e532]:
+              - heading "Geschäftsführung" [level=4] [ref=e533]
+              - paragraph [ref=e534]: Dipl.-Wirtsch.-Ing. Hendrik Grau LL.M.
+    - generic [ref=e536]:
+      - generic [ref=e537]:
+        - generic [ref=e538]:
+          - link "HG Grundbesitz" [ref=e539] [cursor=pointer]:
+            - /url: /de
+            - generic [ref=e540]: HG Grundbesitz GmbH
+          - generic [ref=e541]:
+            - paragraph [ref=e542]: 48155 Münster
+            - paragraph [ref=e543]:
+              - link "info@hg-grundbesitz.de" [ref=e544] [cursor=pointer]:
+                - /url: mailto:hg@hg-grundbesitz.de
+          - link "Hendrik Grau auf LinkedIn ansehen" [ref=e545] [cursor=pointer]:
+            - /url: https://www.linkedin.com/in/hendrikgrau/
+        - generic [ref=e550]:
+          - heading "Navigation" [level=4] [ref=e551]
+          - list [ref=e552]:
+            - listitem [ref=e553]:
+              - link "Über uns" [ref=e554] [cursor=pointer]:
+                - /url: "#about"
+            - listitem [ref=e555]:
+              - link "Ankaufsprofil" [ref=e556] [cursor=pointer]:
+                - /url: "#profile"
+        - generic [ref=e557]:
+          - heading "Rechtliches" [level=4] [ref=e558]
+          - list [ref=e559]:
+            - listitem [ref=e560]:
+              - link "Impressum" [ref=e561] [cursor=pointer]:
+                - /url: /de/impressum
+            - listitem [ref=e562]:
+              - link "Datenschutz" [ref=e563] [cursor=pointer]:
+                - /url: /de/datenschutz
+            - listitem [ref=e564]:
+              - button "Cookie-Einstellungen" [ref=e565]
+      - paragraph [ref=e567]: © 2026 HG Grundbesitz GmbH. All rights reserved.
+  - generic [ref=e570]:
+    - generic [ref=e571]:
+      - generic [ref=e572]: Cookies & Datenschutz
+      - paragraph [ref=e576]: Wir nutzen technisch notwendige Funktionen fuer den sicheren Betrieb. Optionale Webanalyse aktivieren wir erst nach Ihrer Zustimmung. Technische Server-Logdaten wie die IP-Adresse koennen aus Sicherheitsgruenden weiterhin verarbeitet werden.
+      - link "Datenschutz ansehen" [ref=e577] [cursor=pointer]:
+        - /url: /de/datenschutz
+    - generic [ref=e578]:
+      - button "Nur notwendige" [ref=e579]
+      - button "Analyse erlauben" [ref=e580]
+  - button "Open Next.js Dev Tools" [ref=e586] [cursor=pointer]

@@ -45,13 +45,13 @@ const Services: React.FC = () => {
   };
 
   return (
-    <section id="services" className="relative overflow-hidden bg-transparent py-24 font-sans text-stone-900 dark:text-white sm:py-32 lg:py-48">
+    <section id="services" className="relative overflow-hidden bg-transparent py-16 font-sans text-stone-900 dark:text-white sm:py-24 lg:py-28">
       <div className="max-w-[1600px] mx-auto px-6 sm:px-12 lg:px-20 relative z-10">
         
         {/* Header */}
         <motion.div
           {...fadeUp}
-          className="text-center max-w-4xl mx-auto mb-16 sm:mb-24 lg:mb-32"
+          className="text-center max-w-4xl mx-auto mb-12 sm:mb-16 lg:mb-20"
         >
           <motion.span
             initial={{ opacity: 0, y: 10 }}
@@ -63,7 +63,7 @@ const Services: React.FC = () => {
             {t('badge')}
           </motion.span>
           
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-medium leading-tight text-stone-900 dark:text-white mb-6 sm:mb-10 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-medium leading-tight text-stone-900 dark:text-white mb-6 sm:mb-8 tracking-tight">
             {t('title_start')} <br className="hidden sm:block" />
             <span className="pr-2 text-[#7EB4DD] italic">{t('title_highlight')}</span>
           </h2>
@@ -73,7 +73,7 @@ const Services: React.FC = () => {
 
         {/* Services Grid */}
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-7"
           variants={staggerContainer}
           initial="initial"
           whileInView="whileInView"
@@ -86,13 +86,13 @@ const Services: React.FC = () => {
               key={index}
               variants={fadeUp}
               whileHover={{ y: -8 }}
-              className="surface-card group relative flex h-full flex-col overflow-hidden rounded-[2rem] p-8 transition-all duration-500 hover:border-gold/25 hover:shadow-[0_26px_60px_rgba(15,23,42,0.06)] dark:border-[#272b33] dark:bg-[#101317] dark:hover:border-gold/35 dark:hover:shadow-[0_26px_70px_rgba(0,0,0,0.35)] sm:rounded-[2.5rem] sm:p-10 lg:p-12"
+              className="surface-card group relative flex h-full flex-col overflow-hidden rounded-[2rem] p-6 transition-all duration-500 hover:border-gold/25 hover:shadow-[0_26px_60px_rgba(15,23,42,0.06)] dark:border-[#272b33] dark:bg-[#101317] dark:hover:border-gold/35 dark:hover:shadow-[0_26px_70px_rgba(0,0,0,0.35)] sm:p-8 lg:p-9"
             >
               {/* Hover Glow */}
               <div className="absolute inset-0 bg-gradient-to-br from-gold/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
-              <div className="relative z-10 mb-10 flex items-start">
-                <div className="surface-chip flex h-16 w-16 items-center justify-center rounded-2xl text-gold transition-all duration-500 group-hover:scale-110 group-hover:border-gold/25 group-hover:bg-[#edf5fb] group-hover:text-[#1c6aa8] group-hover:shadow-[0_18px_34px_rgba(28,106,168,0.12)] dark:border-[#272b33] dark:bg-[#15181d] dark:group-hover:bg-[#15181d] dark:group-hover:text-gold sm:h-20 sm:w-20">
+              <div className="relative z-10 mb-7 flex items-start">
+                <div className="surface-chip flex h-14 w-14 items-center justify-center rounded-2xl text-gold transition-all duration-500 group-hover:scale-110 group-hover:border-gold/25 group-hover:bg-[#edf5fb] group-hover:text-[#1c6aa8] group-hover:shadow-[0_18px_34px_rgba(28,106,168,0.12)] dark:border-[#272b33] dark:bg-[#15181d] dark:group-hover:bg-[#15181d] dark:group-hover:text-gold sm:h-16 sm:w-16">
                   <Icon className="w-7 h-7 sm:w-8 sm:h-8" />
                 </div>
               </div>

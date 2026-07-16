@@ -232,6 +232,140 @@
       "fes_gmbh": "Friedrich-Ebert-Straße GmbH"
     }
   },
+  "AcquisitionTeasers": {
+    "direct": {
+      "label": "Direktkauf",
+      "title": "Wir kaufen Ihre Immobilie. Schnell und direkt.",
+      "intro": "Direkter Ankauf ohne Makler und ohne Umwege.",
+      "items": {
+        "1": "Wir sind Ihr Partner in schweren Zeiten und zahlen Ihnen immer einen fairen Preis.",
+        "2": "Wir kaufen jede Art von Immobilie und Grundstück direkt an.",
+        "3": "Dank unseres Netzwerks aus Banken und Notaren läuft die Abwicklung sehr schnell.",
+        "4": "Die Abwicklung erfolgt über ein Verkäuferdarlehen, das durch eine Grundschuld abgesichert ist. Das ermöglicht uns Preise, die Sie sonst nicht bekommen würden.",
+        "5": "Unsere Objektbewertung führen wir ausschließlich mit qualifizierten Sachverständigen durch."
+      },
+      "closing": "Sie wollen Ihr Objekt schnell verkaufen? Schreiben Sie uns eine E-Mail mit dem Betreff „Direktkauf“.",
+      "subject": "Direktkauf"
+    },
+    "developer": {
+      "label": "Bauträger",
+      "title": "Wir kaufen Bauträgerprojekte. In jeder Projektphase.",
+      "intro": "Vom Grundstück bis zum fertigen Objekt – direkt vom Bauträger, bundesweit.",
+      "items": {
+        "1": "Wir kaufen Projekte direkt von Bauträgern an – in jeder Projektstufe, vom Grundstück bis zum fertiggestellten Objekt.",
+        "2": "Auch notleidende Projekte, Projekte mit Bau- oder Rechtsmängeln sowie anprivatisierte Aufteilungsmaßnahmen.",
+        "3": "Share Deal und Asset Deal sind gleichermaßen möglich.",
+        "4": "Bundesweit."
+      },
+      "closing": "Sie wollen uns ein Projekt anbieten? Schreiben Sie uns eine E-Mail mit dem Betreff „Bauträger“.",
+      "subject": "Bauträger"
+    },
+    "rnd": {
+      "label": "Restnutzungsdauer",
+      "title": "Sie benötigen ein Restnutzungsdauergutachten?",
+      "text": "Wir haben den richtigen Partner für Sie."
+    },
+    "buttons": {
+      "more": "Mehr erfahren",
+      "email": "E-Mail senden",
+      "rnd": "Zur RND Seite"
+    }
+  },
+  "QuickCheck": {
+    "badge": "Schnellcheck",
+    "title": "Immobilie anbieten. Schnell und strukturiert.",
+    "description": "Wenige Pflichtangaben, optional Unterlagen hochladen und direkt eine erste Einordnung anstoßen.",
+    "back": "Zurück",
+    "next": "Weiter",
+    "stepCounter": "Schritt {current} von {total}",
+    "propertyTypes": {
+      "apartment": "Eigentumswohnung",
+      "singleFamily": "Einfamilienhaus",
+      "multiFamily": "Mehrfamilienhaus",
+      "mixedUse": "Wohn- & Geschäftshaus",
+      "commercial": "Gewerbeobjekt",
+      "land": "Grundstück"
+    },
+    "steps": {
+      "propertyType": {"title": "Um welche Immobilienart handelt es sich?"},
+      "address": {
+        "title": "Wo befindet sich die Immobilie?",
+        "street": "Straße und Hausnummer",
+        "streetPlaceholder": "Bremer Platz 9-11",
+        "postalCode": "PLZ",
+        "postalCodePlaceholder": "48155",
+        "city": "Ort",
+        "cityPlaceholder": "Münster"
+      },
+      "units": {"title": "Wie viele Einheiten umfasst das Objekt?", "label": "Anzahl Einheiten"},
+      "area": {
+        "residentialTitle": "Wie groß ist die Wohnfläche?",
+        "commercialTitle": "Wie groß ist die Mietfläche?",
+        "landTitle": "Wie groß ist das Grundstück?",
+        "label": "Fläche in m²"
+      },
+      "rent": {"title": "Wie hoch sind die Mieteinnahmen pro Jahr?", "label": "Ist-Miete pro Jahr in € (netto kalt)"},
+      "documents": {
+        "title": "Machen Sie uns die Bewertung leicht und laden Sie hier vorhandene Unterlagen hoch.",
+        "subtitle": "Fotos, Grundrisse, Mietaufstellung, Exposé, Teilungserklärung – optional.",
+        "dropHint": "Dateien hier ablegen",
+        "filesAdded": "{count, plural, one {# Datei hinzugefügt} other {# Dateien hinzugefügt}}",
+        "addMore": "Weitere Dateien hier ablegen oder auswählen",
+        "successToast": "{count, plural, one {# Datei hinzugefügt} other {# Dateien hinzugefügt}}",
+        "closeToast": "Meldung schließen",
+        "selectFiles": "Dateien auswählen",
+        "skip": "Überspringen",
+        "removeFile": "{file} entfernen"
+      }
+    },
+    "contact": {
+      "firstName": "Vorname",
+      "firstNamePlaceholder": "Max",
+      "lastName": "Nachname",
+      "lastNamePlaceholder": "Mustermann",
+      "email": "E-Mail",
+      "emailPlaceholder": "max@beispiel.de",
+      "phone": "Telefon",
+      "phonePlaceholder": "+49 ...",
+      "consent": "Ich bin mit der Verarbeitung meiner Angaben zur Bearbeitung der Anfrage einverstanden."
+    },
+    "summary": {
+      "title": "Übersicht",
+      "propertyType": "Immobilienart",
+      "address": "Adresse",
+      "units": "Anzahl Einheiten",
+      "area": "Fläche",
+      "rent": "Ist-Miete pro Jahr",
+      "rentValue": "{value} € netto kalt",
+      "documents": "Unterlagen",
+      "notProvided": "Nicht angegeben",
+      "withoutDocuments": "Ohne Unterlagen",
+      "fileCount": "{count, plural, one {# Datei} other {# Dateien}}"
+    },
+    "errors": {
+      "propertyType": "Bitte wählen Sie eine Immobilienart aus.",
+      "address": "Bitte füllen Sie Straße, PLZ und Ort aus.",
+      "units": "Bitte geben Sie eine ganze Zahl ab 1 ein.",
+      "area": "Bitte geben Sie die Fläche in m² ein.",
+      "rent": "Bitte geben Sie eine gültige Mieteinnahme ein.",
+      "fileType": "{file}: Bitte nur PDFs oder Bilder hochladen.",
+      "fileSize": "{file}: Maximal {size} pro Datei.",
+      "totalFileSize": "Alle Dateien zusammen dürfen maximal {size} groß sein.",
+      "fileCount": "Maximal {count} Dateien pro Schnellcheck.",
+      "required": "Bitte prüfen Sie die Pflichtangaben im Schnellcheck.",
+      "contact": "Bitte geben Sie Name, E-Mail und Telefonnummer ein.",
+      "email": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+      "consent": "Bitte bestätigen Sie die Datenschutzhinweise.",
+      "submit": "Fehler beim Senden. Bitte versuchen Sie es später erneut."
+    },
+    "submit": "Anfrage senden",
+    "submitting": "Wird gesendet...",
+    "success": {
+      "title": "Danke, Ihre Anfrage wurde übermittelt.",
+      "text": "Wir melden uns mit einer ruhigen, nachvollziehbaren nächsten Einordnung bei Ihnen.",
+      "restart": "Neue Anfrage starten"
+    }
+  },
   "FAQ": {
     "badge": "Wissenswertes",
     "title": "Häufige Fragen.",

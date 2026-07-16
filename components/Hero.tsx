@@ -84,10 +84,10 @@ const Hero: React.FC = () => {
           >
             <h1
               className={cn(
-                'mb-5 font-serif font-medium tracking-[-0.045em] text-stone-950 sm:mb-7',
+                'mb-5 font-serif font-medium tracking-[-0.045em] text-stone-950 sm:mb-6',
                 isRtl
                   ? 'text-[2.9rem] leading-[1.18] sm:text-[4.25rem] lg:text-[4rem] xl:text-[4.8rem]'
-                  : 'mx-auto max-w-[18.75rem] text-[2.4rem] leading-[0.98] sm:max-w-none sm:text-[4.4rem] lg:mx-0 lg:text-[4.5rem] xl:text-[5.5rem]'
+                  : 'mx-auto max-w-[18.75rem] text-[2.4rem] leading-[0.98] sm:max-w-none sm:text-[3.75rem] lg:mx-0 lg:text-[4rem] xl:text-[4.75rem]'
               )}
             >
               {t('title_start')} <br />
@@ -103,7 +103,7 @@ const Hero: React.FC = () => {
 
             <p
               className={cn(
-                'mb-8 text-[0.98rem] font-light leading-[1.72] text-stone-600 sm:mb-9 sm:text-lg lg:mb-10 lg:text-xl',
+                'mb-7 text-[0.98rem] font-light leading-[1.72] text-stone-600 sm:mb-8 sm:text-lg lg:mb-9',
                 isRtl ? 'max-w-[32rem]' : 'mx-auto max-w-[20rem] sm:max-w-[28rem] lg:mx-0 lg:max-w-lg'
               )}
             >
@@ -118,9 +118,9 @@ const Hero: React.FC = () => {
               )}
             >
               <motion.a
-                href="#quick-check"
+                href="#schnellcheck"
                 whileTap={{ scale: 0.98 }}
-                className="btn-beam-blue flex w-full items-center justify-center gap-3 rounded-full px-8 py-4 text-xs font-bold uppercase tracking-[0.2em] text-white sm:w-auto sm:min-w-[21rem] sm:py-5 lg:min-w-0"
+                className="btn-beam-blue flex w-full items-center justify-center sm:w-auto sm:min-w-[18rem] lg:min-w-0"
               >
                 <span>{t('cta_offer')}</span>
                 <ArrowRight className="h-4 w-4 rtl:rotate-180" />

@@ -1,0 +1,56 @@
+- generic [active] [ref=f3e1]:
+  - main [ref=f3e2]:
+    - navigation [ref=f3e3]:
+      - generic [ref=f3e5]:
+        - link "HG Grundbesitz" [ref=f3e6] [cursor=pointer]:
+          - /url: /en
+          - generic [ref=f3e7]: HG Grundbesitz GmbH
+        - generic [ref=f3e8]:
+          - link "Contact" [ref=f3e9] [cursor=pointer]:
+            - /url: /en#contact
+          - button [ref=f3e14]
+    - generic [ref=f3e23]:
+      - heading "Kostenlose Ersteinschätzung der Restnutzungsdauer" [level=3] [ref=f3e28]
+      - generic [ref=f3e29]:
+        - generic [ref=f3e30]: Kostenlose Ersteinschätzung
+        - generic [ref=f3e34]: Keine Beauftragung
+        - generic [ref=f3e38]: Ergebnis unter fachlichem Vorbehalt
+      - generic [ref=f3e42]:
+        - paragraph [ref=f3e43]: Ermitteln Sie in wenigen Schritten eine rechnerische Orientierung nach dem ImmoWertV-Modell.
+        - paragraph [ref=f3e44]: Die Berechnung ersetzt weder ein Gutachten noch eine sachverständige Einzelfallprüfung oder Steuerberatung.
+        - button "Berechnung starten" [ref=f3e45]
+    - generic [ref=f3e49]:
+      - generic [ref=f3e50]:
+        - generic [ref=f3e51]:
+          - link "HG Grundbesitz" [ref=f3e52] [cursor=pointer]:
+            - /url: /en
+            - generic [ref=f3e53]: HG Grundbesitz GmbH
+          - generic [ref=f3e54]:
+            - paragraph [ref=f3e55]: 48155 Münster
+            - paragraph [ref=f3e56]:
+              - link "info@hg-grundbesitz.de" [ref=f3e57] [cursor=pointer]:
+                - /url: mailto:hg@hg-grundbesitz.de
+          - link "Hendrik Grau auf LinkedIn ansehen" [ref=f3e58] [cursor=pointer]:
+            - /url: https://www.linkedin.com/in/hendrikgrau/
+        - generic [ref=f3e63]:
+          - heading "Navigation" [level=4] [ref=f3e64]
+          - list [ref=f3e65]:
+            - listitem [ref=f3e66]:
+              - link "About Us" [ref=f3e67] [cursor=pointer]:
+                - /url: /en#about
+            - listitem [ref=f3e68]:
+              - link "Acquisition Profile" [ref=f3e69] [cursor=pointer]:
+                - /url: /en#profile
+        - generic [ref=f3e70]:
+          - heading "Legal" [level=4] [ref=f3e71]
+          - list [ref=f3e72]:
+            - listitem [ref=f3e73]:
+              - link "Imprint" [ref=f3e74] [cursor=pointer]:
+                - /url: /en/impressum
+            - listitem [ref=f3e75]:
+              - link "Privacy Policy" [ref=f3e76] [cursor=pointer]:
+                - /url: /en/datenschutz
+            - listitem [ref=f3e77]:
+              - button "Cookie Settings" [ref=f3e78]
+      - paragraph [ref=f3e80]: © 2026 HG Grundbesitz GmbH. All rights reserved.
+  - button "Open Next.js Dev Tools" [ref=f3e86] [cursor=pointer]

@@ -1,6 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
 import { createQuickCheckRequest, isQuickCheckSupabaseConfigured } from '@/lib/quickCheckSupabase';
+import {getSupabaseAdminClient} from '@/lib/supabase-admin';
+import {
+  isQuickCheckDocumentAllowed,
+  QUICK_CHECK_MAX_DOCUMENTS,
+  QUICK_CHECK_MAX_DOCUMENT_SIZE,
+  QUICK_CHECK_MAX_DOCUMENT_TOTAL_SIZE,
+} from '@/lib/quick-check-upload';
 
 export const runtime = 'nodejs';
 
@@ -12,10 +19,6 @@ const QUICK_CHECK_EMAIL = process.env.QUICK_CHECK_EMAIL || process.env.CONTACT_E
 
 const LIMIT_WINDOW = 60 * 1000;
 const MAX_REQUESTS = 3;
-const MAX_DOCUMENTS = 5;
-const MAX_DOCUMENT_SIZE = 7 * 1024 * 1024;
-const MAX_DOCUMENT_TOTAL_SIZE = 20 * 1024 * 1024;
-
 const rateLimit = new Map<string, { count: number; lastReset: number }>();
 
 type SummaryItem = {
@@ -30,6 +33,7 @@ type QuickCheckPayload = {
     lastName?: string;
     email?: string;
     phone?: string;
+    consent?: boolean;
   };
   answers?: Record<string, unknown>;
   summary?: SummaryItem[];
@@ -151,32 +155,33 @@ export async function POST(request: NextRequest) {
     const files = formData.getAll('documents').filter((item): item is File => item instanceof File);
     const totalSize = files.reduce((total, file) => total + file.size, 0);
 
-    if (files.length > MAX_DOCUMENTS) {
-      return errorResponse('Es können maximal 5 PDF-Dateien angehängt werden.', 400);
+    if (files.length > QUICK_CHECK_MAX_DOCUMENTS) {
+      return errorResponse(`Es können maximal ${QUICK_CHECK_MAX_DOCUMENTS} Dateien angehängt werden.`, 400);
     }
 
-    if (totalSize > MAX_DOCUMENT_TOTAL_SIZE) {
-      return errorResponse('Die gesamte Dokumentenmenge darf 20 MB nicht überschreiten.', 400);
+    if (totalSize > QUICK_CHECK_MAX_DOCUMENT_TOTAL_SIZE) {
+      return errorResponse(`Die gesamte Dokumentenmenge darf ${formatFileSize(QUICK_CHECK_MAX_DOCUMENT_TOTAL_SIZE)} nicht überschreiten.`, 400);
     }
 
     for (const file of files) {
-      const isPdf = file.type === 'application/pdf' || file.name.toLowerCase().endsWith('.pdf');
-
-      if (!isPdf) {
-        return errorResponse('Bitte nur PDF-Dateien hochladen.', 400);
+      if (!isQuickCheckDocumentAllowed(file)) {
+        return errorResponse('Bitte nur PDF-Dateien oder Bilder hochladen.', 400);
       }
 
-      if (file.size > MAX_DOCUMENT_SIZE) {
-        return errorResponse('Eine Datei ist zu groß. Erlaubt sind maximal 7 MB pro PDF.', 400);
+      if (file.size > QUICK_CHECK_MAX_DOCUMENT_SIZE) {
+        return errorResponse(`Eine Datei ist zu groß. Erlaubt sind maximal ${formatFileSize(QUICK_CHECK_MAX_DOCUMENT_SIZE)} pro Datei.`, 400);
       }
     }
 
     let dashboardSaved = false;
     let dashboardError: unknown = null;
-    const dashboardConfigured = isQuickCheckSupabaseConfigured();
+    const primaryDashboard = getSupabaseAdminClient();
+    const dashboardConfigured = Boolean(primaryDashboard) || isQuickCheckSupabaseConfigured();
 
     try {
-      const savedRequest = await createQuickCheckRequest({ payload, files, ip });
+      const savedRequest = primaryDashboard
+        ? await createPrimaryDashboardRequest(primaryDashboard, payload, files)
+        : await createQuickCheckRequest({ payload, files, ip });
       dashboardSaved = Boolean(savedRequest);
     } catch (error) {
       dashboardError = error;
@@ -318,4 +323,86 @@ export async function POST(request: NextRequest) {
     console.error('Quick-check API error:', error);
     return errorResponse(`Interner Serverfehler.${getDebugSuffix(error)}`, 500);
   }
+}
+
+async function createPrimaryDashboardRequest(
+  supabase: NonNullable<ReturnType<typeof getSupabaseAdminClient>>,
+  payload: QuickCheckPayload,
+  files: File[],
+) {
+  const contact = payload.contact || {};
+  const firstName = String(contact.firstName || '').trim();
+  const lastName = String(contact.lastName || '').trim();
+  const email = String(contact.email || '').trim().toLowerCase();
+  const phone = String(contact.phone || '').trim();
+  const answers = payload.answers || {};
+  const address = typeof answers.address === 'string' && answers.address.trim() ? answers.address.trim() : 'Nicht angegeben';
+
+  const {data: requestRow, error: requestError} = await supabase
+    .from('property_requests')
+    .insert({
+      name: `${firstName} ${lastName}`.trim(),
+      email,
+      phone,
+      address,
+      year: null,
+      documents: [],
+      source: 'quick_check',
+      quick_check_answers: Array.isArray(payload.summary) ? payload.summary : [],
+      privacy_consent_at: contact.consent ? new Date().toISOString() : null,
+      privacy_policy_version: '2026-07',
+    })
+    .select('id')
+    .single();
+
+  if (requestError || !requestRow?.id) {
+    throw new Error(requestError?.message || 'Property request could not be created.');
+  }
+
+  const uploadedPaths: string[] = [];
+
+  try {
+    for (const [index, file] of files.entries()) {
+      const path = `${requestRow.id}/quick-check/${index + 1}-${sanitizeStorageFileName(file.name)}`;
+      const {error: uploadError} = await supabase.storage.from('documents').upload(
+        path,
+        Buffer.from(await file.arrayBuffer()),
+        {contentType: file.type || 'application/octet-stream', upsert: false},
+      );
+
+      if (uploadError) {
+        throw new Error(uploadError.message);
+      }
+
+      uploadedPaths.push(path);
+    }
+
+    if (uploadedPaths.length > 0) {
+      const {error: updateError} = await supabase
+        .from('property_requests')
+        .update({documents: uploadedPaths})
+        .eq('id', requestRow.id);
+
+      if (updateError) {
+        throw new Error(updateError.message);
+      }
+    }
+
+    return requestRow;
+  } catch (error) {
+    if (uploadedPaths.length > 0) {
+      await supabase.storage.from('documents').remove(uploadedPaths);
+    }
+    await supabase.from('property_requests').delete().eq('id', requestRow.id);
+    throw error;
+  }
+}
+
+function sanitizeStorageFileName(fileName: string) {
+  return fileName
+    .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-zA-Z0-9._-]/g, '-')
+    .replace(/-+/g, '-')
+    .toLowerCase();
 }

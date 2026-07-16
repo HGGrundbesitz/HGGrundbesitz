@@ -232,6 +232,136 @@
       "fes_gmbh": "Friedrich-Ebert-Straße GmbH"
     }
   },
+  "AcquisitionTeasers": {
+    "direct": {
+      "label": "Direct purchase",
+      "title": "We buy your property. Quickly and directly.",
+      "intro": "Direct acquisition without brokers or detours.",
+      "items": {
+        "1": "We are your partner in difficult times and always pay a fair price.",
+        "2": "We directly acquire every type of property and plot.",
+        "3": "Thanks to our network of banks and notaries, the transaction is completed very quickly.",
+        "4": "The transaction is completed through a seller loan secured by a land charge. This allows us to offer prices you would not otherwise receive.",
+        "5": "Our property valuations are carried out exclusively by qualified experts."
+      },
+      "closing": "Would you like to sell your property quickly? Email us with the subject “Direct purchase”.",
+      "subject": "Direct purchase"
+    },
+    "developer": {
+      "label": "Developers",
+      "title": "We buy development projects. At every project stage.",
+      "intro": "From plots to completed properties – directly from developers, nationwide.",
+      "items": {
+        "1": "We acquire projects directly from developers at every stage, from the plot to the completed property.",
+        "2": "This includes distressed projects, projects with construction or legal defects, and partially privatized subdivision projects.",
+        "3": "Share deals and asset deals are both possible.",
+        "4": "Nationwide."
+      },
+      "closing": "Would you like to offer us a project? Email us with the subject “Developer”.",
+      "subject": "Developer"
+    },
+    "rnd": {
+      "label": "Remaining useful life",
+      "title": "Do you need a remaining-useful-life appraisal?",
+      "text": "We have the right partner for you."
+    },
+    "buttons": {"more": "Learn more", "email": "Send email", "rnd": "Go to RUL page"}
+  },
+  "QuickCheck": {
+    "badge": "Quick check",
+    "title": "Offer your property. Fast and structured.",
+    "description": "Provide a few required details, optionally upload documents, and request an initial assessment.",
+    "back": "Back",
+    "next": "Continue",
+    "stepCounter": "Step {current} of {total}",
+    "propertyTypes": {
+      "apartment": "Condominium",
+      "singleFamily": "Single-family home",
+      "multiFamily": "Apartment building",
+      "mixedUse": "Residential and commercial building",
+      "commercial": "Commercial property",
+      "land": "Plot"
+    },
+    "steps": {
+      "propertyType": {"title": "What type of property is it?"},
+      "address": {
+        "title": "Where is the property located?",
+        "street": "Street and house number",
+        "streetPlaceholder": "Bremer Platz 9-11",
+        "postalCode": "Postal code",
+        "postalCodePlaceholder": "48155",
+        "city": "City",
+        "cityPlaceholder": "Münster"
+      },
+      "units": {"title": "How many units does the property have?", "label": "Number of units"},
+      "area": {
+        "residentialTitle": "What is the living area?",
+        "commercialTitle": "What is the rentable area?",
+        "landTitle": "How large is the plot?",
+        "label": "Area in m²"
+      },
+      "rent": {"title": "What is the annual rental income?", "label": "Current annual net rent in €"},
+      "documents": {
+        "title": "Help us assess the property by uploading any available documents.",
+        "subtitle": "Photos, floor plans, rent roll, exposé, declaration of division – optional.",
+        "dropHint": "Drop files here",
+        "filesAdded": "{count, plural, one {# file added} other {# files added}}",
+        "addMore": "Drop or select more files here",
+        "successToast": "{count, plural, one {# file added} other {# files added}}",
+        "closeToast": "Dismiss notification",
+        "selectFiles": "Select files",
+        "skip": "Skip",
+        "removeFile": "Remove {file}"
+      }
+    },
+    "contact": {
+      "firstName": "First name",
+      "firstNamePlaceholder": "Max",
+      "lastName": "Last name",
+      "lastNamePlaceholder": "Smith",
+      "email": "Email",
+      "emailPlaceholder": "max@example.com",
+      "phone": "Phone",
+      "phonePlaceholder": "+49 ...",
+      "consent": "I consent to the processing of my information for handling this enquiry."
+    },
+    "summary": {
+      "title": "Summary",
+      "propertyType": "Property type",
+      "address": "Address",
+      "units": "Number of units",
+      "area": "Area",
+      "rent": "Current annual rent",
+      "rentValue": "€{value} net rent",
+      "documents": "Documents",
+      "notProvided": "Not provided",
+      "withoutDocuments": "No documents",
+      "fileCount": "{count, plural, one {# file} other {# files}}"
+    },
+    "errors": {
+      "propertyType": "Please select a property type.",
+      "address": "Please complete the street, postal code and city fields.",
+      "units": "Please enter a whole number of at least 1.",
+      "area": "Please enter the area in m².",
+      "rent": "Please enter valid rental income.",
+      "fileType": "{file}: Please upload PDFs or images only.",
+      "fileSize": "{file}: The maximum size is {size} per file.",
+      "totalFileSize": "All files together may not exceed {size}.",
+      "fileCount": "A maximum of {count} files can be uploaded.",
+      "required": "Please review the required property details.",
+      "contact": "Please enter your name, email address and phone number.",
+      "email": "Please enter a valid email address.",
+      "consent": "Please confirm the privacy consent.",
+      "submit": "Your enquiry could not be sent. Please try again later."
+    },
+    "submit": "Send enquiry",
+    "submitting": "Sending...",
+    "success": {
+      "title": "Thank you. Your enquiry has been submitted.",
+      "text": "We will contact you with a clear initial assessment of the next steps.",
+      "restart": "Start a new enquiry"
+    }
+  },
   "FAQ": {
     "badge": "Good to Know",
     "title": "Frequently Asked Questions.",

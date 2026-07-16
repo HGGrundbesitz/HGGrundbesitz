@@ -33,11 +33,11 @@ const Process: React.FC = () => {
   ];
 
   return (
-    <section id="process" className="relative overflow-hidden bg-transparent py-20 text-stone-900 sm:py-32 lg:py-44 dark:text-stone-100">
+    <section id="process" className="relative overflow-hidden bg-transparent py-16 text-stone-900 sm:py-24 lg:py-28 dark:text-stone-100">
       <div className="max-w-[1700px] mx-auto px-4 sm:px-6 lg:px-12 xl:px-24 relative z-10">
         
         {/* Header */}
-        <div className="flex flex-col lg:flex-row gap-8 sm:gap-12 lg:gap-16 justify-between items-start lg:items-end mb-16 sm:mb-24 lg:mb-32">
+        <div className="flex flex-col lg:flex-row gap-7 sm:gap-10 lg:gap-14 justify-between items-start lg:items-end mb-12 sm:mb-16 lg:mb-20">
           <motion.div {...fadeInUp} className="max-w-3xl">
             <motion.span
               initial={{ opacity: 1, y: 0 }}
@@ -48,7 +48,7 @@ const Process: React.FC = () => {
               <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
               {t('badge')}
             </motion.span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif font-medium leading-[1.1] text-stone-900 dark:text-white">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-medium leading-[1.1] text-stone-900 dark:text-white">
               {t('title_start')} <br className="hidden sm:block"/> 
               <span className="text-[#7EB4DD] italic">{t('title_highlight')}</span>
             </h2>
@@ -66,7 +66,7 @@ const Process: React.FC = () => {
         {/* Steps */}
         <div className="relative">
           {/* Connecting Line (Desktop) */}
-          <div className="absolute top-[3.75rem] left-[3rem] right-[3rem] hidden h-[2px] bg-gradient-to-r from-stone-200 via-stone-300 to-stone-200 lg:block dark:from-stone-800 dark:via-stone-700 dark:to-stone-800" />
+          <div className="absolute top-12 left-[3rem] right-[3rem] hidden h-[2px] bg-gradient-to-r from-stone-200 via-stone-300 to-stone-200 lg:block dark:from-stone-800 dark:via-stone-700 dark:to-stone-800" />
           
           {/* Active progress line */}
           <motion.div 
@@ -74,7 +74,7 @@ const Process: React.FC = () => {
             whileInView={{ scaleX: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 1.5, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
-            className="absolute top-[3.75rem] left-[3rem] right-[3rem] hidden h-[2px] origin-left bg-gradient-to-r from-gold/50 via-gold to-gold/50 lg:block"
+            className="absolute top-12 left-[3rem] right-[3rem] hidden h-[2px] origin-left bg-gradient-to-r from-gold/50 via-gold to-gold/50 lg:block"
           />
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-10 lg:gap-8 xl:gap-12">
@@ -93,7 +93,7 @@ const Process: React.FC = () => {
                   <div className="flex items-center gap-4 sm:gap-0 sm:justify-center mb-4 sm:mb-10">
                     <motion.div 
                       whileHover={{ scale: 1.1 }}
-                      className="surface-chip relative z-10 flex h-14 w-14 items-center justify-center rounded-full text-gold transition-all duration-500 group-hover:border-gold/30 group-hover:text-gold sm:h-24 sm:w-24 lg:h-28 lg:w-28 dark:border-[#272b33] dark:bg-[#15181d] dark:shadow-[0_10px_30px_rgba(0,0,0,0.25)]"
+                      className="surface-chip relative z-10 flex h-14 w-14 items-center justify-center rounded-full text-gold transition-all duration-500 group-hover:border-gold/30 group-hover:text-gold sm:h-20 sm:w-20 lg:h-24 lg:w-24 dark:border-[#272b33] dark:bg-[#15181d] dark:shadow-[0_10px_30px_rgba(0,0,0,0.25)]"
                     >
                       <Icon className="h-5 w-5 sm:h-8 sm:w-8 lg:h-9 lg:w-9" />
                       {/* Ring animation on hover */}
@@ -110,7 +110,7 @@ const Process: React.FC = () => {
                     
                     <motion.div
                       whileHover={{ scale: 1.1 }}
-                      className="surface-chip inline-flex h-10 w-10 items-center justify-center rounded-xl text-stone-500 transition-all duration-500 group-hover:border-gold/35 group-hover:bg-gold group-hover:text-white sm:h-12 sm:w-12 sm:rounded-2xl dark:border-[#272b33] dark:bg-[#15181d] dark:text-stone-300"
+                      className="surface-chip hidden h-10 w-10 items-center justify-center rounded-xl text-stone-500 transition-all duration-500 group-hover:border-gold/35 group-hover:bg-gold group-hover:text-white sm:inline-flex dark:border-[#272b33] dark:bg-[#15181d] dark:text-stone-300"
                     >
                       <Icon className="w-4 h-4 sm:w-5 sm:h-5" />
                     </motion.div>

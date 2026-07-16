@@ -2,6 +2,7 @@ import Navbar from '../../components/Navbar';
 import Hero from '../../components/Hero';
 import About from '../../components/About';
 import InvestmentProfile from '../../components/InvestmentProfile';
+import AcquisitionTeasers from '../../components/AcquisitionTeasers';
 import Services from '../../components/Services';
 import Process from '../../components/Process';
 import FAQ from '../../components/FAQ';
@@ -30,9 +31,11 @@ export default function Home() {
         <SectionDivider />
         <About />
         <SectionDivider />
-        <QuickCheck />
-        <SectionDivider />
         <InvestmentProfile />
+        <SectionDivider />
+        <AcquisitionTeasers />
+        <SectionDivider />
+        <QuickCheck />
         <SectionDivider />
         <Services />
         <SectionDivider />
@@ -47,5 +50,3 @@ export default function Home() {
     </main>
   );
 }
-
-

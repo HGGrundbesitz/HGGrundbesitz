@@ -6,13 +6,19 @@ import { motion } from 'framer-motion';
 import { slideInLeft, slideInRight } from '@/lib/animations';
 import { useTranslations } from 'next-intl';
 
+const CONTACT_EMAIL = 'hg@hg-grundbesitz.de';
+const GOOGLE_MAPS_DIRECTIONS_URL =
+  'https://www.google.com/maps/dir/?api=1&destination=HG%20Grundbesitz%20GmbH%2C%20Bremer%20Platz%209-11%2C%2048155%20M%C3%BCnster';
+const GOOGLE_MAPS_EMBED_URL =
+  'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2532.3412097740725!2d7.635518576539882!3d51.95751557772175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b9bad9101040a7%3A0xfc8d8c43cff82cd3!2sHG%20Grundbesitz%20GmbH!5e1!3m2!1sde!2sde!4v1784229740296!5m2!1sde!2sde';
+
 const Contact: React.FC = () => {
   const t = useTranslations('Contact');
   const [copied, setCopied] = useState(false);
 
   const handleCopyEmail = async () => {
     try {
-      await navigator.clipboard.writeText('hg@hg-grundbesitz.de');
+      await navigator.clipboard.writeText(CONTACT_EMAIL);
       setCopied(true);
       window.setTimeout(() => setCopied(false), 1400);
     } catch {
@@ -74,7 +80,7 @@ const Contact: React.FC = () => {
 
                   <div className="flex flex-wrap items-center gap-3 self-start lg:justify-end">
                     <a
-                      href="mailto:hg@hg-grundbesitz.de"
+                      href={`mailto:${CONTACT_EMAIL}`}
                       className="surface-chip inline-flex shrink-0 items-center gap-2 rounded-full bg-white/88 px-4 py-2.5 text-[10px] font-bold uppercase tracking-[0.18em] text-[#1C6AA8] transition-colors hover:border-[#1C6AA8]/20 hover:bg-[#f7fbff] hover:text-[#0B4E84] sm:px-5 sm:py-3"
                     >
                       {t('info.email_btn')}
@@ -108,11 +114,11 @@ const Contact: React.FC = () => {
                     <div className="absolute -left-3 bottom-1 h-20 w-20 rounded-full bg-[#1C6AA8]/6 blur-[42px]" />
                     <div className="relative z-10 flex flex-col gap-4 sm:gap-5 lg:flex-row lg:items-center lg:justify-between">
                       <a
-                        href="mailto:hg@hg-grundbesitz.de"
+                        href={`mailto:${CONTACT_EMAIL}`}
                         dir="ltr"
                         className="block flex-1 select-all break-all text-[1.85rem] font-semibold leading-[1.02] tracking-[-0.06em] text-stone-900 transition-colors hover:text-gold sm:text-[2.15rem] lg:text-[2.45rem]"
                       >
-                        hg@hg-grundbesitz.de
+                        {CONTACT_EMAIL}
                       </a>
                       <div className="surface-chip inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/88 text-[#1C6AA8] shadow-[0_10px_25px_rgba(15,23,42,0.05)]">
                         <Mail className="h-4.5 w-4.5" />
@@ -151,9 +157,9 @@ const Contact: React.FC = () => {
                   </div>
                   <div className="mt-auto flex justify-start">
                     <a
-                      href="https://maps.google.com"
+                      href={GOOGLE_MAPS_DIRECTIONS_URL}
                       target="_blank"
-                      rel="noreferrer"
+                      rel="noopener noreferrer"
                       className="surface-chip group/link inline-flex items-center gap-2 self-start rounded-full bg-white/88 px-4 py-2.5 text-[10px] font-bold uppercase tracking-[0.18em] text-[#1C6AA8] transition-colors hover:border-[#1C6AA8]/20 hover:bg-[#f7fbff] hover:text-stone-900"
                     >
                       {t('info.route')}
@@ -215,6 +221,17 @@ const Contact: React.FC = () => {
               </div>
             </div>
           </motion.div>
+        </div>
+
+        <div className="surface-card mt-7 overflow-hidden rounded-[2.1rem] sm:mt-10 sm:rounded-[2.4rem] lg:mt-16">
+          <iframe
+            src={GOOGLE_MAPS_EMBED_URL}
+            title="HG Grundbesitz GmbH, Bremer Platz 9-11, 48155 Münster"
+            loading="lazy"
+            allowFullScreen
+            referrerPolicy="strict-origin-when-cross-origin"
+            className="h-[280px] w-full border-0 sm:h-[380px] lg:h-[400px]"
+          />
         </div>
       </div>
     </section>

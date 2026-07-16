@@ -35,7 +35,7 @@ const About: React.FC = () => {
   return (
     <section
       id="about"
-      className="relative overflow-hidden bg-transparent py-16 text-stone-900 dark:text-stone-100 sm:py-20 lg:py-32"
+      className="relative overflow-hidden bg-transparent py-14 text-stone-900 dark:text-stone-100 sm:py-18 lg:py-24"
     >
       <div className="max-w-[1600px] mx-auto px-4 pt-4 sm:px-6 sm:pt-6 lg:px-12 lg:pt-0 xl:px-20 relative z-10">
         
@@ -45,7 +45,7 @@ const About: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center max-w-4xl mx-auto mb-12 sm:mb-16 lg:mb-24"
+          className="text-center max-w-4xl mx-auto mb-10 sm:mb-14 lg:mb-18"
         >
           <motion.span 
             initial={{ opacity: 0, y: 10 }}
@@ -58,21 +58,21 @@ const About: React.FC = () => {
             {t('badge')}
           </motion.span>
           
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-medium leading-tight text-stone-900 dark:text-white mb-6 sm:mb-8 px-2">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-serif font-medium leading-tight text-stone-900 dark:text-white mb-5 sm:mb-7 px-2">
             {t('title_start')} <span className="text-[#7EB4DD]">{t('title_highlight')}</span>
           </h2>
           
-          <div className="space-y-4 sm:space-y-6 text-base sm:text-lg lg:text-xl text-stone-600 dark:text-stone-400 font-light leading-relaxed mb-8 sm:mb-12 max-w-3xl mx-auto px-2">
+          <div className="space-y-4 sm:space-y-5 text-base sm:text-lg text-stone-600 dark:text-stone-400 font-light leading-relaxed mb-8 sm:mb-10 max-w-3xl mx-auto px-2">
             <p>{t('description_1')}</p>
             <p>{t('description_2')}</p>
           </div>
           
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 lg:gap-12">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-5 sm:gap-8">
             <motion.a
               href="#contact"
               whileHover={{ scale: 1.03, y: -2 }}
               whileTap={{ scale: 0.98 }}
-              className="btn-beam-blue w-full rounded-full px-8 py-3.5 text-center text-[11px] font-bold uppercase tracking-widest text-white sm:w-auto sm:px-10 sm:py-4 sm:text-xs"
+              className="btn-beam-blue w-full sm:w-auto"
             >
               {t('cta')}
             </motion.a>
@@ -117,7 +117,7 @@ const About: React.FC = () => {
           initial="initial"
           whileInView="whileInView"
           viewport={{ once: true }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 lg:gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5"
         >
           {features.map((feature, index) => {
             const Icon = feature.icon;
@@ -126,7 +126,7 @@ const About: React.FC = () => {
                 key={index}
                 variants={fadeInUp}
                 whileHover={{ y: -8, transition: { duration: 0.3 } }}
-                className="surface-card group relative flex h-full flex-col items-center overflow-hidden rounded-2xl p-6 text-center transition-all duration-500 hover:border-gold/25 hover:shadow-[0_24px_52px_rgba(15,23,42,0.06)] dark:border-[#272b33] dark:bg-[#101317] dark:shadow-[0_22px_55px_rgba(0,0,0,0.3)] dark:hover:border-gold/35 sm:items-start sm:rounded-[2rem] sm:p-8 sm:text-left"
+                className="surface-card group relative flex h-full flex-col items-center overflow-hidden rounded-2xl p-5 text-center transition-all duration-500 hover:border-gold/25 hover:shadow-[0_24px_52px_rgba(15,23,42,0.06)] dark:border-[#272b33] dark:bg-[#101317] dark:shadow-[0_22px_55px_rgba(0,0,0,0.3)] dark:hover:border-gold/35 sm:items-start sm:rounded-[2rem] sm:p-7 sm:text-left"
               >
                 {/* Hover glow effect */}
                 <div className="absolute inset-0 bg-gradient-to-br from-gold/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
