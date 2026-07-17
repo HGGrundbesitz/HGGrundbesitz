@@ -11,7 +11,7 @@ export default function AcquisitionTeasers() {
 
   return (
     <section id="direktkauf" className="relative z-10 mx-auto max-w-[1280px] overflow-hidden px-4 py-10 sm:px-6 lg:py-14">
-      <div aria-hidden="true" className="pointer-events-none absolute left-1/2 top-14 -z-10 h-56 w-[70%] -translate-x-1/2 rounded-full bg-[rgba(126,180,221,0.12)] blur-[90px]" />
+      <div aria-hidden="true" className="pointer-events-none absolute left-1/2 top-14 -z-10 hidden h-56 w-[70%] -translate-x-1/2 rounded-full bg-[rgba(126,180,221,0.12)] blur-[90px] sm:block" />
 
       <div className="mx-auto grid w-full max-w-5xl items-start gap-4 sm:gap-5">
         <TeaserCard
@@ -20,7 +20,6 @@ export default function AcquisitionTeasers() {
           intro={t('direct.intro')}
           items={directCopy}
           closing={t('direct.closing')}
-          subject={t('direct.subject')}
           moreLabel={t('buttons.more')}
           emailLabel={t('buttons.email')}
         />
@@ -31,7 +30,6 @@ export default function AcquisitionTeasers() {
           intro={t('developer.intro')}
           items={developerCopy}
           closing={t('developer.closing')}
-          subject={t('developer.subject')}
           moreLabel={t('buttons.more')}
           emailLabel={t('buttons.email')}
         />
@@ -71,7 +69,6 @@ function TeaserCard({
   intro,
   items,
   closing,
-  subject,
   moreLabel,
   emailLabel,
 }: {
@@ -80,13 +77,11 @@ function TeaserCard({
   intro: string;
   items: string[];
   closing: string;
-  subject: string;
   moreLabel: string;
   emailLabel: string;
 }) {
   const [isOpen, setIsOpen] = useState(false);
   const contentId = useId();
-  const mailHref = `mailto:hg@hg-grundbesitz.de?subject=${encodeURIComponent(subject)}`;
 
   return (
     <article className="surface-card group relative w-full min-w-0 overflow-hidden rounded-[2rem] shadow-[var(--shadow-card)]">
@@ -119,7 +114,7 @@ function TeaserCard({
           </span>
         </button>
 
-        <div id={contentId} className={`grid transition-all duration-500 ${isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
+        <div id={contentId} className={`grid transition-[grid-template-rows,opacity] duration-[250ms] sm:duration-500 ${isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
           <div className="overflow-hidden">
             <div className="mt-4 rounded-[1.4rem] bg-[rgba(28,106,168,0.075)] p-4 text-[var(--color-text-muted)] shadow-[inset_0_1px_0_rgba(255,255,255,0.78)] sm:p-5">
               {items.map((item) => (
@@ -135,7 +130,7 @@ function TeaserCard({
           </div>
         </div>
 
-        <a href={mailHref} className="btn-beam-blue mt-5 w-full self-start sm:w-fit">
+        <a href="#contact-email" className="btn-beam-blue mt-5 w-full self-start sm:w-fit">
           <Mail size={18} />
           <span>{emailLabel}</span>
         </a>

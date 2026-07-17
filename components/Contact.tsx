@@ -9,8 +9,6 @@ import { useTranslations } from 'next-intl';
 const CONTACT_EMAIL = 'hg@hg-grundbesitz.de';
 const GOOGLE_MAPS_DIRECTIONS_URL =
   'https://www.google.com/maps/dir/?api=1&destination=HG%20Grundbesitz%20GmbH%2C%20Bremer%20Platz%209-11%2C%2048155%20M%C3%BCnster';
-const GOOGLE_MAPS_EMBED_URL =
-  'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2532.3412097740725!2d7.635518576539882!3d51.95751557772175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b9bad9101040a7%3A0xfc8d8c43cff82cd3!2sHG%20Grundbesitz%20GmbH!5e1!3m2!1sde!2sde!4v1784229740296!5m2!1sde!2sde';
 
 const Contact: React.FC = () => {
   const t = useTranslations('Contact');
@@ -55,12 +53,16 @@ const Contact: React.FC = () => {
             variants={slideInLeft}
             className="self-start lg:col-span-7 xl:col-span-7"
           >
-            <div className="surface-card relative overflow-hidden rounded-[2.1rem] p-5 backdrop-blur sm:rounded-[2.4rem] sm:p-8 lg:min-h-[18.75rem] lg:p-9">
+            <div
+              id="contact-email"
+              tabIndex={-1}
+              className="surface-card relative scroll-mt-[7rem] overflow-hidden rounded-[2.1rem] p-5 transition-shadow target:ring-4 target:ring-[rgba(28,106,168,0.18)] target:shadow-[0_24px_70px_rgba(28,106,168,0.2)] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[rgba(28,106,168,0.18)] focus-visible:shadow-[0_24px_70px_rgba(28,106,168,0.2)] sm:rounded-[2.4rem] sm:p-8 sm:backdrop-blur lg:min-h-[18.75rem] lg:p-9"
+            >
               <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.98)_0%,rgba(248,251,255,0.94)_52%,rgba(245,249,255,0.96)_100%)]" />
               <div className="absolute inset-x-10 top-0 h-px bg-gradient-to-r from-transparent via-[#1C6AA8]/24 to-transparent" />
-              <div className="absolute -left-10 top-10 h-28 w-28 rounded-full bg-[#1C6AA8]/8 blur-[58px]" />
-              <div className="absolute right-0 top-0 h-36 w-36 rounded-full bg-[#7EB4DD]/10 blur-[76px]" />
-              <div className="absolute -right-12 bottom-2 h-44 w-44 rounded-full bg-[#1C6AA8]/8 blur-[82px]" />
+              <div className="absolute -left-10 top-10 hidden h-28 w-28 rounded-full bg-[#1C6AA8]/8 blur-[58px] sm:block" />
+              <div className="absolute right-0 top-0 hidden h-36 w-36 rounded-full bg-[#7EB4DD]/10 blur-[76px] sm:block" />
+              <div className="absolute -right-12 bottom-2 hidden h-44 w-44 rounded-full bg-[#1C6AA8]/8 blur-[82px] sm:block" />
 
               <div className="relative z-10 flex h-full flex-col gap-5 sm:gap-6 lg:justify-between">
                 <div className="flex flex-col gap-4 sm:gap-5 lg:flex-row lg:items-start lg:justify-between">
@@ -111,7 +113,7 @@ const Contact: React.FC = () => {
                   <div className="absolute inset-0 rounded-[1.9rem] bg-[linear-gradient(135deg,rgba(126,180,221,0.24),rgba(255,255,255,0.78)_42%,rgba(28,106,168,0.08)_100%)]" />
                   <div className="surface-card-strong relative overflow-hidden rounded-[calc(1.9rem-1px)] bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(249,252,255,0.96))] p-5 sm:p-6 lg:p-7">
                     <div className="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-[#1C6AA8]/22 to-transparent" />
-                    <div className="absolute -left-3 bottom-1 h-20 w-20 rounded-full bg-[#1C6AA8]/6 blur-[42px]" />
+                    <div className="absolute -left-3 bottom-1 hidden h-20 w-20 rounded-full bg-[#1C6AA8]/6 blur-[42px] sm:block" />
                     <div className="relative z-10 flex flex-col gap-4 sm:gap-5 lg:flex-row lg:items-center lg:justify-between">
                       <a
                         href={`mailto:${CONTACT_EMAIL}`}
@@ -138,8 +140,8 @@ const Contact: React.FC = () => {
             className="relative self-start lg:col-span-5 xl:col-span-5"
           >
             <div className="grid gap-4 sm:gap-5 md:grid-cols-2 lg:grid-cols-1">
-              <div className="surface-card group relative overflow-hidden rounded-[1.95rem] p-6 backdrop-blur sm:p-7 md:col-span-2 lg:col-span-1">
-                <div className="absolute top-0 right-0 h-28 w-28 rounded-full bg-[#1C6AA8]/6 blur-[52px]" />
+              <div className="surface-card group relative overflow-hidden rounded-[1.95rem] p-6 sm:p-7 sm:backdrop-blur md:col-span-2 lg:col-span-1">
+                <div className="absolute top-0 right-0 hidden h-28 w-28 rounded-full bg-[#1C6AA8]/6 blur-[52px] sm:block" />
                 <div className="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-[#1C6AA8]/22 to-transparent" />
                 <div className="relative z-10 flex h-full flex-col gap-6">
                   <div className="flex items-start gap-4 sm:gap-5">
@@ -169,8 +171,8 @@ const Contact: React.FC = () => {
                 </div>
               </div>
 
-              <div className="surface-card group relative overflow-hidden rounded-[1.95rem] p-6 backdrop-blur sm:p-7 md:col-span-2 lg:col-span-1">
-                <div className="absolute bottom-0 left-0 h-28 w-28 rounded-full bg-[#1C6AA8]/5 blur-[48px]" />
+              <div className="surface-card group relative overflow-hidden rounded-[1.95rem] p-6 sm:p-7 sm:backdrop-blur md:col-span-2 lg:col-span-1">
+                <div className="absolute bottom-0 left-0 hidden h-28 w-28 rounded-full bg-[#1C6AA8]/5 blur-[48px] sm:block" />
                 <div className="absolute inset-x-8 bottom-0 h-px bg-gradient-to-r from-transparent via-[#1C6AA8]/18 to-transparent" />
                 <div className="relative z-10 space-y-5">
                   <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
@@ -206,8 +208,8 @@ const Contact: React.FC = () => {
                 </div>
               </div>
 
-              <div className="surface-card-tint group relative overflow-hidden rounded-[1.95rem] p-6 backdrop-blur sm:p-7 md:col-span-2 lg:col-span-1">
-                <div className="absolute right-0 top-0 h-28 w-28 rounded-full bg-gold/5 blur-[45px] transition-colors duration-700 group-hover:bg-gold/10" />
+              <div className="surface-card-tint group relative overflow-hidden rounded-[1.95rem] p-6 sm:p-7 sm:backdrop-blur md:col-span-2 lg:col-span-1">
+                <div className="absolute right-0 top-0 hidden h-28 w-28 rounded-full bg-gold/5 blur-[45px] transition-colors duration-700 group-hover:bg-gold/10 sm:block" />
                 <div className="absolute left-8 right-8 bottom-0 h-px bg-gradient-to-r from-transparent via-[#1C6AA8]/18 to-transparent" />
                 <div className="relative z-10 flex items-start gap-4">
                   <div className="surface-chip flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/82 text-gold">
@@ -223,16 +225,6 @@ const Contact: React.FC = () => {
           </motion.div>
         </div>
 
-        <div className="surface-card mt-7 overflow-hidden rounded-[2.1rem] sm:mt-10 sm:rounded-[2.4rem] lg:mt-16">
-          <iframe
-            src={GOOGLE_MAPS_EMBED_URL}
-            title="HG Grundbesitz GmbH, Bremer Platz 9-11, 48155 Münster"
-            loading="lazy"
-            allowFullScreen
-            referrerPolicy="strict-origin-when-cross-origin"
-            className="h-[280px] w-full border-0 sm:h-[380px] lg:h-[400px]"
-          />
-        </div>
       </div>
     </section>
   );
